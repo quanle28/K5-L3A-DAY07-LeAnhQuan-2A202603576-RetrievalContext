@@ -1,0 +1,98 @@
+{
+  "dense_base": {
+    "cases": 17,
+    "errors": 0,
+    "hit1": {
+      "n": 8,
+      "N": 15,
+      "rate": 0.5333333333333333
+    },
+    "hit3": {
+      "n": 14,
+      "N": 15,
+      "rate": 0.9333333333333333
+    },
+    "context_hit": {
+      "n": 10,
+      "N": 15,
+      "rate": 0.6666666666666666
+    },
+    "median_seconds": 3.5400466000000037,
+    "total_seconds": 64.2285497,
+    "cost_usd": 0.00468105,
+    "mean_context_chars": 1272.1764705882354,
+    "answer_quality": "Not inferred from evidence substring matches; requires per-query semantic review."
+  },
+  "bm25": {
+    "cases": 17,
+    "errors": 0,
+    "hit1": {
+      "n": 11,
+      "N": 15,
+      "rate": 0.7333333333333333
+    },
+    "hit3": {
+      "n": 13,
+      "N": 15,
+      "rate": 0.8666666666666667
+    },
+    "context_hit": {
+      "n": 12,
+      "N": 15,
+      "rate": 0.8
+    },
+    "median_seconds": 3.2651770999999883,
+    "total_seconds": 57.76386339999996,
+    "cost_usd": 0.0045804,
+    "mean_context_chars": 1184.8235294117646,
+    "answer_quality": "Not inferred from evidence substring matches; requires per-query semantic review."
+  },
+  "hybrid": {
+    "cases": 17,
+    "errors": 0,
+    "hit1": {
+      "n": 8,
+      "N": 15,
+      "rate": 0.5333333333333333
+    },
+    "hit3": {
+      "n": 15,
+      "N": 15,
+      "rate": 1.0
+    },
+    "context_hit": {
+      "n": 10,
+      "N": 15,
+      "rate": 0.6666666666666666
+    },
+    "median_seconds": 3.3659494999999993,
+    "total_seconds": 56.39631660000005,
+    "cost_usd": 0.00444705,
+    "mean_context_chars": 1168.1764705882354,
+    "answer_quality": "Not inferred from evidence substring matches; requires per-query semantic review."
+  },
+  "hybrid_context": {
+    "cases": 17,
+    "errors": 0,
+    "hit1": {
+      "n": 9,
+      "N": 15,
+      "rate": 0.6
+    },
+    "hit3": {
+      "n": 15,
+      "N": 15,
+      "rate": 1.0
+    },
+    "context_hit": {
+      "n": 15,
+      "N": 15,
+      "rate": 1.0
+    },
+    "median_seconds": 4.133073499999995,
+    "total_seconds": 75.65731899999997,
+    "cost_usd": 0.0097212,
+    "mean_context_chars": 5523.764705882353,
+    "answer_quality": "Not inferred from evidence substring matches; requires per-query semantic review."
+  }
+}

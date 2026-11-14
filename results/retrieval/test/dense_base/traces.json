@@ -1,0 +1,606 @@
+[
+  {
+    "status": "retrieved",
+    "events": [
+      {
+        "event": "search",
+        "tool": "dense",
+        "query": "Why does the tutorial recommend import os instead of from os import *?",
+        "filter": {},
+        "results": [
+          {
+            "id": "53ff7bf26259bd5c0b075fde245af356e6c23fe7a66d149c94afe523dc564b4c",
+            "source_id": "python-stdlib",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/stdlib.rst",
+            "page": 1,
+            "text": "Brief Tour of the Standard Library\n\nOperating System Interface\n\nThe os module provides dozens of functions for interacting with the\noperating system::\n\n>>> import os\n>>> os.getcwd() # Return the current working directory\n'C:\\\\Python312'\n>>> os.chdir('/server/accesslogs') # Change current working directory\n>>> os.system('mkdir today') # Run the command mkdir in the system shell\n0\n\nBe sure to use the import os style instead of from os import *. This\nwill keep os.open from shadowing the built-in open function which\noperates much differently.\n\nThe built-in dir and help functions are useful as interactive\naids for working with large modules like os::\n\n>>> import os\n>>> dir(os)\n<returns a list of all module functions>\n>>> help(os)\n<returns an extensive manual page created from the module's docstrings>",
+            "metadata": {
+              "chapter": "stdlib",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 0,
+              "source_char_end": 2502,
+              "char_start": 0,
+              "char_end": 806,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.7647466463586456,
+            "method": "dense"
+          },
+          {
+            "id": "21aa6675e2f3449ea365aa6cb077aa45eeae3964a4e2841566c5d5e62e106c60",
+            "source_id": "python-modules",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/modules.rst",
+            "page": 5,
+            "text": ">>> import fibo, sys\n>>> dir(fibo)\n['__name__', 'fib', 'fib2']\n>>> dir(sys) # doctest: +NORMALIZE_WHITESPACE\n['__breakpointhook__', '__displayhook__', '__doc__', '__excepthook__',\n'__interactivehook__', '__loader__', '__name__', '__package__', '__spec__',\n'__stderr__', '__stdin__', '__stdout__', '__unraisablehook__',\n'_clear_type_cache', '_current_frames', '_debugmallocstats', '_framework',\n'_getframe', '_git', '_home', '_xoptions', 'abiflags', 'addaudithook',\n'api_version', 'argv', 'audit', 'base_exec_prefix', 'base_prefix',\n'breakpointhook', 'builtin_module_names', 'byteorder', 'call_tracing',\n'callstats', 'copyright', 'displayhook', 'dont_write_bytecode', 'exc_info',\n'excepthook', 'exec_prefix', 'executable', 'exit', 'flags', 'float_info',\n'float_repr_style', 'get_asyncgen_hooks', 'get_coroutine_origin_tracking_depth',\n'getallocatedblocks', 'getdefaultencoding',",
+            "metadata": {
+              "chapter": "modules",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 10211,
+              "source_char_end": 12686,
+              "char_start": 485,
+              "char_end": 1362,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.7368099906707459,
+            "method": "dense"
+          },
+          {
+            "id": "3f72f3450ff33402f212df2a9b688165fb24430d35308c3e81555c88f9650984",
+            "source_id": "python-modules",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/modules.rst",
+            "page": 5,
+            "text": "'getdlopenflags',\n'getfilesystemencodeerrors', 'getfilesystemencoding', 'getprofile',\n'getrecursionlimit', 'getrefcount', 'getsizeof', 'getswitchinterval',\n'gettrace', 'hash_info', 'hexversion', 'implementation', 'int_info',\n'intern', 'is_finalizing', 'last_traceback', 'last_type', 'last_value',\n'maxsize', 'maxunicode', 'meta_path', 'modules', 'path', 'path_hooks',\n'path_importer_cache', 'platform', 'prefix', 'ps1', 'ps2', 'pycache_prefix',\n'set_asyncgen_hooks', 'set_coroutine_origin_tracking_depth', 'setdlopenflags',\n'setprofile', 'setrecursionlimit', 'setswitchinterval', 'settrace', 'stderr',\n'stdin', 'stdout', 'thread_info', 'unraisablehook', 'version', 'version_info',\n'warnoptions']\n\nWithout arguments, dir lists the names you have defined currently::\n\n>>> a = [1, 2, 3, 4, 5]\n>>> import fibo\n>>> fib = fibo.fib\n>>> dir()\n['__builtins__', '__name__', 'a', 'fib', 'fibo', 'sys']",
+            "metadata": {
+              "chapter": "modules",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 10211,
+              "source_char_end": 12686,
+              "char_start": 1363,
+              "char_end": 2253,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.72743799164006,
+            "method": "dense"
+          }
+        ]
+      }
+    ],
+    "context": "[53ff7bf26259bd5c0b075fde245af356e6c23fe7a66d149c94afe523dc564b4c | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/stdlib.rst | source unit 1]\nBrief Tour of the Standard Library\n\nOperating System Interface\n\nThe os module provides dozens of functions for interacting with the\noperating system::\n\n>>> import os\n>>> os.getcwd() # Return the current working directory\n'C:\\\\Python312'\n>>> os.chdir('/server/accesslogs') # Change current working directory\n>>> os.system('mkdir today') # Run the command mkdir in the system shell\n0\n\nBe sure to use the import os style instead of from os import *. This\nwill keep os.open from shadowing the built-in open function which\noperates much differently.\n\nThe built-in dir and help functions are useful as interactive\naids for working with large modules like os::\n\n>>> import os\n>>> dir(os)\n<returns a list of all module functions>\n>>> help(os)\n<returns an extensive manual page created from the module's docstrings>",
+    "context_ids": [
+      "53ff7bf26259bd5c0b075fde245af356e6c23fe7a66d149c94afe523dc564b4c"
+    ],
+    "context_chars": 962,
+    "elapsed_seconds": 0.29525369999999995,
+    "cost_usd": 0,
+    "query_id": "d7-t01",
+    "split": "test",
+    "question": "Why does the tutorial recommend import os instead of from os import *?",
+    "answerable": true,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "metric_scope": "Single-chunk alternative evidence; hit1/hit3 on FIRST query, context_hit on cumulative final context",
+    "configuration": "dense_base"
+  },
+  {
+    "status": "retrieved",
+    "events": [
+      {
+        "event": "search",
+        "tool": "dense",
+        "query": "Where are command-line arguments stored, and what container type holds them?",
+        "filter": {},
+        "results": [
+          {
+            "id": "3f72f3450ff33402f212df2a9b688165fb24430d35308c3e81555c88f9650984",
+            "source_id": "python-modules",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/modules.rst",
+            "page": 5,
+            "text": "'getdlopenflags',\n'getfilesystemencodeerrors', 'getfilesystemencoding', 'getprofile',\n'getrecursionlimit', 'getrefcount', 'getsizeof', 'getswitchinterval',\n'gettrace', 'hash_info', 'hexversion', 'implementation', 'int_info',\n'intern', 'is_finalizing', 'last_traceback', 'last_type', 'last_value',\n'maxsize', 'maxunicode', 'meta_path', 'modules', 'path', 'path_hooks',\n'path_importer_cache', 'platform', 'prefix', 'ps1', 'ps2', 'pycache_prefix',\n'set_asyncgen_hooks', 'set_coroutine_origin_tracking_depth', 'setdlopenflags',\n'setprofile', 'setrecursionlimit', 'setswitchinterval', 'settrace', 'stderr',\n'stdin', 'stdout', 'thread_info', 'unraisablehook', 'version', 'version_info',\n'warnoptions']\n\nWithout arguments, dir lists the names you have defined currently::\n\n>>> a = [1, 2, 3, 4, 5]\n>>> import fibo\n>>> fib = fibo.fib\n>>> dir()\n['__builtins__', '__name__', 'a', 'fib', 'fibo', 'sys']",
+            "metadata": {
+              "chapter": "modules",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 10211,
+              "source_char_end": 12686,
+              "char_start": 1363,
+              "char_end": 2253,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.7478737165604088,
+            "method": "dense"
+          },
+          {
+            "id": "50e71d88dc1fd25fae397dc6cdcdd99dbb982ce3873cc63f2690f2230fb55821",
+            "source_id": "python-stdlib",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/stdlib.rst",
+            "page": 1,
+            "text": "The argparse module provides a more sophisticated mechanism to process\ncommand line arguments. The following script extracts one or more filenames\nand an optional number of lines to be displayed::\n\nimport argparse\n\nparser = argparse.ArgumentParser(\nprog='top',\ndescription='Show top lines from each file')\nparser.add_argument('filenames', nargs='+')\nparser.add_argument('-l', '--lines', type=int, default=10)\nargs = parser.parse_args()\nprint(args)\n\nWhen run at the command line with python top.py --lines=5 alpha.txt\nbeta.txt, the script sets args.lines to 5 and args.filenames\nto ['alpha.txt', 'beta.txt'].\n\nError Output Redirection and Program Termination\n\nThe sys module also has attributes for *stdin*, *stdout*, and *stderr*.\nThe latter is useful for emitting warnings and error messages to make them\nvisible even when *stdout* has been redirected::",
+            "metadata": {
+              "chapter": "stdlib",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 0,
+              "source_char_end": 2502,
+              "char_start": 1648,
+              "char_end": 2502,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.7297498646584074,
+            "method": "dense"
+          },
+          {
+            "id": "69823a65c27b529f9232bb7621a82fd70a70d852586de304a182a21a299ad94c",
+            "source_id": "python-stdlib",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/stdlib.rst",
+            "page": 1,
+            "text": "For daily file and directory management tasks, the shutil module provides\na higher level interface that is easier to use::\n\n>>> import shutil\n>>> shutil.copyfile('data.db', 'archive.db')\n'archive.db'\n>>> shutil.move('/build/executables', 'installdir')\n'installdir'\n\nFile Wildcards\n\nThe glob module provides a function for making file lists from directory\nwildcard searches::\n\n>>> import glob\n>>> glob.glob('*.py')\n['primes.py', 'random.py', 'quote.py']\n\nCommand Line Arguments\n\nCommon utility scripts often need to process command line arguments. These\narguments are stored in the sys module's *argv* attribute as a list. For\ninstance, let's take the following demo.py file::\n\n# File demo.py\nimport sys\nprint(sys.argv)\n\nHere is the output from running python demo.py one two three at the command\nline::\n\n['demo.py', 'one', 'two', 'three']",
+            "metadata": {
+              "chapter": "stdlib",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 0,
+              "source_char_end": 2502,
+              "char_start": 808,
+              "char_end": 1646,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.7232749678552287,
+            "method": "dense"
+          }
+        ]
+      }
+    ],
+    "context": "[3f72f3450ff33402f212df2a9b688165fb24430d35308c3e81555c88f9650984 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/modules.rst | source unit 5]\n'getdlopenflags',\n'getfilesystemencodeerrors', 'getfilesystemencoding', 'getprofile',\n'getrecursionlimit', 'getrefcount', 'getsizeof', 'getswitchinterval',\n'gettrace', 'hash_info', 'hexversion', 'implementation', 'int_info',\n'intern', 'is_finalizing', 'last_traceback', 'last_type', 'last_value',\n'maxsize', 'maxunicode', 'meta_path', 'modules', 'path', 'path_hooks',\n'path_importer_cache', 'platform', 'prefix', 'ps1', 'ps2', 'pycache_prefix',\n'set_asyncgen_hooks', 'set_coroutine_origin_tracking_depth', 'setdlopenflags',\n'setprofile', 'setrecursionlimit', 'setswitchinterval', 'settrace', 'stderr',\n'stdin', 'stdout', 'thread_info', 'unraisablehook', 'version', 'version_info',\n'warnoptions']\n\nWithout arguments, dir lists the names you have defined currently::\n\n>>> a = [1, 2, 3, 4, 5]\n>>> import fibo\n>>> fib = fibo.fib\n>>> dir()\n['__builtins__', '__name__', 'a', 'fib', 'fibo', 'sys']",
+    "context_ids": [
+      "3f72f3450ff33402f212df2a9b688165fb24430d35308c3e81555c88f9650984"
+    ],
+    "context_chars": 1047,
+    "elapsed_seconds": 0.30159740000000035,
+    "cost_usd": 0,
+    "query_id": "d7-t02",
+    "split": "test",
+    "question": "Where are command-line arguments stored, and what container type holds them?",
+    "answerable": true,
+    "hit1": false,
+    "hit3": true,
+    "context_hit": false,
+    "metric_scope": "Single-chunk alternative evidence; hit1/hit3 on FIRST query, context_hit on cumulative final context",
+    "configuration": "dense_base"
+  },
+  {
+    "status": "retrieved",
+    "events": [
+      {
+        "event": "search",
+        "tool": "dense",
+        "query": "Which module checks examples embedded in a program's docstrings?",
+        "filter": {},
+        "results": [
+          {
+            "id": "32f9e4f08a17e5075e3f4f6c31423c0cd21b1a9cb5e7b1ef6c2cf237d9a50833",
+            "source_id": "python-controlflow",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/controlflow.rst",
+            "page": 13,
+            "text": "Here is an example of a multi-line docstring::\n\n>>> def my_function():\n... \"\"\"Do nothing, but document it.\n...\n... No, really, it doesn't do anything.\n... \"\"\"\n... pass\n...\n>>> print(my_function.__doc__)\nDo nothing, but document it.\n\nNo, really, it doesn't do anything.\n\nFunction Annotations\n\nFunction annotations are completely optional metadata\ninformation about the types used by user-defined functions (see 3107 and\n484 for more information).",
+            "metadata": {
+              "chapter": "controlflow",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 30599,
+              "source_char_end": 34026,
+              "char_start": 0,
+              "char_end": 445,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.7387429830826886,
+            "method": "dense"
+          },
+          {
+            "id": "3f72f3450ff33402f212df2a9b688165fb24430d35308c3e81555c88f9650984",
+            "source_id": "python-modules",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/modules.rst",
+            "page": 5,
+            "text": "'getdlopenflags',\n'getfilesystemencodeerrors', 'getfilesystemencoding', 'getprofile',\n'getrecursionlimit', 'getrefcount', 'getsizeof', 'getswitchinterval',\n'gettrace', 'hash_info', 'hexversion', 'implementation', 'int_info',\n'intern', 'is_finalizing', 'last_traceback', 'last_type', 'last_value',\n'maxsize', 'maxunicode', 'meta_path', 'modules', 'path', 'path_hooks',\n'path_importer_cache', 'platform', 'prefix', 'ps1', 'ps2', 'pycache_prefix',\n'set_asyncgen_hooks', 'set_coroutine_origin_tracking_depth', 'setdlopenflags',\n'setprofile', 'setrecursionlimit', 'setswitchinterval', 'settrace', 'stderr',\n'stdin', 'stdout', 'thread_info', 'unraisablehook', 'version', 'version_info',\n'warnoptions']\n\nWithout arguments, dir lists the names you have defined currently::\n\n>>> a = [1, 2, 3, 4, 5]\n>>> import fibo\n>>> fib = fibo.fib\n>>> dir()\n['__builtins__', '__name__', 'a', 'fib', 'fibo', 'sys']",
+            "metadata": {
+              "chapter": "modules",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 10211,
+              "source_char_end": 12686,
+              "char_start": 1363,
+              "char_end": 2253,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.7303666743827377,
+            "method": "dense"
+          },
+          {
+            "id": "c082cf19f8fb9f11e85910549aa3ff01629e406c269e728fdc98556a11ea8edf",
+            "source_id": "python-modules",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/modules.rst",
+            "page": 6,
+            "text": ">>> import builtins\n>>> dir(builtins) # doctest: +NORMALIZE_WHITESPACE\n['ArithmeticError', 'AssertionError', 'AttributeError', 'BaseException',\n'BlockingIOError', 'BrokenPipeError', 'BufferError', 'BytesWarning',\n'ChildProcessError', 'ConnectionAbortedError', 'ConnectionError',\n'ConnectionRefusedError', 'ConnectionResetError', 'DeprecationWarning',\n'EOFError', 'Ellipsis', 'EnvironmentError', 'Exception', 'False',\n'FileExistsError', 'FileNotFoundError', 'FloatingPointError',\n'FutureWarning', 'GeneratorExit', 'IOError', 'ImportError',\n'ImportWarning', 'IndentationError', 'IndexError', 'InterruptedError',\n'IsADirectoryError', 'KeyError', 'KeyboardInterrupt', 'LookupError',\n'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n'NotImplementedError', 'OSError', 'OverflowError',\n'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n'ReferenceError',",
+            "metadata": {
+              "chapter": "modules",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 12688,
+              "source_char_end": 15174,
+              "char_start": 0,
+              "char_end": 893,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.726353847116463,
+            "method": "dense"
+          }
+        ]
+      }
+    ],
+    "context": "[32f9e4f08a17e5075e3f4f6c31423c0cd21b1a9cb5e7b1ef6c2cf237d9a50833 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/controlflow.rst | source unit 13]\nHere is an example of a multi-line docstring::\n\n>>> def my_function():\n... \"\"\"Do nothing, but document it.\n...\n... No, really, it doesn't do anything.\n... \"\"\"\n... pass\n...\n>>> print(my_function.__doc__)\nDo nothing, but document it.\n\nNo, really, it doesn't do anything.\n\nFunction Annotations\n\nFunction annotations are completely optional metadata\ninformation about the types used by user-defined functions (see 3107 and\n484 for more information).\n\n[3f72f3450ff33402f212df2a9b688165fb24430d35308c3e81555c88f9650984 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/modules.rst | source unit 5]\n'getdlopenflags',\n'getfilesystemencodeerrors', 'getfilesystemencoding', 'getprofile',\n'getrecursionlimit', 'getrefcount', 'getsizeof', 'getswitchinterval',\n'gettrace', 'hash_info', 'hexversion', 'implementation', 'int_info',\n'intern', 'is_finalizing', 'last_traceback', 'last_type', 'last_value',\n'maxsize', 'maxunicode', 'meta_path', 'modules', 'path', 'path_hooks',\n'path_importer_cache', 'platform', 'prefix', 'ps1', 'ps2', 'pycache_prefix',\n'set_asyncgen_hooks', 'set_coroutine_origin_tracking_depth', 'setdlopenflags',\n'setprofile', 'setrecursionlimit', 'setswitchinterval', 'settrace', 'stderr',\n'stdin', 'stdout', 'thread_info', 'unraisablehook', 'version', 'version_info',\n'warnoptions']\n\nWithout arguments, dir lists the names you have defined currently::\n\n>>> a = [1, 2, 3, 4, 5]\n>>> import fibo\n>>> fib = fibo.fib\n>>> dir()\n['__builtins__', '__name__', 'a', 'fib', 'fibo', 'sys']",
+    "context_ids": [
+      "32f9e4f08a17e5075e3f4f6c31423c0cd21b1a9cb5e7b1ef6c2cf237d9a50833",
+      "3f72f3450ff33402f212df2a9b688165fb24430d35308c3e81555c88f9650984"
+    ],
+    "context_chars": 1656,
+    "elapsed_seconds": 0.31862369999999984,
+    "cost_usd": 0,
+    "query_id": "d7-t03",
+    "split": "test",
+    "question": "Which module checks examples embedded in a program's docstrings?",
+    "answerable": true,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false,
+    "metric_scope": "Single-chunk alternative evidence; hit1/hit3 on FIRST query, context_hit on cumulative final context",
+    "configuration": "dense_base"
+  },
+  {
+    "status": "retrieved",
+    "events": [
+      {
+        "event": "search",
+        "tool": "dense",
+        "query": "What happens to an unresolved placeholder with string.Template.safe_substitute?",
+        "filter": {},
+        "results": [
+          {
+            "id": "c901bf7f8af24964510868d97e1f5a334fb874149efbc2f729370f4fc4a448ec",
+            "source_id": "python-stdlib2",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/stdlib2.rst",
+            "page": 2,
+            "text": ">>> from string import Template\n>>> t = Template('${village}folk send $$10 to $cause.')\n>>> t.substitute(village='Nottingham', cause='the ditch fund')\n'Nottinghamfolk send $10 to the ditch fund.'\n\nThe string.Template.substitute method raises a KeyError when a\nplaceholder is not supplied in a dictionary or a keyword argument. For\nmail-merge style applications, user supplied data may be incomplete and the\nstring.Template.safe_substitute method may be more appropriate ---\nit will leave placeholders unchanged if data is missing::\n\n>>> t = Template('Return the $item to $owner.')\n>>> d = dict(item='unladen swallow')\n>>> t.substitute(d)\nTraceback (most recent call last):\n...\nKeyError: 'owner'\n>>> t.safe_substitute(d)\n'Return the unladen swallow to $owner.'",
+            "metadata": {
+              "chapter": "stdlib2",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 2507,
+              "source_char_end": 5035,
+              "char_start": 0,
+              "char_end": 759,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.814225536274681,
+            "method": "dense"
+          },
+          {
+            "id": "2f848a383b1ebe460651c4b13492971268b6e6a4463d09b4c7cf479afac66dad",
+            "source_id": "python-stdlib2",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/stdlib2.rst",
+            "page": 2,
+            "text": "Template subclasses can specify a custom delimiter. For example, a batch\nrenaming utility for a photo browser may elect to use percent signs for\nplaceholders such as the current date, image sequence number, or file format::\n\n>>> import time, os.path\n>>> photofiles = ['img_1074.jpg', 'img_1076.jpg', 'img_1077.jpg']\n>>> class BatchRename(Template):\n... delimiter = '%'\n...\n>>> fmt = input('Enter rename style (%d-date %n-seqnum %f-format): ')\nEnter rename style (%d-date %n-seqnum %f-format): Ashley_%n%f\n\n>>> t = BatchRename(fmt)\n>>> date = time.strftime('%d%b%y')\n>>> for i, filename in enumerate(photofiles):\n... base, ext = os.path.splitext(filename)\n... newname = t.substitute(d=date, n=i, f=ext)\n... print('{0} --> {1}'.format(filename, newname))\n\nimg_1074.jpg --> Ashley_0.jpg\nimg_1076.jpg --> Ashley_1.jpg\nimg_1077.jpg --> Ashley_2.jpg",
+            "metadata": {
+              "chapter": "stdlib2",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 2507,
+              "source_char_end": 5035,
+              "char_start": 761,
+              "char_end": 1604,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.7231036739414982,
+            "method": "dense"
+          },
+          {
+            "id": "8b225ef04cf56f46eecf64ce2012675472ec704ae7b3e0b685dd21b269e95c05",
+            "source_id": "python-errors",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/errors.rst",
+            "page": 4,
+            "text": "If an unhandled exception occurs inside an except section, it will\nhave the exception being handled attached to it and included in the error\nmessage::\n\n>>> try:\n... open(\"database.sqlite\")\n... except OSError:\n... raise RuntimeError(\"unable to handle error\")\n...\nTraceback (most recent call last):\nFile \"<stdin>\", line 2, in <module>\nFileNotFoundError: [Errno 2] No such file or directory: 'database.sqlite'\n<BLANKLINE>\nDuring handling of the above exception, another exception occurred:\n<BLANKLINE>\nTraceback (most recent call last):\nFile \"<stdin>\", line 4, in <module>\nRuntimeError: unable to handle error\n\nTo indicate that an exception is a direct consequence of another, the\nraise statement allows an optional from<raise> clause::\n\n# exc must be exception instance or None.\nraise RuntimeError from exc\n\nThis can be useful when you are transforming exceptions. For example::",
+            "metadata": {
+              "chapter": "errors",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 7677,
+              "source_char_end": 10473,
+              "char_start": 1434,
+              "char_end": 2310,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.6888628811632826,
+            "method": "dense"
+          }
+        ]
+      }
+    ],
+    "context": "[c901bf7f8af24964510868d97e1f5a334fb874149efbc2f729370f4fc4a448ec | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/stdlib2.rst | source unit 2]\n>>> from string import Template\n>>> t = Template('${village}folk send $$10 to $cause.')\n>>> t.substitute(village='Nottingham', cause='the ditch fund')\n'Nottinghamfolk send $10 to the ditch fund.'\n\nThe string.Template.substitute method raises a KeyError when a\nplaceholder is not supplied in a dictionary or a keyword argument. For\nmail-merge style applications, user supplied data may be incomplete and the\nstring.Template.safe_substitute method may be more appropriate ---\nit will leave placeholders unchanged if data is missing::\n\n>>> t = Template('Return the $item to $owner.')\n>>> d = dict(item='unladen swallow')\n>>> t.substitute(d)\nTraceback (most recent call last):\n...\nKeyError: 'owner'\n>>> t.safe_substitute(d)\n'Return the unladen swallow to $owner.'",
+    "context_ids": [
+      "c901bf7f8af24964510868d97e1f5a334fb874149efbc2f729370f4fc4a448ec"
+    ],
+    "context_chars": 916,
+    "elapsed_seconds": 0.29067830000000017,
+    "cost_usd": 0,
+    "query_id": "d7-t04",
+    "split": "test",
+    "question": "What happens to an unresolved placeholder with string.Template.safe_substitute?",
+    "answerable": true,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "metric_scope": "Single-chunk alternative evidence; hit1/hit3 on FIRST query, context_hit on cumulative final context",
+    "configuration": "dense_base"
+  },
+  {
+    "status": "retrieved",
+    "events": [
+      {
+        "event": "search",
+        "tool": "dense",
+        "query": "For a heapq heap, which position always holds the lowest-valued entry?",
+        "filter": {},
+        "results": [
+          {
+            "id": "012a48290d0980da22fdb71c836b58996cafd5cf633b9acd0b56ad6afa574182",
+            "source_id": "python-stdlib2",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/stdlib2.rst",
+            "page": 5,
+            "text": ">>> import bisect\n>>> scores = [(100, 'perl'), (200, 'tcl'), (400, 'lua'), (500, 'python')]\n>>> bisect.insort(scores, (300, 'ruby'))\n>>> scores\n[(100, 'perl'), (200, 'tcl'), (300, 'ruby'), (400, 'lua'), (500, 'python')]\n\nThe heapq module provides functions for implementing heaps based on\nregular lists. The lowest valued entry is always kept at position zero. This\nis useful for applications which repeatedly access the smallest element but do\nnot want to run a full list sort::\n\n>>> from heapq import heapify, heappop, heappush\n>>> data = [1, 3, 5, 7, 9, 2, 4, 6, 8, 0]\n>>> heapify(data) # rearrange the list into heap order\n>>> heappush(data, -5) # add a new entry\n>>> [heappop(data) for i in range(3)] # fetch the three smallest entries\n[-5, 0, 1]\n\nDecimal Floating Point Arithmetic",
+            "metadata": {
+              "chapter": "stdlib2",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 10056,
+              "source_char_end": 13407,
+              "char_start": 861,
+              "char_end": 1647,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.8022985484501539,
+            "method": "dense"
+          },
+          {
+            "id": "e90c0e45c5de79d8e04e6e601b815adc510b707b4c98e460f6da11609ed109e5",
+            "source_id": "python-datastructures",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/datastructures.rst",
+            "page": 1,
+            "text": "The optional arguments *start* and *end* are interpreted as in the slice\nnotation and are used to limit the search to a particular subsequence of\nthe list. The returned index is computed relative to the beginning of the full\nsequence rather than the *start* argument.\n\n.. method:: list.count(x)\n:noindex:\n\nReturn the number of times *x* appears in the list.\n\n.. method:: list.sort(*, key=None, reverse=False)\n:noindex:\n\nSort the items of the list in place (the arguments can be used for sort\ncustomization, see sorted for their explanation).\n\n.. method:: list.reverse()\n:noindex:\n\nReverse the elements of the list in place.\n\n.. method:: list.copy()\n:noindex:\n\nReturn a shallow copy of the list. Equivalent to a[:].\n\nAn example that uses most of the list methods::",
+            "metadata": {
+              "chapter": "datastructures",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 0,
+              "source_char_end": 2927,
+              "char_start": 1586,
+              "char_end": 2349,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.7127754090532247,
+            "method": "dense"
+          },
+          {
+            "id": "b2d879a1c5b16f8ec6dd674b6ae0594eb6888627829545fa24fa1f35812cd6c2",
+            "source_id": "python-datastructures",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/datastructures.rst",
+            "page": 2,
+            "text": "You might have noticed that methods like insert, remove or sort that\nonly modify the list have no return value printed -- they return the default\nNone. [#]_ This is a design principle for all mutable data structures in\nPython.\n\nAnother thing you might notice is that not all data can be sorted or\ncompared. For instance, [None, 'hello', 10] doesn't sort because\nintegers can't be compared to strings and *None* can't be compared to\nother types. Also, there are some types that don't have a defined\nordering relation. For example, 3+4j < 5+7j isn't a valid\ncomparison.\n\nUsing Lists as Stacks\n\nThe list methods make it very easy to use a list as a stack, where the last\nelement added is the first element retrieved (\"last-in, first-out\"). To add an\nitem to the top of the stack, use list.append. To retrieve an item from the\ntop of the stack, use list.pop without an explicit index. For example::",
+            "metadata": {
+              "chapter": "datastructures",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 2929,
+              "source_char_end": 5383,
+              "char_start": 0,
+              "char_end": 894,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.7049882624054455,
+            "method": "dense"
+          }
+        ]
+      }
+    ],
+    "context": "[012a48290d0980da22fdb71c836b58996cafd5cf633b9acd0b56ad6afa574182 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/stdlib2.rst | source unit 5]\n>>> import bisect\n>>> scores = [(100, 'perl'), (200, 'tcl'), (400, 'lua'), (500, 'python')]\n>>> bisect.insort(scores, (300, 'ruby'))\n>>> scores\n[(100, 'perl'), (200, 'tcl'), (300, 'ruby'), (400, 'lua'), (500, 'python')]\n\nThe heapq module provides functions for implementing heaps based on\nregular lists. The lowest valued entry is always kept at position zero. This\nis useful for applications which repeatedly access the smallest element but do\nnot want to run a full list sort::\n\n>>> from heapq import heapify, heappop, heappush\n>>> data = [1, 3, 5, 7, 9, 2, 4, 6, 8, 0]\n>>> heapify(data) # rearrange the list into heap order\n>>> heappush(data, -5) # add a new entry\n>>> [heappop(data) for i in range(3)] # fetch the three smallest entries\n[-5, 0, 1]\n\nDecimal Floating Point Arithmetic",
+    "context_ids": [
+      "012a48290d0980da22fdb71c836b58996cafd5cf633b9acd0b56ad6afa574182"
+    ],
+    "context_chars": 943,
+    "elapsed_seconds": 0.2970484999999998,
+    "cost_usd": 0,
+    "query_id": "d7-t05",
+    "split": "test",
+    "question": "For a heapq heap, which position always holds the lowest-valued entry?",
+    "answerable": true,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "metric_scope": "Single-chunk alternative evidence; hit1/hit3 on FIRST query, context_hit on cumulative final context",
+    "configuration": "dense_base"
+  },
+  {
+    "status": "retrieved",
+    "events": [
+      {
+        "event": "search",
+        "tool": "dense",
+        "query": "Which Django command rolls back exactly the latest database migration?",
+        "filter": {},
+        "results": [
+          {
+            "id": "3f72f3450ff33402f212df2a9b688165fb24430d35308c3e81555c88f9650984",
+            "source_id": "python-modules",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/modules.rst",
+            "page": 5,
+            "text": "'getdlopenflags',\n'getfilesystemencodeerrors', 'getfilesystemencoding', 'getprofile',\n'getrecursionlimit', 'getrefcount', 'getsizeof', 'getswitchinterval',\n'gettrace', 'hash_info', 'hexversion', 'implementation', 'int_info',\n'intern', 'is_finalizing', 'last_traceback', 'last_type', 'last_value',\n'maxsize', 'maxunicode', 'meta_path', 'modules', 'path', 'path_hooks',\n'path_importer_cache', 'platform', 'prefix', 'ps1', 'ps2', 'pycache_prefix',\n'set_asyncgen_hooks', 'set_coroutine_origin_tracking_depth', 'setdlopenflags',\n'setprofile', 'setrecursionlimit', 'setswitchinterval', 'settrace', 'stderr',\n'stdin', 'stdout', 'thread_info', 'unraisablehook', 'version', 'version_info',\n'warnoptions']\n\nWithout arguments, dir lists the names you have defined currently::\n\n>>> a = [1, 2, 3, 4, 5]\n>>> import fibo\n>>> fib = fibo.fib\n>>> dir()\n['__builtins__', '__name__', 'a', 'fib', 'fibo', 'sys']",
+            "metadata": {
+              "chapter": "modules",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 10211,
+              "source_char_end": 12686,
+              "char_start": 1363,
+              "char_end": 2253,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.6396833193220988,
+            "method": "dense"
+          },
+          {
+            "id": "62df0e483169e95847c412daedcccb96819fd07878433374239b27b6db5aa65e",
+            "source_id": "python-venv",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/venv.rst",
+            "page": 2,
+            "text": "(tutorial-env) $ python -m pip install requests==2.6.0\nCollecting requests==2.6.0\nUsing cached requests-2.6.0-py2.py3-none-any.whl\nInstalling collected packages: requests\nSuccessfully installed requests-2.6.0\n\nIf you re-run this command, pip will notice that the requested\nversion is already installed and do nothing. You can supply a\ndifferent version number to get that version, or you can run python\n-m pip install --upgrade to upgrade the package to the latest version:\n\n(tutorial-env) $ python -m pip install --upgrade requests\nCollecting requests\nInstalling collected packages: requests\nFound existing installation: requests 2.6.0\nUninstalling requests-2.6.0:\nSuccessfully uninstalled requests-2.6.0\nSuccessfully installed requests-2.7.0\n\npython -m pip uninstall followed by one or more package names will\nremove the packages from the virtual environment.",
+            "metadata": {
+              "chapter": "venv",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 2431,
+              "source_char_end": 4904,
+              "char_start": 1612,
+              "char_end": 2473,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.6298362671322281,
+            "method": "dense"
+          },
+          {
+            "id": "36dd4492b0116e42bd734d2de5f70897c45908f1dd95aacc230423910fc9a2a0",
+            "source_id": "python-venv",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/venv.rst",
+            "page": 2,
+            "text": "On Unix or MacOS, run::\n\nsource tutorial-env/bin/activate\n\n(This script is written for the bash shell. If you use the\ncsh or fish shells, there are alternate\nactivate.csh and activate.fish scripts you should use\ninstead.)\n\nActivating the virtual environment will change your shell's prompt to show what\nvirtual environment you're using, and modify the environment so that running\npython will get you that particular version and installation of Python.\nFor example:\n\n$ source ~/envs/tutorial-env/bin/activate\n(tutorial-env) $ python\nPython 3.5.1 (default, May 6 2016, 10:59:36)\n...\n>>> import sys\n>>> sys.path\n['', '/usr/local/lib/python35.zip', ...,\n'~/envs/tutorial-env/lib/python3.5/site-packages']\n>>>\n\nTo deactivate a virtual environment, type::\n\ndeactivate\n\ninto the terminal.\n\nManaging Packages with pip",
+            "metadata": {
+              "chapter": "venv",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 2431,
+              "source_char_end": 4904,
+              "char_start": 0,
+              "char_end": 809,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.627401342467689,
+            "method": "dense"
+          }
+        ]
+      }
+    ],
+    "context": "[3f72f3450ff33402f212df2a9b688165fb24430d35308c3e81555c88f9650984 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/modules.rst | source unit 5]\n'getdlopenflags',\n'getfilesystemencodeerrors', 'getfilesystemencoding', 'getprofile',\n'getrecursionlimit', 'getrefcount', 'getsizeof', 'getswitchinterval',\n'gettrace', 'hash_info', 'hexversion', 'implementation', 'int_info',\n'intern', 'is_finalizing', 'last_traceback', 'last_type', 'last_value',\n'maxsize', 'maxunicode', 'meta_path', 'modules', 'path', 'path_hooks',\n'path_importer_cache', 'platform', 'prefix', 'ps1', 'ps2', 'pycache_prefix',\n'set_asyncgen_hooks', 'set_coroutine_origin_tracking_depth', 'setdlopenflags',\n'setprofile', 'setrecursionlimit', 'setswitchinterval', 'settrace', 'stderr',\n'stdin', 'stdout', 'thread_info', 'unraisablehook', 'version', 'version_info',\n'warnoptions']\n\nWithout arguments, dir lists the names you have defined currently::\n\n>>> a = [1, 2, 3, 4, 5]\n>>> import fibo\n>>> fib = fibo.fib\n>>> dir()\n['__builtins__', '__name__', 'a', 'fib', 'fibo', 'sys']",
+    "context_ids": [
+      "3f72f3450ff33402f212df2a9b688165fb24430d35308c3e81555c88f9650984"
+    ],
+    "context_chars": 1047,
+    "elapsed_seconds": 0.31087560000000014,
+    "cost_usd": 0,
+    "query_id": "d7-u03",
+    "split": "test",
+    "question": "Which Django command rolls back exactly the latest database migration?",
+    "answerable": false,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false,
+    "metric_scope": "Single-chunk alternative evidence; hit1/hit3 on FIRST query, context_hit on cumulative final context",
+    "configuration": "dense_base"
+  },
+  {
+    "status": "retrieved",
+    "events": [
+      {
+        "event": "search",
+        "tool": "dense",
+        "query": "How does pip --require-hashes validate every dependency's archive hash?",
+        "filter": {},
+        "results": [
+          {
+            "id": "0ff0e6bbf6d502b3fcf8cd3b6bad0fd00d39582ef59bfef9a823215d08251b38",
+            "source_id": "python-venv",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/venv.rst",
+            "page": 3,
+            "text": "(tutorial-env) $ python -m pip freeze > requirements.txt\n(tutorial-env) $ cat requirements.txt\nnovas==3.1.1.3\nnumpy==1.9.2\nrequests==2.7.0\n\nThe requirements.txt can then be committed to version control and\nshipped as part of an application. Users can then install all the\nnecessary packages with install -r:\n\n(tutorial-env) $ python -m pip install -r requirements.txt\nCollecting novas==3.1.1.3 (from -r requirements.txt (line 1))\n...\nCollecting numpy==1.9.2 (from -r requirements.txt (line 2))\n...\nCollecting requests==2.7.0 (from -r requirements.txt (line 3))\n...\nInstalling collected packages: novas, numpy, requests\nRunning setup.py install for novas\nSuccessfully installed novas-3.1.1.3 numpy-1.9.2 requests-2.7.0",
+            "metadata": {
+              "chapter": "venv",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 4906,
+              "source_char_end": 6776,
+              "char_start": 818,
+              "char_end": 1535,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.6889260705872228,
+            "method": "dense"
+          },
+          {
+            "id": "214dbcc9d673d510e079a85286a9af2b2e0f6090eea114cdef82574c81e31413",
+            "source_id": "python-modules",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/modules.rst",
+            "page": 4,
+            "text": "Python checks the modification date of the source against the compiled version\nto see if it's out of date and needs to be recompiled. This is a completely\nautomatic process. Also, the compiled modules are platform-independent, so the\nsame library can be shared among systems with different architectures.\n\nPython does not check the cache in two circumstances. First, it always\nrecompiles and does not store the result for the module that's loaded directly\nfrom the command line. Second, it does not check the cache if there is no\nsource module. To support a non-source (compiled only) distribution, the\ncompiled module must be in the source directory, and there must not be a source\nmodule.\n\nSome tips for experts:",
+            "metadata": {
+              "chapter": "modules",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 7730,
+              "source_char_end": 10209,
+              "char_start": 0,
+              "char_end": 714,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.685304778973221,
+            "method": "dense"
+          },
+          {
+            "id": "62df0e483169e95847c412daedcccb96819fd07878433374239b27b6db5aa65e",
+            "source_id": "python-venv",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/venv.rst",
+            "page": 2,
+            "text": "(tutorial-env) $ python -m pip install requests==2.6.0\nCollecting requests==2.6.0\nUsing cached requests-2.6.0-py2.py3-none-any.whl\nInstalling collected packages: requests\nSuccessfully installed requests-2.6.0\n\nIf you re-run this command, pip will notice that the requested\nversion is already installed and do nothing. You can supply a\ndifferent version number to get that version, or you can run python\n-m pip install --upgrade to upgrade the package to the latest version:\n\n(tutorial-env) $ python -m pip install --upgrade requests\nCollecting requests\nInstalling collected packages: requests\nFound existing installation: requests 2.6.0\nUninstalling requests-2.6.0:\nSuccessfully uninstalled requests-2.6.0\nSuccessfully installed requests-2.7.0\n\npython -m pip uninstall followed by one or more package names will\nremove the packages from the virtual environment.",
+            "metadata": {
+              "chapter": "venv",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 2431,
+              "source_char_end": 4904,
+              "char_start": 1612,
+              "char_end": 2473,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.6841995611800311,
+            "method": "dense"
+          }
+        ]
+      }
+    ],
+    "context": "[0ff0e6bbf6d502b3fcf8cd3b6bad0fd00d39582ef59bfef9a823215d08251b38 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/venv.rst | source unit 3]\n(tutorial-env) $ python -m pip freeze > requirements.txt\n(tutorial-env) $ cat requirements.txt\nnovas==3.1.1.3\nnumpy==1.9.2\nrequests==2.7.0\n\nThe requirements.txt can then be committed to version control and\nshipped as part of an application. Users can then install all the\nnecessary packages with install -r:\n\n(tutorial-env) $ python -m pip install -r requirements.txt\nCollecting novas==3.1.1.3 (from -r requirements.txt (line 1))\n...\nCollecting numpy==1.9.2 (from -r requirements.txt (line 2))\n...\nCollecting requests==2.7.0 (from -r requirements.txt (line 3))\n...\nInstalling collected packages: novas, numpy, requests\nRunning setup.py install for novas\nSuccessfully installed novas-3.1.1.3 numpy-1.9.2 requests-2.7.0\n\n[214dbcc9d673d510e079a85286a9af2b2e0f6090eea114cdef82574c81e31413 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/modules.rst | source unit 4]\nPython checks the modification date of the source against the compiled version\nto see if it's out of date and needs to be recompiled. This is a completely\nautomatic process. Also, the compiled modules are platform-independent, so the\nsame library can be shared among systems with different architectures.\n\nPython does not check the cache in two circumstances. First, it always\nrecompiles and does not store the result for the module that's loaded directly\nfrom the command line. Second, it does not check the cache if there is no\nsource module. To support a non-source (compiled only) distribution, the\ncompiled module must be in the source directory, and there must not be a source\nmodule.\n\nSome tips for experts:",
+    "context_ids": [
+      "0ff0e6bbf6d502b3fcf8cd3b6bad0fd00d39582ef59bfef9a823215d08251b38",
+      "214dbcc9d673d510e079a85286a9af2b2e0f6090eea114cdef82574c81e31413"
+    ],
+    "context_chars": 1744,
+    "elapsed_seconds": 0.3010780999999998,
+    "cost_usd": 0,
+    "query_id": "d7-u04",
+    "split": "test",
+    "question": "How does pip --require-hashes validate every dependency's archive hash?",
+    "answerable": false,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false,
+    "metric_scope": "Single-chunk alternative evidence; hit1/hit3 on FIRST query, context_hit on cumulative final context",
+    "configuration": "dense_base"
+  }
+]

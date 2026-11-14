@@ -1,0 +1,1414 @@
+[
+  {
+    "status": "retrieved",
+    "events": [
+      {
+        "event": "search",
+        "tool": "hybrid",
+        "query": "Why does the tutorial recommend import os instead of from os import *?",
+        "filter": {},
+        "results": [
+          {
+            "id": "53ff7bf26259bd5c0b075fde245af356e6c23fe7a66d149c94afe523dc564b4c",
+            "source_id": "python-stdlib",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/stdlib.rst",
+            "page": 1,
+            "text": "Brief Tour of the Standard Library\n\nOperating System Interface\n\nThe os module provides dozens of functions for interacting with the\noperating system::\n\n>>> import os\n>>> os.getcwd() # Return the current working directory\n'C:\\\\Python312'\n>>> os.chdir('/server/accesslogs') # Change current working directory\n>>> os.system('mkdir today') # Run the command mkdir in the system shell\n0\n\nBe sure to use the import os style instead of from os import *. This\nwill keep os.open from shadowing the built-in open function which\noperates much differently.\n\nThe built-in dir and help functions are useful as interactive\naids for working with large modules like os::\n\n>>> import os\n>>> dir(os)\n<returns a list of all module functions>\n>>> help(os)\n<returns an extensive manual page created from the module's docstrings>",
+            "metadata": {
+              "chapter": "stdlib",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 0,
+              "source_char_end": 2502,
+              "char_start": 0,
+              "char_end": 806,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.03278688524590164,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 1,
+                "score": 0.7647466463586456
+              },
+              "bm25": {
+                "rank": 1,
+                "score": 17.387558515433383
+              }
+            }
+          },
+          {
+            "id": "36dd4492b0116e42bd734d2de5f70897c45908f1dd95aacc230423910fc9a2a0",
+            "source_id": "python-venv",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/venv.rst",
+            "page": 2,
+            "text": "On Unix or MacOS, run::\n\nsource tutorial-env/bin/activate\n\n(This script is written for the bash shell. If you use the\ncsh or fish shells, there are alternate\nactivate.csh and activate.fish scripts you should use\ninstead.)\n\nActivating the virtual environment will change your shell's prompt to show what\nvirtual environment you're using, and modify the environment so that running\npython will get you that particular version and installation of Python.\nFor example:\n\n$ source ~/envs/tutorial-env/bin/activate\n(tutorial-env) $ python\nPython 3.5.1 (default, May 6 2016, 10:59:36)\n...\n>>> import sys\n>>> sys.path\n['', '/usr/local/lib/python35.zip', ...,\n'~/envs/tutorial-env/lib/python3.5/site-packages']\n>>>\n\nTo deactivate a virtual environment, type::\n\ndeactivate\n\ninto the terminal.\n\nManaging Packages with pip",
+            "metadata": {
+              "chapter": "venv",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 2431,
+              "source_char_end": 4904,
+              "char_start": 0,
+              "char_end": 809,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.030158730158730156,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 10,
+                "score": 0.7054770318721983
+              },
+              "bm25": {
+                "rank": 3,
+                "score": 10.120966900453984
+              }
+            }
+          },
+          {
+            "id": "16a7b92f39d5f3bf91c1bb64932dae0b76298e980de2488c06fd369deba8cbdb",
+            "source_id": "python-modules",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/modules.rst",
+            "page": 9,
+            "text": "If __all__ is not defined, the statement from sound.effects import *\ndoes *not* import all submodules from the package !sound.effects into the\ncurrent namespace; it only ensures that the package !sound.effects has\nbeen imported (possibly running any initialization code in __init__.py)\nand then imports whatever names are defined in the package. This includes any\nnames defined (and submodules explicitly loaded) by __init__.py. It\nalso includes any submodules of the package that were explicitly loaded by\nprevious import statements. Consider this code::\n\nimport sound.effects.echo\nimport sound.effects.surround\nfrom sound.effects import *\n\nIn this example, the !echo and !surround modules are imported in the\ncurrent namespace because they are defined in the !sound.effects package\nwhen the from...import statement is executed. (This also works when\n__all__ is defined.)",
+            "metadata": {
+              "chapter": "modules",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 20057,
+              "source_char_end": 22903,
+              "char_start": 0,
+              "char_end": 872,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.028612012987012988,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 17,
+                "score": 0.686076286405812
+              },
+              "bm25": {
+                "rank": 4,
+                "score": 8.035256370022157
+              }
+            }
+          },
+          {
+            "id": "4219c0d87ca135a79ed14c09a19242e111c35d9ed4ac49eb18a38ada6c577d67",
+            "source_id": "python-modules",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/modules.rst",
+            "page": 9,
+            "text": "You can also write relative imports, with the from module import name form\nof import statement. These imports use leading dots to indicate the current and\nparent packages involved in the relative import. From the !surround\nmodule for example, you might use::\n\nfrom . import echo\nfrom .. import formats\nfrom ..filters import equalizer\n\nNote that relative imports are based on the name of the current module. Since\nthe name of the main module is always \"__main__\", modules intended for use\nas the main module of a Python application must always use absolute imports.\n\nPackages in Multiple Directories",
+            "metadata": {
+              "chapter": "modules",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 20057,
+              "source_char_end": 22903,
+              "char_start": 1611,
+              "char_end": 2209,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.027783137179239824,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 13,
+                "score": 0.6954265669844093
+              },
+              "bm25": {
+                "rank": 11,
+                "score": 6.011831315370093
+              }
+            }
+          },
+          {
+            "id": "e2eeeb66b8892fd97e52a2aeee5dae4e40887232e2d164b0df506f3b97d2d715",
+            "source_id": "python-modules",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/modules.rst",
+            "page": 8,
+            "text": "The only solution is for the package author to provide an explicit index of the\npackage. The import statement uses the following convention: if a package's\n__init__.py code defines a list named __all__, it is taken to be the\nlist of module names that should be imported when from package import * is\nencountered. It is up to the package author to keep this list up-to-date when a\nnew version of the package is released. Package authors may also decide not to\nsupport it, if they don't see a use for importing \\* from their package. For\nexample, the file sound/effects/__init__.py could contain the following\ncode::\n\n__all__ = [\"echo\", \"surround\", \"reverse\"]\n\nThis would mean that from sound.effects import * would import the three\nnamed submodules of the !sound.effects package.",
+            "metadata": {
+              "chapter": "modules",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 17613,
+              "source_char_end": 20055,
+              "char_start": 1020,
+              "char_end": 1798,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.025978407557354925,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 16,
+                "score": 0.6879633166098222
+              },
+              "bm25": {
+                "rank": 18,
+                "score": 5.079715917001994
+              }
+            }
+          },
+          {
+            "id": "21aa6675e2f3449ea365aa6cb077aa45eeae3964a4e2841566c5d5e62e106c60",
+            "source_id": "python-modules",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/modules.rst",
+            "page": 5,
+            "text": ">>> import fibo, sys\n>>> dir(fibo)\n['__name__', 'fib', 'fib2']\n>>> dir(sys) # doctest: +NORMALIZE_WHITESPACE\n['__breakpointhook__', '__displayhook__', '__doc__', '__excepthook__',\n'__interactivehook__', '__loader__', '__name__', '__package__', '__spec__',\n'__stderr__', '__stdin__', '__stdout__', '__unraisablehook__',\n'_clear_type_cache', '_current_frames', '_debugmallocstats', '_framework',\n'_getframe', '_git', '_home', '_xoptions', 'abiflags', 'addaudithook',\n'api_version', 'argv', 'audit', 'base_exec_prefix', 'base_prefix',\n'breakpointhook', 'builtin_module_names', 'byteorder', 'call_tracing',\n'callstats', 'copyright', 'displayhook', 'dont_write_bytecode', 'exc_info',\n'excepthook', 'exec_prefix', 'executable', 'exit', 'flags', 'float_info',\n'float_repr_style', 'get_asyncgen_hooks', 'get_coroutine_origin_tracking_depth',\n'getallocatedblocks', 'getdefaultencoding',",
+            "metadata": {
+              "chapter": "modules",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 10211,
+              "source_char_end": 12686,
+              "char_start": 485,
+              "char_end": 1362,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.016129032258064516,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 2,
+                "score": 0.7368099906707459
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "context": "[53ff7bf26259bd5c0b075fde245af356e6c23fe7a66d149c94afe523dc564b4c | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/stdlib.rst | source unit 1]\nBrief Tour of the Standard Library\n\nOperating System Interface\n\nThe os module provides dozens of functions for interacting with the\noperating system::\n\n>>> import os\n>>> os.getcwd() # Return the current working directory\n'C:\\\\Python312'\n>>> os.chdir('/server/accesslogs') # Change current working directory\n>>> os.system('mkdir today') # Run the command mkdir in the system shell\n0\n\nBe sure to use the import os style instead of from os import *. This\nwill keep os.open from shadowing the built-in open function which\noperates much differently.\n\nThe built-in dir and help functions are useful as interactive\naids for working with large modules like os::\n\n>>> import os\n>>> dir(os)\n<returns a list of all module functions>\n>>> help(os)\n<returns an extensive manual page created from the module's docstrings>\n\n[36dd4492b0116e42bd734d2de5f70897c45908f1dd95aacc230423910fc9a2a0 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/venv.rst | source unit 2]\nOn Unix or MacOS, run::\n\nsource tutorial-env/bin/activate\n\n(This script is written for the bash shell. If you use the\ncsh or fish shells, there are alternate\nactivate.csh and activate.fish scripts you should use\ninstead.)\n\nActivating the virtual environment will change your shell's prompt to show what\nvirtual environment you're using, and modify the environment so that running\npython will get you that particular version and installation of Python.\nFor example:\n\n$ source ~/envs/tutorial-env/bin/activate\n(tutorial-env) $ python\nPython 3.5.1 (default, May 6 2016, 10:59:36)\n...\n>>> import sys\n>>> sys.path\n['', '/usr/local/lib/python35.zip', ...,\n'~/envs/tutorial-env/lib/python3.5/site-packages']\n>>>\n\nTo deactivate a virtual environment, type::\n\ndeactivate\n\ninto the terminal.\n\nManaging Packages with pip\n\n[16a7b92f39d5f3bf91c1bb64932dae0b76298e980de2488c06fd369deba8cbdb | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/modules.rst | source unit 9]\nIf __all__ is not defined, the statement from sound.effects import *\ndoes *not* import all submodules from the package !sound.effects into the\ncurrent namespace; it only ensures that the package !sound.effects has\nbeen imported (possibly running any initialization code in __init__.py)\nand then imports whatever names are defined in the package. This includes any\nnames defined (and submodules explicitly loaded) by __init__.py. It\nalso includes any submodules of the package that were explicitly loaded by\nprevious import statements. Consider this code::\n\nimport sound.effects.echo\nimport sound.effects.surround\nfrom sound.effects import *\n\nIn this example, the !echo and !surround modules are imported in the\ncurrent namespace because they are defined in the !sound.effects package\nwhen the from...import statement is executed. (This also works when\n__all__ is defined.)\n\n[4219c0d87ca135a79ed14c09a19242e111c35d9ed4ac49eb18a38ada6c577d67 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/modules.rst | source unit 9]\nYou can also write relative imports, with the from module import name form\nof import statement. These imports use leading dots to indicate the current and\nparent packages involved in the relative import. From the !surround\nmodule for example, you might use::\n\nfrom . import echo\nfrom .. import formats\nfrom ..filters import equalizer\n\nNote that relative imports are based on the name of the current module. Since\nthe name of the main module is always \"__main__\", modules intended for use\nas the main module of a Python application must always use absolute imports.\n\nPackages in Multiple Directories\n\n[e2eeeb66b8892fd97e52a2aeee5dae4e40887232e2d164b0df506f3b97d2d715 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/modules.rst | source unit 8]\nThe only solution is for the package author to provide an explicit index of the\npackage. The import statement uses the following convention: if a package's\n__init__.py code defines a list named __all__, it is taken to be the\nlist of module names that should be imported when from package import * is\nencountered. It is up to the package author to keep this list up-to-date when a\nnew version of the package is released. Package authors may also decide not to\nsupport it, if they don't see a use for importing \\* from their package. For\nexample, the file sound/effects/__init__.py could contain the following\ncode::\n\n__all__ = [\"echo\", \"surround\", \"reverse\"]\n\nThis would mean that from sound.effects import * would import the three\nnamed submodules of the !sound.effects package.\n\n[21aa6675e2f3449ea365aa6cb077aa45eeae3964a4e2841566c5d5e62e106c60 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/modules.rst | source unit 5]\n>>> import fibo, sys\n>>> dir(fibo)\n['__name__', 'fib', 'fib2']\n>>> dir(sys) # doctest: +NORMALIZE_WHITESPACE\n['__breakpointhook__', '__displayhook__', '__doc__', '__excepthook__',\n'__interactivehook__', '__loader__', '__name__', '__package__', '__spec__',\n'__stderr__', '__stdin__', '__stdout__', '__unraisablehook__',\n'_clear_type_cache', '_current_frames', '_debugmallocstats', '_framework',\n'_getframe', '_git', '_home', '_xoptions', 'abiflags', 'addaudithook',\n'api_version', 'argv', 'audit', 'base_exec_prefix', 'base_prefix',\n'breakpointhook', 'builtin_module_names', 'byteorder', 'call_tracing',\n'callstats', 'copyright', 'displayhook', 'dont_write_bytecode', 'exc_info',\n'excepthook', 'exec_prefix', 'executable', 'exit', 'flags', 'float_info',\n'float_repr_style', 'get_asyncgen_hooks', 'get_coroutine_origin_tracking_depth',\n'getallocatedblocks', 'getdefaultencoding',",
+    "context_ids": [
+      "53ff7bf26259bd5c0b075fde245af356e6c23fe7a66d149c94afe523dc564b4c",
+      "36dd4492b0116e42bd734d2de5f70897c45908f1dd95aacc230423910fc9a2a0",
+      "16a7b92f39d5f3bf91c1bb64932dae0b76298e980de2488c06fd369deba8cbdb",
+      "4219c0d87ca135a79ed14c09a19242e111c35d9ed4ac49eb18a38ada6c577d67",
+      "e2eeeb66b8892fd97e52a2aeee5dae4e40887232e2d164b0df506f3b97d2d715",
+      "21aa6675e2f3449ea365aa6cb077aa45eeae3964a4e2841566c5d5e62e106c60"
+    ],
+    "context_chars": 5688,
+    "elapsed_seconds": 0.0034882999999998887,
+    "cost_usd": 0,
+    "query_id": "d7-t01",
+    "split": "test",
+    "question": "Why does the tutorial recommend import os instead of from os import *?",
+    "answerable": true,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "metric_scope": "Single-chunk alternative evidence; hit1/hit3 on FIRST query, context_hit on cumulative final context",
+    "configuration": "hybrid_context"
+  },
+  {
+    "status": "retrieved",
+    "events": [
+      {
+        "event": "search",
+        "tool": "hybrid",
+        "query": "Where are command-line arguments stored, and what container type holds them?",
+        "filter": {},
+        "results": [
+          {
+            "id": "69823a65c27b529f9232bb7621a82fd70a70d852586de304a182a21a299ad94c",
+            "source_id": "python-stdlib",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/stdlib.rst",
+            "page": 1,
+            "text": "For daily file and directory management tasks, the shutil module provides\na higher level interface that is easier to use::\n\n>>> import shutil\n>>> shutil.copyfile('data.db', 'archive.db')\n'archive.db'\n>>> shutil.move('/build/executables', 'installdir')\n'installdir'\n\nFile Wildcards\n\nThe glob module provides a function for making file lists from directory\nwildcard searches::\n\n>>> import glob\n>>> glob.glob('*.py')\n['primes.py', 'random.py', 'quote.py']\n\nCommand Line Arguments\n\nCommon utility scripts often need to process command line arguments. These\narguments are stored in the sys module's *argv* attribute as a list. For\ninstance, let's take the following demo.py file::\n\n# File demo.py\nimport sys\nprint(sys.argv)\n\nHere is the output from running python demo.py one two three at the command\nline::\n\n['demo.py', 'one', 'two', 'three']",
+            "metadata": {
+              "chapter": "stdlib",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 0,
+              "source_char_end": 2502,
+              "char_start": 808,
+              "char_end": 1646,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.032266458495966696,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 3,
+                "score": 0.7232749678552287
+              },
+              "bm25": {
+                "rank": 1,
+                "score": 15.227842946610409
+              }
+            }
+          },
+          {
+            "id": "50e71d88dc1fd25fae397dc6cdcdd99dbb982ce3873cc63f2690f2230fb55821",
+            "source_id": "python-stdlib",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/stdlib.rst",
+            "page": 1,
+            "text": "The argparse module provides a more sophisticated mechanism to process\ncommand line arguments. The following script extracts one or more filenames\nand an optional number of lines to be displayed::\n\nimport argparse\n\nparser = argparse.ArgumentParser(\nprog='top',\ndescription='Show top lines from each file')\nparser.add_argument('filenames', nargs='+')\nparser.add_argument('-l', '--lines', type=int, default=10)\nargs = parser.parse_args()\nprint(args)\n\nWhen run at the command line with python top.py --lines=5 alpha.txt\nbeta.txt, the script sets args.lines to 5 and args.filenames\nto ['alpha.txt', 'beta.txt'].\n\nError Output Redirection and Program Termination\n\nThe sys module also has attributes for *stdin*, *stdout*, and *stderr*.\nThe latter is useful for emitting warnings and error messages to make them\nvisible even when *stdout* has been redirected::",
+            "metadata": {
+              "chapter": "stdlib",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 0,
+              "source_char_end": 2502,
+              "char_start": 1648,
+              "char_end": 2502,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.03225806451612903,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 2,
+                "score": 0.7297498646584074
+              },
+              "bm25": {
+                "rank": 2,
+                "score": 13.710549120624398
+              }
+            }
+          },
+          {
+            "id": "85d6c3b1395db4dc3da87ba418ff5fdb0e3f72f41a8f6f134cc9a8e8659e9397",
+            "source_id": "python-controlflow",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/controlflow.rst",
+            "page": 13,
+            "text": "Annotations are stored in the !__annotations__\nattribute of the function as a dictionary and have no effect on any other part of the\nfunction. Parameter annotations are defined by a colon after the parameter name, followed\nby an expression evaluating to the value of the annotation. Return annotations are\ndefined by a literal ->, followed by an expression, between the parameter\nlist and the colon denoting the end of the def statement. The\nfollowing example has a required argument, an optional argument, and the return\nvalue annotated::\n\n>>> def f(ham: str, eggs: str = 'eggs') -> str:\n... print(\"Annotations:\", f.__annotations__)\n... print(\"Arguments:\", ham, eggs)\n... return ham + ' and ' + eggs\n...\n>>> f('spam')\nAnnotations: {'ham': <class 'str'>, 'return': <class 'str'>, 'eggs': <class 'str'>}\nArguments: spam eggs\n'spam and eggs'\n\nIntermezzo: Coding Style",
+            "metadata": {
+              "chapter": "controlflow",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 30599,
+              "source_char_end": 34026,
+              "char_start": 447,
+              "char_end": 1312,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.028594771241830064,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 8,
+                "score": 0.6729122170455066
+              },
+              "bm25": {
+                "rank": 12,
+                "score": 7.869701856411009
+              }
+            }
+          },
+          {
+            "id": "ff06e9453bca2b59568cbb3d3054ea61d46af57388907370ff918a6325c51cc0",
+            "source_id": "python-controlflow",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/controlflow.rst",
+            "page": 9,
+            "text": "def f(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2):\n----------- ---------- ----------\n| | |\n| Positional or keyword |\n| - Keyword only\n-- Positional only\n\nwhere / and * are optional. If used, these symbols indicate the kind of\nparameter by how the arguments may be passed to the function:\npositional-only, positional-or-keyword, and keyword-only. Keyword parameters\nare also referred to as named parameters.\n\nPositional-or-Keyword Arguments\n\nIf / and * are not present in the function definition, arguments may\nbe passed to a function by position or by keyword.\n\nPositional-Only Parameters",
+            "metadata": {
+              "chapter": "controlflow",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 19772,
+              "source_char_end": 22494,
+              "char_start": 1680,
+              "char_end": 2266,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.028370221327967807,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 10,
+                "score": 0.6710471148607466
+              },
+              "bm25": {
+                "rank": 11,
+                "score": 8.183107948831235
+              }
+            }
+          },
+          {
+            "id": "3f72f3450ff33402f212df2a9b688165fb24430d35308c3e81555c88f9650984",
+            "source_id": "python-modules",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/modules.rst",
+            "page": 5,
+            "text": "'getdlopenflags',\n'getfilesystemencodeerrors', 'getfilesystemencoding', 'getprofile',\n'getrecursionlimit', 'getrefcount', 'getsizeof', 'getswitchinterval',\n'gettrace', 'hash_info', 'hexversion', 'implementation', 'int_info',\n'intern', 'is_finalizing', 'last_traceback', 'last_type', 'last_value',\n'maxsize', 'maxunicode', 'meta_path', 'modules', 'path', 'path_hooks',\n'path_importer_cache', 'platform', 'prefix', 'ps1', 'ps2', 'pycache_prefix',\n'set_asyncgen_hooks', 'set_coroutine_origin_tracking_depth', 'setdlopenflags',\n'setprofile', 'setrecursionlimit', 'setswitchinterval', 'settrace', 'stderr',\n'stdin', 'stdout', 'thread_info', 'unraisablehook', 'version', 'version_info',\n'warnoptions']\n\nWithout arguments, dir lists the names you have defined currently::\n\n>>> a = [1, 2, 3, 4, 5]\n>>> import fibo\n>>> fib = fibo.fib\n>>> dir()\n['__builtins__', '__name__', 'a', 'fib', 'fibo', 'sys']",
+            "metadata": {
+              "chapter": "modules",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 10211,
+              "source_char_end": 12686,
+              "char_start": 1363,
+              "char_end": 2253,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.01639344262295082,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 1,
+                "score": 0.7478737165604088
+              }
+            }
+          },
+          {
+            "id": "701a2ad9a45bc6a1ce699794c3f064cb1467b0a3f1fa84759498eda893887c9b",
+            "source_id": "python-errors",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/errors.rst",
+            "page": 1,
+            "text": "The rest of the line provides detail based on the type of exception and what\ncaused it.\n\nThe preceding part of the error message shows the context where the exception\noccurred, in the form of a stack traceback. In general it contains a stack\ntraceback listing source lines; however, it will not display lines read from\nstandard input.",
+            "metadata": {
+              "chapter": "errors",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 0,
+              "source_char_end": 2566,
+              "char_start": 2232,
+              "char_end": 2566,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.015873015873015872,
+            "method": "hybrid",
+            "component_ranks": {
+              "bm25": {
+                "rank": 3,
+                "score": 11.977728558250906
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "context": "[69823a65c27b529f9232bb7621a82fd70a70d852586de304a182a21a299ad94c | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/stdlib.rst | source unit 1]\nFor daily file and directory management tasks, the shutil module provides\na higher level interface that is easier to use::\n\n>>> import shutil\n>>> shutil.copyfile('data.db', 'archive.db')\n'archive.db'\n>>> shutil.move('/build/executables', 'installdir')\n'installdir'\n\nFile Wildcards\n\nThe glob module provides a function for making file lists from directory\nwildcard searches::\n\n>>> import glob\n>>> glob.glob('*.py')\n['primes.py', 'random.py', 'quote.py']\n\nCommand Line Arguments\n\nCommon utility scripts often need to process command line arguments. These\narguments are stored in the sys module's *argv* attribute as a list. For\ninstance, let's take the following demo.py file::\n\n# File demo.py\nimport sys\nprint(sys.argv)\n\nHere is the output from running python demo.py one two three at the command\nline::\n\n['demo.py', 'one', 'two', 'three']\n\n[50e71d88dc1fd25fae397dc6cdcdd99dbb982ce3873cc63f2690f2230fb55821 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/stdlib.rst | source unit 1]\nThe argparse module provides a more sophisticated mechanism to process\ncommand line arguments. The following script extracts one or more filenames\nand an optional number of lines to be displayed::\n\nimport argparse\n\nparser = argparse.ArgumentParser(\nprog='top',\ndescription='Show top lines from each file')\nparser.add_argument('filenames', nargs='+')\nparser.add_argument('-l', '--lines', type=int, default=10)\nargs = parser.parse_args()\nprint(args)\n\nWhen run at the command line with python top.py --lines=5 alpha.txt\nbeta.txt, the script sets args.lines to 5 and args.filenames\nto ['alpha.txt', 'beta.txt'].\n\nError Output Redirection and Program Termination\n\nThe sys module also has attributes for *stdin*, *stdout*, and *stderr*.\nThe latter is useful for emitting warnings and error messages to make them\nvisible even when *stdout* has been redirected::\n\n[85d6c3b1395db4dc3da87ba418ff5fdb0e3f72f41a8f6f134cc9a8e8659e9397 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/controlflow.rst | source unit 13]\nAnnotations are stored in the !__annotations__\nattribute of the function as a dictionary and have no effect on any other part of the\nfunction. Parameter annotations are defined by a colon after the parameter name, followed\nby an expression evaluating to the value of the annotation. Return annotations are\ndefined by a literal ->, followed by an expression, between the parameter\nlist and the colon denoting the end of the def statement. The\nfollowing example has a required argument, an optional argument, and the return\nvalue annotated::\n\n>>> def f(ham: str, eggs: str = 'eggs') -> str:\n... print(\"Annotations:\", f.__annotations__)\n... print(\"Arguments:\", ham, eggs)\n... return ham + ' and ' + eggs\n...\n>>> f('spam')\nAnnotations: {'ham': <class 'str'>, 'return': <class 'str'>, 'eggs': <class 'str'>}\nArguments: spam eggs\n'spam and eggs'\n\nIntermezzo: Coding Style\n\n[ff06e9453bca2b59568cbb3d3054ea61d46af57388907370ff918a6325c51cc0 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/controlflow.rst | source unit 9]\ndef f(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2):\n----------- ---------- ----------\n| | |\n| Positional or keyword |\n| - Keyword only\n-- Positional only\n\nwhere / and * are optional. If used, these symbols indicate the kind of\nparameter by how the arguments may be passed to the function:\npositional-only, positional-or-keyword, and keyword-only. Keyword parameters\nare also referred to as named parameters.\n\nPositional-or-Keyword Arguments\n\nIf / and * are not present in the function definition, arguments may\nbe passed to a function by position or by keyword.\n\nPositional-Only Parameters\n\n[3f72f3450ff33402f212df2a9b688165fb24430d35308c3e81555c88f9650984 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/modules.rst | source unit 5]\n'getdlopenflags',\n'getfilesystemencodeerrors', 'getfilesystemencoding', 'getprofile',\n'getrecursionlimit', 'getrefcount', 'getsizeof', 'getswitchinterval',\n'gettrace', 'hash_info', 'hexversion', 'implementation', 'int_info',\n'intern', 'is_finalizing', 'last_traceback', 'last_type', 'last_value',\n'maxsize', 'maxunicode', 'meta_path', 'modules', 'path', 'path_hooks',\n'path_importer_cache', 'platform', 'prefix', 'ps1', 'ps2', 'pycache_prefix',\n'set_asyncgen_hooks', 'set_coroutine_origin_tracking_depth', 'setdlopenflags',\n'setprofile', 'setrecursionlimit', 'setswitchinterval', 'settrace', 'stderr',\n'stdin', 'stdout', 'thread_info', 'unraisablehook', 'version', 'version_info',\n'warnoptions']\n\nWithout arguments, dir lists the names you have defined currently::\n\n>>> a = [1, 2, 3, 4, 5]\n>>> import fibo\n>>> fib = fibo.fib\n>>> dir()\n['__builtins__', '__name__', 'a', 'fib', 'fibo', 'sys']\n\n[701a2ad9a45bc6a1ce699794c3f064cb1467b0a3f1fa84759498eda893887c9b | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/errors.rst | source unit 1]\nThe rest of the line provides detail based on the type of exception and what\ncaused it.\n\nThe preceding part of the error message shows the context where the exception\noccurred, in the form of a stack traceback. In general it contains a stack\ntraceback listing source lines; however, it will not display lines read from\nstandard input.",
+    "context_ids": [
+      "69823a65c27b529f9232bb7621a82fd70a70d852586de304a182a21a299ad94c",
+      "50e71d88dc1fd25fae397dc6cdcdd99dbb982ce3873cc63f2690f2230fb55821",
+      "85d6c3b1395db4dc3da87ba418ff5fdb0e3f72f41a8f6f134cc9a8e8659e9397",
+      "ff06e9453bca2b59568cbb3d3054ea61d46af57388907370ff918a6325c51cc0",
+      "3f72f3450ff33402f212df2a9b688165fb24430d35308c3e81555c88f9650984",
+      "701a2ad9a45bc6a1ce699794c3f064cb1467b0a3f1fa84759498eda893887c9b"
+    ],
+    "context_chars": 5325,
+    "elapsed_seconds": 0.004198500000000216,
+    "cost_usd": 0,
+    "query_id": "d7-t02",
+    "split": "test",
+    "question": "Where are command-line arguments stored, and what container type holds them?",
+    "answerable": true,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "metric_scope": "Single-chunk alternative evidence; hit1/hit3 on FIRST query, context_hit on cumulative final context",
+    "configuration": "hybrid_context"
+  },
+  {
+    "status": "retrieved",
+    "events": [
+      {
+        "event": "search",
+        "tool": "hybrid",
+        "query": "Which module checks examples embedded in a program's docstrings?",
+        "filter": {},
+        "results": [
+          {
+            "id": "5e521cae71844e71f0c51e23aa104d5f0b237d58913e2f2f199ddc0b489c325e",
+            "source_id": "python-controlflow",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/controlflow.rst",
+            "page": 6,
+            "text": "The first statement of the function body can optionally be a string literal;\nthis string literal is the function's documentation string, or docstring.\n(More about docstrings can be found in the section tut-docstrings.)\nThere are tools which use docstrings to automatically produce online or printed\ndocumentation, or to let the user interactively browse through code; it's good\npractice to include docstrings in code that you write, so make a habit of it.",
+            "metadata": {
+              "chapter": "controlflow",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 12398,
+              "source_char_end": 14897,
+              "char_start": 0,
+              "char_end": 455,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.031754032258064516,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 4,
+                "score": 0.7256843322837752
+              },
+              "bm25": {
+                "rank": 2,
+                "score": 12.438392098861957
+              }
+            }
+          },
+          {
+            "id": "d29c6ddc9b67369fdcc3d5a0f4f391d04fda1f29a8294256bbbea9d67da96644",
+            "source_id": "python-modules",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/modules.rst",
+            "page": 2,
+            "text": "Each module has its own private namespace, which is used as the global namespace\nby all functions defined in the module. Thus, the author of a module can\nuse global variables in the module without worrying about accidental clashes\nwith a user's global variables. On the other hand, if you know what you are\ndoing you can touch a module's global variables with the same notation used to\nrefer to its functions, modname.itemname.\n\nModules can import other modules. It is customary but not required to place all\nimport statements at the beginning of a module (or script, for that\nmatter). The imported module names, if placed at the top level of a module\n(outside any functions or classes), are added to the module's global namespace.\n\nThere is a variant of the import statement that imports names from a\nmodule directly into the importing module's namespace. For example::",
+            "metadata": {
+              "chapter": "modules",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 2544,
+              "source_char_end": 5040,
+              "char_start": 0,
+              "char_end": 870,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.026785714285714288,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 20,
+                "score": 0.6863635184611223
+              },
+              "bm25": {
+                "rank": 10,
+                "score": 6.54981480954583
+              }
+            }
+          },
+          {
+            "id": "32f9e4f08a17e5075e3f4f6c31423c0cd21b1a9cb5e7b1ef6c2cf237d9a50833",
+            "source_id": "python-controlflow",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/controlflow.rst",
+            "page": 13,
+            "text": "Here is an example of a multi-line docstring::\n\n>>> def my_function():\n... \"\"\"Do nothing, but document it.\n...\n... No, really, it doesn't do anything.\n... \"\"\"\n... pass\n...\n>>> print(my_function.__doc__)\nDo nothing, but document it.\n\nNo, really, it doesn't do anything.\n\nFunction Annotations\n\nFunction annotations are completely optional metadata\ninformation about the types used by user-defined functions (see 3107 and\n484 for more information).",
+            "metadata": {
+              "chapter": "controlflow",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 30599,
+              "source_char_end": 34026,
+              "char_start": 0,
+              "char_end": 445,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.01639344262295082,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 1,
+                "score": 0.7387429830826886
+              }
+            }
+          },
+          {
+            "id": "aa4e1424f5ac6448176e2211c1c643b872379426c9c14aec1a766b2212c2b144",
+            "source_id": "python-stdlib",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/stdlib.rst",
+            "page": 3,
+            "text": ">>> from timeit import Timer\n>>> Timer('t=a; a=b; b=t', 'a=1; b=2').timeit()\n0.57535828626024577\n>>> Timer('a,b = b,a', 'a=1; b=2').timeit()\n0.54962537085770791\n\nIn contrast to timeit's fine level of granularity, the profile and\npstats modules provide tools for identifying time critical sections in\nlarger blocks of code.\n\nQuality Control\n\nOne approach for developing high quality software is to write tests for each\nfunction as it is developed and to run those tests frequently during the\ndevelopment process.\n\nThe doctest module provides a tool for scanning a module and validating\ntests embedded in a program's docstrings. Test construction is as simple as\ncutting-and-pasting a typical call along with its results into the docstring.\nThis improves the documentation by providing the user with an example and it\nallows the doctest module to make sure the code remains true to the\ndocumentation::",
+            "metadata": {
+              "chapter": "stdlib",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 5008,
+              "source_char_end": 7514,
+              "char_start": 1607,
+              "char_end": 2506,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.01639344262295082,
+            "method": "hybrid",
+            "component_ranks": {
+              "bm25": {
+                "rank": 1,
+                "score": 13.911486196822096
+              }
+            }
+          },
+          {
+            "id": "3f72f3450ff33402f212df2a9b688165fb24430d35308c3e81555c88f9650984",
+            "source_id": "python-modules",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/modules.rst",
+            "page": 5,
+            "text": "'getdlopenflags',\n'getfilesystemencodeerrors', 'getfilesystemencoding', 'getprofile',\n'getrecursionlimit', 'getrefcount', 'getsizeof', 'getswitchinterval',\n'gettrace', 'hash_info', 'hexversion', 'implementation', 'int_info',\n'intern', 'is_finalizing', 'last_traceback', 'last_type', 'last_value',\n'maxsize', 'maxunicode', 'meta_path', 'modules', 'path', 'path_hooks',\n'path_importer_cache', 'platform', 'prefix', 'ps1', 'ps2', 'pycache_prefix',\n'set_asyncgen_hooks', 'set_coroutine_origin_tracking_depth', 'setdlopenflags',\n'setprofile', 'setrecursionlimit', 'setswitchinterval', 'settrace', 'stderr',\n'stdin', 'stdout', 'thread_info', 'unraisablehook', 'version', 'version_info',\n'warnoptions']\n\nWithout arguments, dir lists the names you have defined currently::\n\n>>> a = [1, 2, 3, 4, 5]\n>>> import fibo\n>>> fib = fibo.fib\n>>> dir()\n['__builtins__', '__name__', 'a', 'fib', 'fibo', 'sys']",
+            "metadata": {
+              "chapter": "modules",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 10211,
+              "source_char_end": 12686,
+              "char_start": 1363,
+              "char_end": 2253,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.016129032258064516,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 2,
+                "score": 0.7303666743827377
+              }
+            }
+          },
+          {
+            "id": "214dbcc9d673d510e079a85286a9af2b2e0f6090eea114cdef82574c81e31413",
+            "source_id": "python-modules",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/modules.rst",
+            "page": 4,
+            "text": "Python checks the modification date of the source against the compiled version\nto see if it's out of date and needs to be recompiled. This is a completely\nautomatic process. Also, the compiled modules are platform-independent, so the\nsame library can be shared among systems with different architectures.\n\nPython does not check the cache in two circumstances. First, it always\nrecompiles and does not store the result for the module that's loaded directly\nfrom the command line. Second, it does not check the cache if there is no\nsource module. To support a non-source (compiled only) distribution, the\ncompiled module must be in the source directory, and there must not be a source\nmodule.\n\nSome tips for experts:",
+            "metadata": {
+              "chapter": "modules",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 7730,
+              "source_char_end": 10209,
+              "char_start": 0,
+              "char_end": 714,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.015873015873015872,
+            "method": "hybrid",
+            "component_ranks": {
+              "bm25": {
+                "rank": 3,
+                "score": 9.556643598205667
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "context": "[5e521cae71844e71f0c51e23aa104d5f0b237d58913e2f2f199ddc0b489c325e | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/controlflow.rst | source unit 6]\nThe first statement of the function body can optionally be a string literal;\nthis string literal is the function's documentation string, or docstring.\n(More about docstrings can be found in the section tut-docstrings.)\nThere are tools which use docstrings to automatically produce online or printed\ndocumentation, or to let the user interactively browse through code; it's good\npractice to include docstrings in code that you write, so make a habit of it.\n\n[d29c6ddc9b67369fdcc3d5a0f4f391d04fda1f29a8294256bbbea9d67da96644 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/modules.rst | source unit 2]\nEach module has its own private namespace, which is used as the global namespace\nby all functions defined in the module. Thus, the author of a module can\nuse global variables in the module without worrying about accidental clashes\nwith a user's global variables. On the other hand, if you know what you are\ndoing you can touch a module's global variables with the same notation used to\nrefer to its functions, modname.itemname.\n\nModules can import other modules. It is customary but not required to place all\nimport statements at the beginning of a module (or script, for that\nmatter). The imported module names, if placed at the top level of a module\n(outside any functions or classes), are added to the module's global namespace.\n\nThere is a variant of the import statement that imports names from a\nmodule directly into the importing module's namespace. For example::\n\n[32f9e4f08a17e5075e3f4f6c31423c0cd21b1a9cb5e7b1ef6c2cf237d9a50833 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/controlflow.rst | source unit 13]\nHere is an example of a multi-line docstring::\n\n>>> def my_function():\n... \"\"\"Do nothing, but document it.\n...\n... No, really, it doesn't do anything.\n... \"\"\"\n... pass\n...\n>>> print(my_function.__doc__)\nDo nothing, but document it.\n\nNo, really, it doesn't do anything.\n\nFunction Annotations\n\nFunction annotations are completely optional metadata\ninformation about the types used by user-defined functions (see 3107 and\n484 for more information).\n\n[aa4e1424f5ac6448176e2211c1c643b872379426c9c14aec1a766b2212c2b144 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/stdlib.rst | source unit 3]\n>>> from timeit import Timer\n>>> Timer('t=a; a=b; b=t', 'a=1; b=2').timeit()\n0.57535828626024577\n>>> Timer('a,b = b,a', 'a=1; b=2').timeit()\n0.54962537085770791\n\nIn contrast to timeit's fine level of granularity, the profile and\npstats modules provide tools for identifying time critical sections in\nlarger blocks of code.\n\nQuality Control\n\nOne approach for developing high quality software is to write tests for each\nfunction as it is developed and to run those tests frequently during the\ndevelopment process.\n\nThe doctest module provides a tool for scanning a module and validating\ntests embedded in a program's docstrings. Test construction is as simple as\ncutting-and-pasting a typical call along with its results into the docstring.\nThis improves the documentation by providing the user with an example and it\nallows the doctest module to make sure the code remains true to the\ndocumentation::\n\n[3f72f3450ff33402f212df2a9b688165fb24430d35308c3e81555c88f9650984 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/modules.rst | source unit 5]\n'getdlopenflags',\n'getfilesystemencodeerrors', 'getfilesystemencoding', 'getprofile',\n'getrecursionlimit', 'getrefcount', 'getsizeof', 'getswitchinterval',\n'gettrace', 'hash_info', 'hexversion', 'implementation', 'int_info',\n'intern', 'is_finalizing', 'last_traceback', 'last_type', 'last_value',\n'maxsize', 'maxunicode', 'meta_path', 'modules', 'path', 'path_hooks',\n'path_importer_cache', 'platform', 'prefix', 'ps1', 'ps2', 'pycache_prefix',\n'set_asyncgen_hooks', 'set_coroutine_origin_tracking_depth', 'setdlopenflags',\n'setprofile', 'setrecursionlimit', 'setswitchinterval', 'settrace', 'stderr',\n'stdin', 'stdout', 'thread_info', 'unraisablehook', 'version', 'version_info',\n'warnoptions']\n\nWithout arguments, dir lists the names you have defined currently::\n\n>>> a = [1, 2, 3, 4, 5]\n>>> import fibo\n>>> fib = fibo.fib\n>>> dir()\n['__builtins__', '__name__', 'a', 'fib', 'fibo', 'sys']\n\n[214dbcc9d673d510e079a85286a9af2b2e0f6090eea114cdef82574c81e31413 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/modules.rst | source unit 4]\nPython checks the modification date of the source against the compiled version\nto see if it's out of date and needs to be recompiled. This is a completely\nautomatic process. Also, the compiled modules are platform-independent, so the\nsame library can be shared among systems with different architectures.\n\nPython does not check the cache in two circumstances. First, it always\nrecompiles and does not store the result for the module that's loaded directly\nfrom the command line. Second, it does not check the cache if there is no\nsource module. To support a non-source (compiled only) distribution, the\ncompiled module must be in the source directory, and there must not be a source\nmodule.\n\nSome tips for experts:",
+    "context_ids": [
+      "5e521cae71844e71f0c51e23aa104d5f0b237d58913e2f2f199ddc0b489c325e",
+      "d29c6ddc9b67369fdcc3d5a0f4f391d04fda1f29a8294256bbbea9d67da96644",
+      "32f9e4f08a17e5075e3f4f6c31423c0cd21b1a9cb5e7b1ef6c2cf237d9a50833",
+      "aa4e1424f5ac6448176e2211c1c643b872379426c9c14aec1a766b2212c2b144",
+      "3f72f3450ff33402f212df2a9b688165fb24430d35308c3e81555c88f9650984",
+      "214dbcc9d673d510e079a85286a9af2b2e0f6090eea114cdef82574c81e31413"
+    ],
+    "context_chars": 5233,
+    "elapsed_seconds": 0.0035136000000006717,
+    "cost_usd": 0,
+    "query_id": "d7-t03",
+    "split": "test",
+    "question": "Which module checks examples embedded in a program's docstrings?",
+    "answerable": true,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": true,
+    "metric_scope": "Single-chunk alternative evidence; hit1/hit3 on FIRST query, context_hit on cumulative final context",
+    "configuration": "hybrid_context"
+  },
+  {
+    "status": "retrieved",
+    "events": [
+      {
+        "event": "search",
+        "tool": "hybrid",
+        "query": "What happens to an unresolved placeholder with string.Template.safe_substitute?",
+        "filter": {},
+        "results": [
+          {
+            "id": "c901bf7f8af24964510868d97e1f5a334fb874149efbc2f729370f4fc4a448ec",
+            "source_id": "python-stdlib2",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/stdlib2.rst",
+            "page": 2,
+            "text": ">>> from string import Template\n>>> t = Template('${village}folk send $$10 to $cause.')\n>>> t.substitute(village='Nottingham', cause='the ditch fund')\n'Nottinghamfolk send $10 to the ditch fund.'\n\nThe string.Template.substitute method raises a KeyError when a\nplaceholder is not supplied in a dictionary or a keyword argument. For\nmail-merge style applications, user supplied data may be incomplete and the\nstring.Template.safe_substitute method may be more appropriate ---\nit will leave placeholders unchanged if data is missing::\n\n>>> t = Template('Return the $item to $owner.')\n>>> d = dict(item='unladen swallow')\n>>> t.substitute(d)\nTraceback (most recent call last):\n...\nKeyError: 'owner'\n>>> t.safe_substitute(d)\n'Return the unladen swallow to $owner.'",
+            "metadata": {
+              "chapter": "stdlib2",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 2507,
+              "source_char_end": 5035,
+              "char_start": 0,
+              "char_end": 759,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.03278688524590164,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 1,
+                "score": 0.814225536274681
+              },
+              "bm25": {
+                "rank": 1,
+                "score": 23.96895406642021
+              }
+            }
+          },
+          {
+            "id": "497c63db82fd783a90550b63ceb9eb15fd7066f76f8fdd8d8cf394e1f19564ce",
+            "source_id": "python-stdlib2",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/stdlib2.rst",
+            "page": 1,
+            "text": ">>> import locale\n>>> locale.setlocale(locale.LC_ALL, 'English_United States.1252')\n'English_United States.1252'\n>>> conv = locale.localeconv() # get a mapping of conventions\n>>> x = 1234567.8\n>>> locale.format_string(\"%d\", x, grouping=True)\n'1,234,567'\n>>> locale.format_string(\"%s%.*f\", (conv['currency_symbol'],\n... conv['frac_digits'], x), grouping=True)\n'$1,234,567.80'\n\nTemplating\n\nThe string module includes a versatile string.Template class\nwith a simplified syntax suitable for editing by end-users. This allows users\nto customize their applications without having to alter the application.\n\nThe format uses placeholder names formed by $ with valid Python identifiers\n(alphanumeric characters and underscores). Surrounding the placeholder with\nbraces allows it to be followed by more alphanumeric letters with no intervening\nspaces. Writing $$ creates a single escaped $::",
+            "metadata": {
+              "chapter": "stdlib2",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 0,
+              "source_char_end": 2505,
+              "char_start": 1624,
+              "char_end": 2505,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.031754032258064516,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 4,
+                "score": 0.686754779336468
+              },
+              "bm25": {
+                "rank": 2,
+                "score": 15.042339388243501
+              }
+            }
+          },
+          {
+            "id": "2f848a383b1ebe460651c4b13492971268b6e6a4463d09b4c7cf479afac66dad",
+            "source_id": "python-stdlib2",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/stdlib2.rst",
+            "page": 2,
+            "text": "Template subclasses can specify a custom delimiter. For example, a batch\nrenaming utility for a photo browser may elect to use percent signs for\nplaceholders such as the current date, image sequence number, or file format::\n\n>>> import time, os.path\n>>> photofiles = ['img_1074.jpg', 'img_1076.jpg', 'img_1077.jpg']\n>>> class BatchRename(Template):\n... delimiter = '%'\n...\n>>> fmt = input('Enter rename style (%d-date %n-seqnum %f-format): ')\nEnter rename style (%d-date %n-seqnum %f-format): Ashley_%n%f\n\n>>> t = BatchRename(fmt)\n>>> date = time.strftime('%d%b%y')\n>>> for i, filename in enumerate(photofiles):\n... base, ext = os.path.splitext(filename)\n... newname = t.substitute(d=date, n=i, f=ext)\n... print('{0} --> {1}'.format(filename, newname))\n\nimg_1074.jpg --> Ashley_0.jpg\nimg_1076.jpg --> Ashley_1.jpg\nimg_1077.jpg --> Ashley_2.jpg",
+            "metadata": {
+              "chapter": "stdlib2",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 2507,
+              "source_char_end": 5035,
+              "char_start": 761,
+              "char_end": 1604,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.030621785881252923,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 2,
+                "score": 0.7231036739414982
+              },
+              "bm25": {
+                "rank": 9,
+                "score": 5.780376267053308
+              }
+            }
+          },
+          {
+            "id": "0dcc6c8bc77521f76b9174a82a06b0a033a3c27b1f0c899377f0a32fcb18b322",
+            "source_id": "python-inputoutput",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/inputoutput.rst",
+            "page": 2,
+            "text": "Some examples::\n\n>>> s = 'Hello, world.'\n>>> str(s)\n'Hello, world.'\n>>> repr(s)\n\"'Hello, world.'\"\n>>> str(1/7)\n'0.14285714285714285'\n>>> x = 10 * 3.25\n>>> y = 200 * 200\n>>> s = 'The value of x is ' + repr(x) + ', and y is ' + repr(y) + '...'\n>>> print(s)\nThe value of x is 32.5, and y is 40000...\n>>> # The repr() of a string adds string quotes and backslashes:\n... hello = 'hello, world\\n'\n>>> hellos = repr(hello)\n>>> print(hellos)\n'hello, world\\n'\n>>> # The argument to repr() may be any Python object:\n... repr((x, y, ('spam', 'eggs')))\n\"(32.5, 40000, ('spam', 'eggs'))\"\n\nThe string module contains a string.Template class that offers\nyet another way to substitute values into strings, using placeholders like\n$x and replacing them with values from a dictionary, but offers much less\ncontrol of the formatting.\n\nFormatted String Literals",
+            "metadata": {
+              "chapter": "inputoutput",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 2476,
+              "source_char_end": 4960,
+              "char_start": 0,
+              "char_end": 841,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.030536130536130537,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 6,
+                "score": 0.6866198607059091
+              },
+              "bm25": {
+                "rank": 5,
+                "score": 8.372401365954929
+              }
+            }
+          },
+          {
+            "id": "699dc9fcec41cf2a4e5fac1ea70fac6aa8c5039f2855c4e20522b503d755eea6",
+            "source_id": "python-classes",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/classes.rst",
+            "page": 3,
+            "text": "The local namespace for a function is created when the function is called, and\ndeleted when the function returns or raises an exception that is not handled\nwithin the function. (Actually, forgetting would be a better way to describe\nwhat actually happens.) Of course, recursive invocations each have their own\nlocal namespace.\n\nA *scope* is a textual region of a Python program where a namespace is directly\naccessible. \"Directly accessible\" here means that an unqualified reference to a\nname attempts to find the name in the namespace.\n\nAlthough scopes are determined statically, they are used dynamically. At any\ntime during execution, there are 3 or 4 nested scopes whose namespaces are\ndirectly accessible:",
+            "metadata": {
+              "chapter": "classes",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 5526,
+              "source_char_end": 8340,
+              "char_start": 0,
+              "char_end": 710,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.027651515151515153,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 20,
+                "score": 0.6593299776307553
+              },
+              "bm25": {
+                "rank": 6,
+                "score": 8.118678678994137
+              }
+            }
+          },
+          {
+            "id": "8b225ef04cf56f46eecf64ce2012675472ec704ae7b3e0b685dd21b269e95c05",
+            "source_id": "python-errors",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/errors.rst",
+            "page": 4,
+            "text": "If an unhandled exception occurs inside an except section, it will\nhave the exception being handled attached to it and included in the error\nmessage::\n\n>>> try:\n... open(\"database.sqlite\")\n... except OSError:\n... raise RuntimeError(\"unable to handle error\")\n...\nTraceback (most recent call last):\nFile \"<stdin>\", line 2, in <module>\nFileNotFoundError: [Errno 2] No such file or directory: 'database.sqlite'\n<BLANKLINE>\nDuring handling of the above exception, another exception occurred:\n<BLANKLINE>\nTraceback (most recent call last):\nFile \"<stdin>\", line 4, in <module>\nRuntimeError: unable to handle error\n\nTo indicate that an exception is a direct consequence of another, the\nraise statement allows an optional from<raise> clause::\n\n# exc must be exception instance or None.\nraise RuntimeError from exc\n\nThis can be useful when you are transforming exceptions. For example::",
+            "metadata": {
+              "chapter": "errors",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 7677,
+              "source_char_end": 10473,
+              "char_start": 1434,
+              "char_end": 2310,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.015873015873015872,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 3,
+                "score": 0.6888628811632826
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "context": "[c901bf7f8af24964510868d97e1f5a334fb874149efbc2f729370f4fc4a448ec | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/stdlib2.rst | source unit 2]\n>>> from string import Template\n>>> t = Template('${village}folk send $$10 to $cause.')\n>>> t.substitute(village='Nottingham', cause='the ditch fund')\n'Nottinghamfolk send $10 to the ditch fund.'\n\nThe string.Template.substitute method raises a KeyError when a\nplaceholder is not supplied in a dictionary or a keyword argument. For\nmail-merge style applications, user supplied data may be incomplete and the\nstring.Template.safe_substitute method may be more appropriate ---\nit will leave placeholders unchanged if data is missing::\n\n>>> t = Template('Return the $item to $owner.')\n>>> d = dict(item='unladen swallow')\n>>> t.substitute(d)\nTraceback (most recent call last):\n...\nKeyError: 'owner'\n>>> t.safe_substitute(d)\n'Return the unladen swallow to $owner.'\n\n[497c63db82fd783a90550b63ceb9eb15fd7066f76f8fdd8d8cf394e1f19564ce | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/stdlib2.rst | source unit 1]\n>>> import locale\n>>> locale.setlocale(locale.LC_ALL, 'English_United States.1252')\n'English_United States.1252'\n>>> conv = locale.localeconv() # get a mapping of conventions\n>>> x = 1234567.8\n>>> locale.format_string(\"%d\", x, grouping=True)\n'1,234,567'\n>>> locale.format_string(\"%s%.*f\", (conv['currency_symbol'],\n... conv['frac_digits'], x), grouping=True)\n'$1,234,567.80'\n\nTemplating\n\nThe string module includes a versatile string.Template class\nwith a simplified syntax suitable for editing by end-users. This allows users\nto customize their applications without having to alter the application.\n\nThe format uses placeholder names formed by $ with valid Python identifiers\n(alphanumeric characters and underscores). Surrounding the placeholder with\nbraces allows it to be followed by more alphanumeric letters with no intervening\nspaces. Writing $$ creates a single escaped $::\n\n[2f848a383b1ebe460651c4b13492971268b6e6a4463d09b4c7cf479afac66dad | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/stdlib2.rst | source unit 2]\nTemplate subclasses can specify a custom delimiter. For example, a batch\nrenaming utility for a photo browser may elect to use percent signs for\nplaceholders such as the current date, image sequence number, or file format::\n\n>>> import time, os.path\n>>> photofiles = ['img_1074.jpg', 'img_1076.jpg', 'img_1077.jpg']\n>>> class BatchRename(Template):\n... delimiter = '%'\n...\n>>> fmt = input('Enter rename style (%d-date %n-seqnum %f-format): ')\nEnter rename style (%d-date %n-seqnum %f-format): Ashley_%n%f\n\n>>> t = BatchRename(fmt)\n>>> date = time.strftime('%d%b%y')\n>>> for i, filename in enumerate(photofiles):\n... base, ext = os.path.splitext(filename)\n... newname = t.substitute(d=date, n=i, f=ext)\n... print('{0} --> {1}'.format(filename, newname))\n\nimg_1074.jpg --> Ashley_0.jpg\nimg_1076.jpg --> Ashley_1.jpg\nimg_1077.jpg --> Ashley_2.jpg\n\n[0dcc6c8bc77521f76b9174a82a06b0a033a3c27b1f0c899377f0a32fcb18b322 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/inputoutput.rst | source unit 2]\nSome examples::\n\n>>> s = 'Hello, world.'\n>>> str(s)\n'Hello, world.'\n>>> repr(s)\n\"'Hello, world.'\"\n>>> str(1/7)\n'0.14285714285714285'\n>>> x = 10 * 3.25\n>>> y = 200 * 200\n>>> s = 'The value of x is ' + repr(x) + ', and y is ' + repr(y) + '...'\n>>> print(s)\nThe value of x is 32.5, and y is 40000...\n>>> # The repr() of a string adds string quotes and backslashes:\n... hello = 'hello, world\\n'\n>>> hellos = repr(hello)\n>>> print(hellos)\n'hello, world\\n'\n>>> # The argument to repr() may be any Python object:\n... repr((x, y, ('spam', 'eggs')))\n\"(32.5, 40000, ('spam', 'eggs'))\"\n\nThe string module contains a string.Template class that offers\nyet another way to substitute values into strings, using placeholders like\n$x and replacing them with values from a dictionary, but offers much less\ncontrol of the formatting.\n\nFormatted String Literals\n\n[699dc9fcec41cf2a4e5fac1ea70fac6aa8c5039f2855c4e20522b503d755eea6 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/classes.rst | source unit 3]\nThe local namespace for a function is created when the function is called, and\ndeleted when the function returns or raises an exception that is not handled\nwithin the function. (Actually, forgetting would be a better way to describe\nwhat actually happens.) Of course, recursive invocations each have their own\nlocal namespace.\n\nA *scope* is a textual region of a Python program where a namespace is directly\naccessible. \"Directly accessible\" here means that an unqualified reference to a\nname attempts to find the name in the namespace.\n\nAlthough scopes are determined statically, they are used dynamically. At any\ntime during execution, there are 3 or 4 nested scopes whose namespaces are\ndirectly accessible:\n\n[8b225ef04cf56f46eecf64ce2012675472ec704ae7b3e0b685dd21b269e95c05 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/errors.rst | source unit 4]\nIf an unhandled exception occurs inside an except section, it will\nhave the exception being handled attached to it and included in the error\nmessage::\n\n>>> try:\n... open(\"database.sqlite\")\n... except OSError:\n... raise RuntimeError(\"unable to handle error\")\n...\nTraceback (most recent call last):\nFile \"<stdin>\", line 2, in <module>\nFileNotFoundError: [Errno 2] No such file or directory: 'database.sqlite'\n<BLANKLINE>\nDuring handling of the above exception, another exception occurred:\n<BLANKLINE>\nTraceback (most recent call last):\nFile \"<stdin>\", line 4, in <module>\nRuntimeError: unable to handle error\n\nTo indicate that an exception is a direct consequence of another, the\nraise statement allows an optional from<raise> clause::\n\n# exc must be exception instance or None.\nraise RuntimeError from exc\n\nThis can be useful when you are transforming exceptions. For example::",
+    "context_ids": [
+      "c901bf7f8af24964510868d97e1f5a334fb874149efbc2f729370f4fc4a448ec",
+      "497c63db82fd783a90550b63ceb9eb15fd7066f76f8fdd8d8cf394e1f19564ce",
+      "2f848a383b1ebe460651c4b13492971268b6e6a4463d09b4c7cf479afac66dad",
+      "0dcc6c8bc77521f76b9174a82a06b0a033a3c27b1f0c899377f0a32fcb18b322",
+      "699dc9fcec41cf2a4e5fac1ea70fac6aa8c5039f2855c4e20522b503d755eea6",
+      "8b225ef04cf56f46eecf64ce2012675472ec704ae7b3e0b685dd21b269e95c05"
+    ],
+    "context_chars": 5865,
+    "elapsed_seconds": 0.0033020000000005822,
+    "cost_usd": 0,
+    "query_id": "d7-t04",
+    "split": "test",
+    "question": "What happens to an unresolved placeholder with string.Template.safe_substitute?",
+    "answerable": true,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "metric_scope": "Single-chunk alternative evidence; hit1/hit3 on FIRST query, context_hit on cumulative final context",
+    "configuration": "hybrid_context"
+  },
+  {
+    "status": "retrieved",
+    "events": [
+      {
+        "event": "search",
+        "tool": "hybrid",
+        "query": "For a heapq heap, which position always holds the lowest-valued entry?",
+        "filter": {},
+        "results": [
+          {
+            "id": "012a48290d0980da22fdb71c836b58996cafd5cf633b9acd0b56ad6afa574182",
+            "source_id": "python-stdlib2",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/stdlib2.rst",
+            "page": 5,
+            "text": ">>> import bisect\n>>> scores = [(100, 'perl'), (200, 'tcl'), (400, 'lua'), (500, 'python')]\n>>> bisect.insort(scores, (300, 'ruby'))\n>>> scores\n[(100, 'perl'), (200, 'tcl'), (300, 'ruby'), (400, 'lua'), (500, 'python')]\n\nThe heapq module provides functions for implementing heaps based on\nregular lists. The lowest valued entry is always kept at position zero. This\nis useful for applications which repeatedly access the smallest element but do\nnot want to run a full list sort::\n\n>>> from heapq import heapify, heappop, heappush\n>>> data = [1, 3, 5, 7, 9, 2, 4, 6, 8, 0]\n>>> heapify(data) # rearrange the list into heap order\n>>> heappush(data, -5) # add a new entry\n>>> [heappop(data) for i in range(3)] # fetch the three smallest entries\n[-5, 0, 1]\n\nDecimal Floating Point Arithmetic",
+            "metadata": {
+              "chapter": "stdlib2",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 10056,
+              "source_char_end": 13407,
+              "char_start": 861,
+              "char_end": 1647,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.03278688524590164,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 1,
+                "score": 0.8022985484501539
+              },
+              "bm25": {
+                "rank": 1,
+                "score": 35.48312296943324
+              }
+            }
+          },
+          {
+            "id": "661f5020232a923da25890d8e88cecdd0cf0d0587806ecc6b915f9f969a31e07",
+            "source_id": "python-datastructures",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/datastructures.rst",
+            "page": 8,
+            "text": "The comparison operators in and not in are membership tests that\ndetermine whether a value is in (or not in) a container. The operators is\nand is not compare whether two objects are really the same object. All\ncomparison operators have the same priority, which is lower than that of all\nnumerical operators.\n\nComparisons can be chained. For example, a < b == c tests whether a is\nless than b and moreover b equals c.\n\nComparisons may be combined using the Boolean operators and and or, and\nthe outcome of a comparison (or of any other Boolean expression) may be negated\nwith not. These have lower priorities than comparison operators; between\nthem, not has the highest priority and or the lowest, so that A and\nnot B or C is equivalent to (A and (not B)) or C. As always, parentheses\ncan be used to express the desired composition.",
+            "metadata": {
+              "chapter": "datastructures",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 18029,
+              "source_char_end": 20612,
+              "char_start": 865,
+              "char_end": 1696,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.02886002886002886,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 17,
+                "score": 0.6349297362810449
+              },
+              "bm25": {
+                "rank": 3,
+                "score": 8.534353642315427
+              }
+            }
+          },
+          {
+            "id": "1a0126fe8acf81f506d0dfdb3141f758c27ca284bfb957be732853d9c542a5dc",
+            "source_id": "python-datastructures",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/datastructures.rst",
+            "page": 1,
+            "text": ".. method:: list.pop([i])\n:noindex:\n\nRemove the item at the given position in the list, and return it. If no index\nis specified, a.pop() removes and returns the last item in the list. (The\nsquare brackets around the *i* in the method signature denote that the parameter\nis optional, not that you should type square brackets at that position. You\nwill see this notation frequently in the Python Library Reference.)\n\n.. method:: list.clear()\n:noindex:\n\nRemove all items from the list. Equivalent to del a[:].\n\n.. method:: list.index(x[, start[, end]])\n:noindex:\n\nReturn zero-based index in the list of the first item whose value is equal to *x*.\nRaises a ValueError if there is no such item.",
+            "metadata": {
+              "chapter": "datastructures",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 0,
+              "source_char_end": 2927,
+              "char_start": 895,
+              "char_end": 1584,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.028612012987012988,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 4,
+                "score": 0.689451786982227
+              },
+              "bm25": {
+                "rank": 17,
+                "score": 4.195442079559755
+              }
+            }
+          },
+          {
+            "id": "0facea5f1965fa0baeada57b0126ad7882a683105043785f164bc91916e6fda9",
+            "source_id": "python-stdlib2",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/stdlib2.rst",
+            "page": 4,
+            "text": ">>> import weakref, gc\n>>> class A:\n... def __init__(self, value):\n... self.value = value\n... def __repr__(self):\n... return str(self.value)\n...\n>>> a = A(10) # create a reference\n>>> d = weakref.WeakValueDictionary()\n>>> d['primary'] = a # does not create a reference\n>>> d['primary'] # fetch the object if it is still alive\n10\n>>> del a # remove the one reference\n>>> gc.collect() # run garbage collection right away\n0\n>>> d['primary'] # entry was automatically removed\nTraceback (most recent call last):\nFile \"<stdin>\", line 1, in <module>\nd['primary'] # entry was automatically removed\nFile \"C:/python312/lib/weakref.py\", line 46, in __getitem__\no = self.data[key]()\nKeyError: 'primary'\n\nTools for Working with Lists\n\nMany data structure needs can be met with the built-in list type. However,\nsometimes there is a need for alternative implementations with different\nperformance trade-offs.",
+            "metadata": {
+              "chapter": "stdlib2",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 7553,
+              "source_char_end": 10054,
+              "char_start": 1284,
+              "char_end": 2177,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.02854251012145749,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 16,
+                "score": 0.635493176212476
+              },
+              "bm25": {
+                "rank": 5,
+                "score": 6.428257944478042
+              }
+            }
+          },
+          {
+            "id": "255f100c84e88a043ea577bb62a187eeeb6d62cdd1108da8ec1a089a52923dd7",
+            "source_id": "python-introduction",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/introduction.rst",
+            "page": 4,
+            "text": "Slice indices have useful defaults; an omitted first index defaults to zero, an\nomitted second index defaults to the size of the string being sliced. ::\n\n>>> word[:2] # character from the beginning to position 2 (excluded)\n'Py'\n>>> word[4:] # characters from position 4 (included) to the end\n'on'\n>>> word[-2:] # characters from the second-last (included) to the end\n'on'\n\nNote how the start is always included, and the end always excluded. This\nmakes sure that s[:i] + s[i:] is always equal to s::\n\n>>> word[:2] + word[2:]\n'Python'\n>>> word[:4] + word[4:]\n'Python'\n\nOne way to remember how slices work is to think of the indices as pointing\n*between* characters, with the left edge of the first character numbered 0.\nThen the right edge of the last character of a string of *n* characters has\nindex *n*, for example::",
+            "metadata": {
+              "chapter": "introduction",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 7342,
+              "source_char_end": 9824,
+              "char_start": 844,
+              "char_end": 1662,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.016129032258064516,
+            "method": "hybrid",
+            "component_ranks": {
+              "bm25": {
+                "rank": 2,
+                "score": 8.563551330993278
+              }
+            }
+          },
+          {
+            "id": "e90c0e45c5de79d8e04e6e601b815adc510b707b4c98e460f6da11609ed109e5",
+            "source_id": "python-datastructures",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/datastructures.rst",
+            "page": 1,
+            "text": "The optional arguments *start* and *end* are interpreted as in the slice\nnotation and are used to limit the search to a particular subsequence of\nthe list. The returned index is computed relative to the beginning of the full\nsequence rather than the *start* argument.\n\n.. method:: list.count(x)\n:noindex:\n\nReturn the number of times *x* appears in the list.\n\n.. method:: list.sort(*, key=None, reverse=False)\n:noindex:\n\nSort the items of the list in place (the arguments can be used for sort\ncustomization, see sorted for their explanation).\n\n.. method:: list.reverse()\n:noindex:\n\nReverse the elements of the list in place.\n\n.. method:: list.copy()\n:noindex:\n\nReturn a shallow copy of the list. Equivalent to a[:].\n\nAn example that uses most of the list methods::",
+            "metadata": {
+              "chapter": "datastructures",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 0,
+              "source_char_end": 2927,
+              "char_start": 1586,
+              "char_end": 2349,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.016129032258064516,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 2,
+                "score": 0.7127754090532247
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "context": "[012a48290d0980da22fdb71c836b58996cafd5cf633b9acd0b56ad6afa574182 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/stdlib2.rst | source unit 5]\n>>> import bisect\n>>> scores = [(100, 'perl'), (200, 'tcl'), (400, 'lua'), (500, 'python')]\n>>> bisect.insort(scores, (300, 'ruby'))\n>>> scores\n[(100, 'perl'), (200, 'tcl'), (300, 'ruby'), (400, 'lua'), (500, 'python')]\n\nThe heapq module provides functions for implementing heaps based on\nregular lists. The lowest valued entry is always kept at position zero. This\nis useful for applications which repeatedly access the smallest element but do\nnot want to run a full list sort::\n\n>>> from heapq import heapify, heappop, heappush\n>>> data = [1, 3, 5, 7, 9, 2, 4, 6, 8, 0]\n>>> heapify(data) # rearrange the list into heap order\n>>> heappush(data, -5) # add a new entry\n>>> [heappop(data) for i in range(3)] # fetch the three smallest entries\n[-5, 0, 1]\n\nDecimal Floating Point Arithmetic\n\n[661f5020232a923da25890d8e88cecdd0cf0d0587806ecc6b915f9f969a31e07 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/datastructures.rst | source unit 8]\nThe comparison operators in and not in are membership tests that\ndetermine whether a value is in (or not in) a container. The operators is\nand is not compare whether two objects are really the same object. All\ncomparison operators have the same priority, which is lower than that of all\nnumerical operators.\n\nComparisons can be chained. For example, a < b == c tests whether a is\nless than b and moreover b equals c.\n\nComparisons may be combined using the Boolean operators and and or, and\nthe outcome of a comparison (or of any other Boolean expression) may be negated\nwith not. These have lower priorities than comparison operators; between\nthem, not has the highest priority and or the lowest, so that A and\nnot B or C is equivalent to (A and (not B)) or C. As always, parentheses\ncan be used to express the desired composition.\n\n[1a0126fe8acf81f506d0dfdb3141f758c27ca284bfb957be732853d9c542a5dc | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/datastructures.rst | source unit 1]\n.. method:: list.pop([i])\n:noindex:\n\nRemove the item at the given position in the list, and return it. If no index\nis specified, a.pop() removes and returns the last item in the list. (The\nsquare brackets around the *i* in the method signature denote that the parameter\nis optional, not that you should type square brackets at that position. You\nwill see this notation frequently in the Python Library Reference.)\n\n.. method:: list.clear()\n:noindex:\n\nRemove all items from the list. Equivalent to del a[:].\n\n.. method:: list.index(x[, start[, end]])\n:noindex:\n\nReturn zero-based index in the list of the first item whose value is equal to *x*.\nRaises a ValueError if there is no such item.\n\n[0facea5f1965fa0baeada57b0126ad7882a683105043785f164bc91916e6fda9 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/stdlib2.rst | source unit 4]\n>>> import weakref, gc\n>>> class A:\n... def __init__(self, value):\n... self.value = value\n... def __repr__(self):\n... return str(self.value)\n...\n>>> a = A(10) # create a reference\n>>> d = weakref.WeakValueDictionary()\n>>> d['primary'] = a # does not create a reference\n>>> d['primary'] # fetch the object if it is still alive\n10\n>>> del a # remove the one reference\n>>> gc.collect() # run garbage collection right away\n0\n>>> d['primary'] # entry was automatically removed\nTraceback (most recent call last):\nFile \"<stdin>\", line 1, in <module>\nd['primary'] # entry was automatically removed\nFile \"C:/python312/lib/weakref.py\", line 46, in __getitem__\no = self.data[key]()\nKeyError: 'primary'\n\nTools for Working with Lists\n\nMany data structure needs can be met with the built-in list type. However,\nsometimes there is a need for alternative implementations with different\nperformance trade-offs.\n\n[255f100c84e88a043ea577bb62a187eeeb6d62cdd1108da8ec1a089a52923dd7 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/introduction.rst | source unit 4]\nSlice indices have useful defaults; an omitted first index defaults to zero, an\nomitted second index defaults to the size of the string being sliced. ::\n\n>>> word[:2] # character from the beginning to position 2 (excluded)\n'Py'\n>>> word[4:] # characters from position 4 (included) to the end\n'on'\n>>> word[-2:] # characters from the second-last (included) to the end\n'on'\n\nNote how the start is always included, and the end always excluded. This\nmakes sure that s[:i] + s[i:] is always equal to s::\n\n>>> word[:2] + word[2:]\n'Python'\n>>> word[:4] + word[4:]\n'Python'\n\nOne way to remember how slices work is to think of the indices as pointing\n*between* characters, with the left edge of the first character numbered 0.\nThen the right edge of the last character of a string of *n* characters has\nindex *n*, for example::\n\n[e90c0e45c5de79d8e04e6e601b815adc510b707b4c98e460f6da11609ed109e5 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/datastructures.rst | source unit 1]\nThe optional arguments *start* and *end* are interpreted as in the slice\nnotation and are used to limit the search to a particular subsequence of\nthe list. The returned index is computed relative to the beginning of the full\nsequence rather than the *start* argument.\n\n.. method:: list.count(x)\n:noindex:\n\nReturn the number of times *x* appears in the list.\n\n.. method:: list.sort(*, key=None, reverse=False)\n:noindex:\n\nSort the items of the list in place (the arguments can be used for sort\ncustomization, see sorted for their explanation).\n\n.. method:: list.reverse()\n:noindex:\n\nReverse the elements of the list in place.\n\n.. method:: list.copy()\n:noindex:\n\nReturn a shallow copy of the list. Equivalent to a[:].\n\nAn example that uses most of the list methods::",
+    "context_ids": [
+      "012a48290d0980da22fdb71c836b58996cafd5cf633b9acd0b56ad6afa574182",
+      "661f5020232a923da25890d8e88cecdd0cf0d0587806ecc6b915f9f969a31e07",
+      "1a0126fe8acf81f506d0dfdb3141f758c27ca284bfb957be732853d9c542a5dc",
+      "0facea5f1965fa0baeada57b0126ad7882a683105043785f164bc91916e6fda9",
+      "255f100c84e88a043ea577bb62a187eeeb6d62cdd1108da8ec1a089a52923dd7",
+      "e90c0e45c5de79d8e04e6e601b815adc510b707b4c98e460f6da11609ed109e5"
+    ],
+    "context_chars": 5758,
+    "elapsed_seconds": 0.0043855999999999895,
+    "cost_usd": 0,
+    "query_id": "d7-t05",
+    "split": "test",
+    "question": "For a heapq heap, which position always holds the lowest-valued entry?",
+    "answerable": true,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "metric_scope": "Single-chunk alternative evidence; hit1/hit3 on FIRST query, context_hit on cumulative final context",
+    "configuration": "hybrid_context"
+  },
+  {
+    "status": "retrieved",
+    "events": [
+      {
+        "event": "search",
+        "tool": "hybrid",
+        "query": "Which Django command rolls back exactly the latest database migration?",
+        "filter": {},
+        "results": [
+          {
+            "id": "62df0e483169e95847c412daedcccb96819fd07878433374239b27b6db5aa65e",
+            "source_id": "python-venv",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/venv.rst",
+            "page": 2,
+            "text": "(tutorial-env) $ python -m pip install requests==2.6.0\nCollecting requests==2.6.0\nUsing cached requests-2.6.0-py2.py3-none-any.whl\nInstalling collected packages: requests\nSuccessfully installed requests-2.6.0\n\nIf you re-run this command, pip will notice that the requested\nversion is already installed and do nothing. You can supply a\ndifferent version number to get that version, or you can run python\n-m pip install --upgrade to upgrade the package to the latest version:\n\n(tutorial-env) $ python -m pip install --upgrade requests\nCollecting requests\nInstalling collected packages: requests\nFound existing installation: requests 2.6.0\nUninstalling requests-2.6.0:\nSuccessfully uninstalled requests-2.6.0\nSuccessfully installed requests-2.7.0\n\npython -m pip uninstall followed by one or more package names will\nremove the packages from the virtual environment.",
+            "metadata": {
+              "chapter": "venv",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 2431,
+              "source_char_end": 4904,
+              "char_start": 1612,
+              "char_end": 2473,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.03225806451612903,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 2,
+                "score": 0.6298362671322281
+              },
+              "bm25": {
+                "rank": 2,
+                "score": 6.99558557742561
+              }
+            }
+          },
+          {
+            "id": "825e877aee1c408c8cc483cbb6288ea45efa11b6c6a51e7764101fb11b041386",
+            "source_id": "python-errors",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/errors.rst",
+            "page": 4,
+            "text": ">>> def func():\n... raise ConnectionError\n...\n>>> try:\n... func()\n... except ConnectionError as exc:\n... raise RuntimeError('Failed to open database') from exc\n...\nTraceback (most recent call last):\nFile \"<stdin>\", line 2, in <module>\nFile \"<stdin>\", line 2, in func\nConnectionError\n<BLANKLINE>\nThe above exception was the direct cause of the following exception:\n<BLANKLINE>\nTraceback (most recent call last):\nFile \"<stdin>\", line 4, in <module>\nRuntimeError: Failed to open database",
+            "metadata": {
+              "chapter": "errors",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 7677,
+              "source_char_end": 10473,
+              "char_start": 2312,
+              "char_end": 2796,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.030798389007344232,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 7,
+                "score": 0.6087984252662397
+              },
+              "bm25": {
+                "rank": 3,
+                "score": 6.6178622832606155
+              }
+            }
+          },
+          {
+            "id": "69823a65c27b529f9232bb7621a82fd70a70d852586de304a182a21a299ad94c",
+            "source_id": "python-stdlib",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/stdlib.rst",
+            "page": 1,
+            "text": "For daily file and directory management tasks, the shutil module provides\na higher level interface that is easier to use::\n\n>>> import shutil\n>>> shutil.copyfile('data.db', 'archive.db')\n'archive.db'\n>>> shutil.move('/build/executables', 'installdir')\n'installdir'\n\nFile Wildcards\n\nThe glob module provides a function for making file lists from directory\nwildcard searches::\n\n>>> import glob\n>>> glob.glob('*.py')\n['primes.py', 'random.py', 'quote.py']\n\nCommand Line Arguments\n\nCommon utility scripts often need to process command line arguments. These\narguments are stored in the sys module's *argv* attribute as a list. For\ninstance, let's take the following demo.py file::\n\n# File demo.py\nimport sys\nprint(sys.argv)\n\nHere is the output from running python demo.py one two three at the command\nline::\n\n['demo.py', 'one', 'two', 'three']",
+            "metadata": {
+              "chapter": "stdlib",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 0,
+              "source_char_end": 2502,
+              "char_start": 808,
+              "char_end": 1646,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.030090497737556562,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 5,
+                "score": 0.6093586200293949
+              },
+              "bm25": {
+                "rank": 8,
+                "score": 5.383136369185659
+              }
+            }
+          },
+          {
+            "id": "61ff6afcd5b419f70a90eb83bfd1c9bd06984a1941cc1a1b8107204a79551cbf",
+            "source_id": "python-venv",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/venv.rst",
+            "page": 2,
+            "text": "You can install, upgrade, and remove packages using a program called\npip. By default pip will install packages from the `Python\nPackage Index <https://pypi.org>`_. You can browse the Python\nPackage Index by going to it in your web browser.\n\npip has a number of subcommands: \"install\", \"uninstall\",\n\"freeze\", etc. (Consult the installing-index guide for\ncomplete documentation for pip.)\n\nYou can install the latest version of a package by specifying a package's name:\n\n(tutorial-env) $ python -m pip install novas\nCollecting novas\nDownloading novas-3.1.1.3.tar.gz (136kB)\nInstalling collected packages: novas\nRunning setup.py install for novas\nSuccessfully installed novas-3.1.1.3\n\nYou can also install a specific version of a package by giving the\npackage name followed by == and the version number:",
+            "metadata": {
+              "chapter": "venv",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 2431,
+              "source_char_end": 4904,
+              "char_start": 811,
+              "char_end": 1610,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.028484848484848488,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 6,
+                "score": 0.6092334958219179
+              },
+              "bm25": {
+                "rank": 15,
+                "score": 4.1460707206087415
+              }
+            }
+          },
+          {
+            "id": "8b225ef04cf56f46eecf64ce2012675472ec704ae7b3e0b685dd21b269e95c05",
+            "source_id": "python-errors",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/errors.rst",
+            "page": 4,
+            "text": "If an unhandled exception occurs inside an except section, it will\nhave the exception being handled attached to it and included in the error\nmessage::\n\n>>> try:\n... open(\"database.sqlite\")\n... except OSError:\n... raise RuntimeError(\"unable to handle error\")\n...\nTraceback (most recent call last):\nFile \"<stdin>\", line 2, in <module>\nFileNotFoundError: [Errno 2] No such file or directory: 'database.sqlite'\n<BLANKLINE>\nDuring handling of the above exception, another exception occurred:\n<BLANKLINE>\nTraceback (most recent call last):\nFile \"<stdin>\", line 4, in <module>\nRuntimeError: unable to handle error\n\nTo indicate that an exception is a direct consequence of another, the\nraise statement allows an optional from<raise> clause::\n\n# exc must be exception instance or None.\nraise RuntimeError from exc\n\nThis can be useful when you are transforming exceptions. For example::",
+            "metadata": {
+              "chapter": "errors",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 7677,
+              "source_char_end": 10473,
+              "char_start": 1434,
+              "char_end": 2310,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.027745885954841176,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 18,
+                "score": 0.5885744375028099
+              },
+              "bm25": {
+                "rank": 7,
+                "score": 5.510172283875528
+              }
+            }
+          },
+          {
+            "id": "3826271ff6c2ee86e12e81c2acf3d6b294d206e068420443f16ef120a24f9c4d",
+            "source_id": "python-introduction",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/introduction.rst",
+            "page": 2,
+            "text": "Python can manipulate text (represented by type str, so-called\n\"strings\") as well as numbers. This includes characters \"!\", words\n\"rabbit\", names \"Paris\", sentences \"Got your back.\", etc.\n\"Yay! :)\". They can be enclosed in single quotes ('...') or double\nquotes (\"...\") with the same result [#]_.\n\n>>> 'spam eggs' # single quotes\n'spam eggs'\n>>> \"Paris rabbit got your back :)! Yay!\" # double quotes\n'Paris rabbit got your back :)! Yay!'\n>>> '1975' # digits and numerals enclosed in quotes are also strings\n'1975'\n\nTo quote a quote, we need to \"escape\" it, by preceding it with \\.\nAlternatively, we can use the other type of quotation marks::",
+            "metadata": {
+              "chapter": "introduction",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 2507,
+              "source_char_end": 4930,
+              "char_start": 1518,
+              "char_end": 2160,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.01639344262295082,
+            "method": "hybrid",
+            "component_ranks": {
+              "bm25": {
+                "rank": 1,
+                "score": 7.669407084058951
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "context": "[62df0e483169e95847c412daedcccb96819fd07878433374239b27b6db5aa65e | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/venv.rst | source unit 2]\n(tutorial-env) $ python -m pip install requests==2.6.0\nCollecting requests==2.6.0\nUsing cached requests-2.6.0-py2.py3-none-any.whl\nInstalling collected packages: requests\nSuccessfully installed requests-2.6.0\n\nIf you re-run this command, pip will notice that the requested\nversion is already installed and do nothing. You can supply a\ndifferent version number to get that version, or you can run python\n-m pip install --upgrade to upgrade the package to the latest version:\n\n(tutorial-env) $ python -m pip install --upgrade requests\nCollecting requests\nInstalling collected packages: requests\nFound existing installation: requests 2.6.0\nUninstalling requests-2.6.0:\nSuccessfully uninstalled requests-2.6.0\nSuccessfully installed requests-2.7.0\n\npython -m pip uninstall followed by one or more package names will\nremove the packages from the virtual environment.\n\n[825e877aee1c408c8cc483cbb6288ea45efa11b6c6a51e7764101fb11b041386 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/errors.rst | source unit 4]\n>>> def func():\n... raise ConnectionError\n...\n>>> try:\n... func()\n... except ConnectionError as exc:\n... raise RuntimeError('Failed to open database') from exc\n...\nTraceback (most recent call last):\nFile \"<stdin>\", line 2, in <module>\nFile \"<stdin>\", line 2, in func\nConnectionError\n<BLANKLINE>\nThe above exception was the direct cause of the following exception:\n<BLANKLINE>\nTraceback (most recent call last):\nFile \"<stdin>\", line 4, in <module>\nRuntimeError: Failed to open database\n\n[69823a65c27b529f9232bb7621a82fd70a70d852586de304a182a21a299ad94c | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/stdlib.rst | source unit 1]\nFor daily file and directory management tasks, the shutil module provides\na higher level interface that is easier to use::\n\n>>> import shutil\n>>> shutil.copyfile('data.db', 'archive.db')\n'archive.db'\n>>> shutil.move('/build/executables', 'installdir')\n'installdir'\n\nFile Wildcards\n\nThe glob module provides a function for making file lists from directory\nwildcard searches::\n\n>>> import glob\n>>> glob.glob('*.py')\n['primes.py', 'random.py', 'quote.py']\n\nCommand Line Arguments\n\nCommon utility scripts often need to process command line arguments. These\narguments are stored in the sys module's *argv* attribute as a list. For\ninstance, let's take the following demo.py file::\n\n# File demo.py\nimport sys\nprint(sys.argv)\n\nHere is the output from running python demo.py one two three at the command\nline::\n\n['demo.py', 'one', 'two', 'three']\n\n[61ff6afcd5b419f70a90eb83bfd1c9bd06984a1941cc1a1b8107204a79551cbf | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/venv.rst | source unit 2]\nYou can install, upgrade, and remove packages using a program called\npip. By default pip will install packages from the `Python\nPackage Index <https://pypi.org>`_. You can browse the Python\nPackage Index by going to it in your web browser.\n\npip has a number of subcommands: \"install\", \"uninstall\",\n\"freeze\", etc. (Consult the installing-index guide for\ncomplete documentation for pip.)\n\nYou can install the latest version of a package by specifying a package's name:\n\n(tutorial-env) $ python -m pip install novas\nCollecting novas\nDownloading novas-3.1.1.3.tar.gz (136kB)\nInstalling collected packages: novas\nRunning setup.py install for novas\nSuccessfully installed novas-3.1.1.3\n\nYou can also install a specific version of a package by giving the\npackage name followed by == and the version number:\n\n[8b225ef04cf56f46eecf64ce2012675472ec704ae7b3e0b685dd21b269e95c05 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/errors.rst | source unit 4]\nIf an unhandled exception occurs inside an except section, it will\nhave the exception being handled attached to it and included in the error\nmessage::\n\n>>> try:\n... open(\"database.sqlite\")\n... except OSError:\n... raise RuntimeError(\"unable to handle error\")\n...\nTraceback (most recent call last):\nFile \"<stdin>\", line 2, in <module>\nFileNotFoundError: [Errno 2] No such file or directory: 'database.sqlite'\n<BLANKLINE>\nDuring handling of the above exception, another exception occurred:\n<BLANKLINE>\nTraceback (most recent call last):\nFile \"<stdin>\", line 4, in <module>\nRuntimeError: unable to handle error\n\nTo indicate that an exception is a direct consequence of another, the\nraise statement allows an optional from<raise> clause::\n\n# exc must be exception instance or None.\nraise RuntimeError from exc\n\nThis can be useful when you are transforming exceptions. For example::\n\n[3826271ff6c2ee86e12e81c2acf3d6b294d206e068420443f16ef120a24f9c4d | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/introduction.rst | source unit 2]\nPython can manipulate text (represented by type str, so-called\n\"strings\") as well as numbers. This includes characters \"!\", words\n\"rabbit\", names \"Paris\", sentences \"Got your back.\", etc.\n\"Yay! :)\". They can be enclosed in single quotes ('...') or double\nquotes (\"...\") with the same result [#]_.\n\n>>> 'spam eggs' # single quotes\n'spam eggs'\n>>> \"Paris rabbit got your back :)! Yay!\" # double quotes\n'Paris rabbit got your back :)! Yay!'\n>>> '1975' # digits and numerals enclosed in quotes are also strings\n'1975'\n\nTo quote a quote, we need to \"escape\" it, by preceding it with \\.\nAlternatively, we can use the other type of quotation marks::",
+    "context_ids": [
+      "62df0e483169e95847c412daedcccb96819fd07878433374239b27b6db5aa65e",
+      "825e877aee1c408c8cc483cbb6288ea45efa11b6c6a51e7764101fb11b041386",
+      "69823a65c27b529f9232bb7621a82fd70a70d852586de304a182a21a299ad94c",
+      "61ff6afcd5b419f70a90eb83bfd1c9bd06984a1941cc1a1b8107204a79551cbf",
+      "8b225ef04cf56f46eecf64ce2012675472ec704ae7b3e0b685dd21b269e95c05",
+      "3826271ff6c2ee86e12e81c2acf3d6b294d206e068420443f16ef120a24f9c4d"
+    ],
+    "context_chars": 5448,
+    "elapsed_seconds": 0.0036431999999999576,
+    "cost_usd": 0,
+    "query_id": "d7-u03",
+    "split": "test",
+    "question": "Which Django command rolls back exactly the latest database migration?",
+    "answerable": false,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false,
+    "metric_scope": "Single-chunk alternative evidence; hit1/hit3 on FIRST query, context_hit on cumulative final context",
+    "configuration": "hybrid_context"
+  },
+  {
+    "status": "retrieved",
+    "events": [
+      {
+        "event": "search",
+        "tool": "hybrid",
+        "query": "How does pip --require-hashes validate every dependency's archive hash?",
+        "filter": {},
+        "results": [
+          {
+            "id": "62df0e483169e95847c412daedcccb96819fd07878433374239b27b6db5aa65e",
+            "source_id": "python-venv",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/venv.rst",
+            "page": 2,
+            "text": "(tutorial-env) $ python -m pip install requests==2.6.0\nCollecting requests==2.6.0\nUsing cached requests-2.6.0-py2.py3-none-any.whl\nInstalling collected packages: requests\nSuccessfully installed requests-2.6.0\n\nIf you re-run this command, pip will notice that the requested\nversion is already installed and do nothing. You can supply a\ndifferent version number to get that version, or you can run python\n-m pip install --upgrade to upgrade the package to the latest version:\n\n(tutorial-env) $ python -m pip install --upgrade requests\nCollecting requests\nInstalling collected packages: requests\nFound existing installation: requests 2.6.0\nUninstalling requests-2.6.0:\nSuccessfully uninstalled requests-2.6.0\nSuccessfully installed requests-2.7.0\n\npython -m pip uninstall followed by one or more package names will\nremove the packages from the virtual environment.",
+            "metadata": {
+              "chapter": "venv",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 2431,
+              "source_char_end": 4904,
+              "char_start": 1612,
+              "char_end": 2473,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.031024531024531024,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 3,
+                "score": 0.6841995611800311
+              },
+              "bm25": {
+                "rank": 6,
+                "score": 6.947531598412844
+              }
+            }
+          },
+          {
+            "id": "54f3d919b4e5b882e2ad6c3f13af70d8b4724291f207453ab4f5e75ce6ee37aa",
+            "source_id": "python-venv",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/venv.rst",
+            "page": 1,
+            "text": "Virtual Environments and Packages\n\nIntroduction\n\nPython applications will often use packages and modules that don't\ncome as part of the standard library. Applications will sometimes\nneed a specific version of a library, because the application may\nrequire that a particular bug has been fixed or the application may be\nwritten using an obsolete version of the library's interface.\n\nThis means it may not be possible for one Python installation to meet\nthe requirements of every application. If application A needs version\n1.0 of a particular module but application B needs version 2.0, then\nthe requirements are in conflict and installing either version 1.0 or 2.0\nwill leave one application unable to run.",
+            "metadata": {
+              "chapter": "venv",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 0,
+              "source_char_end": 2429,
+              "char_start": 0,
+              "char_end": 706,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.030886196246139225,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 9,
+                "score": 0.6514917430564455
+              },
+              "bm25": {
+                "rank": 1,
+                "score": 10.196668041696842
+              }
+            }
+          },
+          {
+            "id": "214dbcc9d673d510e079a85286a9af2b2e0f6090eea114cdef82574c81e31413",
+            "source_id": "python-modules",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/modules.rst",
+            "page": 4,
+            "text": "Python checks the modification date of the source against the compiled version\nto see if it's out of date and needs to be recompiled. This is a completely\nautomatic process. Also, the compiled modules are platform-independent, so the\nsame library can be shared among systems with different architectures.\n\nPython does not check the cache in two circumstances. First, it always\nrecompiles and does not store the result for the module that's loaded directly\nfrom the command line. Second, it does not check the cache if there is no\nsource module. To support a non-source (compiled only) distribution, the\ncompiled module must be in the source directory, and there must not be a source\nmodule.\n\nSome tips for experts:",
+            "metadata": {
+              "chapter": "modules",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 7730,
+              "source_char_end": 10209,
+              "char_start": 0,
+              "char_end": 714,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.030834914611005692,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 2,
+                "score": 0.685304778973221
+              },
+              "bm25": {
+                "rank": 8,
+                "score": 6.313095209518467
+              }
+            }
+          },
+          {
+            "id": "500327dd555ec10550d73e6254b930b29efd5d337bf5a069ac08970d04e9b8e1",
+            "source_id": "python-venv",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/venv.rst",
+            "page": 3,
+            "text": "python -m pip show will display information about a particular package:\n\n(tutorial-env) $ python -m pip show requests\nMetadata-Version: 2.0\nName: requests\nVersion: 2.7.0\nSummary: Python HTTP for Humans.\nHome-page: http://python-requests.org\nAuthor: Kenneth Reitz\nAuthor-email: me@kennethreitz.com\nLicense: Apache 2.0\nLocation: /Users/akuchling/envs/tutorial-env/lib/python3.4/site-packages\nRequires:\n\npython -m pip list will display all of the packages installed in\nthe virtual environment:\n\n(tutorial-env) $ python -m pip list\nnovas (3.1.1.3)\nnumpy (1.9.2)\npip (7.0.3)\nrequests (2.7.0)\nsetuptools (16.0)\n\npython -m pip freeze will produce a similar list of the installed packages,\nbut the output uses the format that python -m pip install expects.\nA common convention is to put this list in a requirements.txt file:",
+            "metadata": {
+              "chapter": "venv",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 4906,
+              "source_char_end": 6776,
+              "char_start": 0,
+              "char_end": 816,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.03076923076923077,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 5,
+                "score": 0.6690930885723433
+              },
+              "bm25": {
+                "rank": 5,
+                "score": 7.444488925387973
+              }
+            }
+          },
+          {
+            "id": "0ff0e6bbf6d502b3fcf8cd3b6bad0fd00d39582ef59bfef9a823215d08251b38",
+            "source_id": "python-venv",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/venv.rst",
+            "page": 3,
+            "text": "(tutorial-env) $ python -m pip freeze > requirements.txt\n(tutorial-env) $ cat requirements.txt\nnovas==3.1.1.3\nnumpy==1.9.2\nrequests==2.7.0\n\nThe requirements.txt can then be committed to version control and\nshipped as part of an application. Users can then install all the\nnecessary packages with install -r:\n\n(tutorial-env) $ python -m pip install -r requirements.txt\nCollecting novas==3.1.1.3 (from -r requirements.txt (line 1))\n...\nCollecting numpy==1.9.2 (from -r requirements.txt (line 2))\n...\nCollecting requests==2.7.0 (from -r requirements.txt (line 3))\n...\nInstalling collected packages: novas, numpy, requests\nRunning setup.py install for novas\nSuccessfully installed novas-3.1.1.3 numpy-1.9.2 requests-2.7.0",
+            "metadata": {
+              "chapter": "venv",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 4906,
+              "source_char_end": 6776,
+              "char_start": 818,
+              "char_end": 1535,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.029906956136464335,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 1,
+                "score": 0.6889260705872228
+              },
+              "bm25": {
+                "rank": 14,
+                "score": 5.144551194158554
+              }
+            }
+          },
+          {
+            "id": "36dd4492b0116e42bd734d2de5f70897c45908f1dd95aacc230423910fc9a2a0",
+            "source_id": "python-venv",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/venv.rst",
+            "page": 2,
+            "text": "On Unix or MacOS, run::\n\nsource tutorial-env/bin/activate\n\n(This script is written for the bash shell. If you use the\ncsh or fish shells, there are alternate\nactivate.csh and activate.fish scripts you should use\ninstead.)\n\nActivating the virtual environment will change your shell's prompt to show what\nvirtual environment you're using, and modify the environment so that running\npython will get you that particular version and installation of Python.\nFor example:\n\n$ source ~/envs/tutorial-env/bin/activate\n(tutorial-env) $ python\nPython 3.5.1 (default, May 6 2016, 10:59:36)\n...\n>>> import sys\n>>> sys.path\n['', '/usr/local/lib/python35.zip', ...,\n'~/envs/tutorial-env/lib/python3.5/site-packages']\n>>>\n\nTo deactivate a virtual environment, type::\n\ndeactivate\n\ninto the terminal.\n\nManaging Packages with pip",
+            "metadata": {
+              "chapter": "venv",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 2431,
+              "source_char_end": 4904,
+              "char_start": 0,
+              "char_end": 809,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.027272727272727275,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 10,
+                "score": 0.641908987525351
+              },
+              "bm25": {
+                "rank": 17,
+                "score": 4.507780658088174
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "context": "[62df0e483169e95847c412daedcccb96819fd07878433374239b27b6db5aa65e | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/venv.rst | source unit 2]\n(tutorial-env) $ python -m pip install requests==2.6.0\nCollecting requests==2.6.0\nUsing cached requests-2.6.0-py2.py3-none-any.whl\nInstalling collected packages: requests\nSuccessfully installed requests-2.6.0\n\nIf you re-run this command, pip will notice that the requested\nversion is already installed and do nothing. You can supply a\ndifferent version number to get that version, or you can run python\n-m pip install --upgrade to upgrade the package to the latest version:\n\n(tutorial-env) $ python -m pip install --upgrade requests\nCollecting requests\nInstalling collected packages: requests\nFound existing installation: requests 2.6.0\nUninstalling requests-2.6.0:\nSuccessfully uninstalled requests-2.6.0\nSuccessfully installed requests-2.7.0\n\npython -m pip uninstall followed by one or more package names will\nremove the packages from the virtual environment.\n\n[54f3d919b4e5b882e2ad6c3f13af70d8b4724291f207453ab4f5e75ce6ee37aa | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/venv.rst | source unit 1]\nVirtual Environments and Packages\n\nIntroduction\n\nPython applications will often use packages and modules that don't\ncome as part of the standard library. Applications will sometimes\nneed a specific version of a library, because the application may\nrequire that a particular bug has been fixed or the application may be\nwritten using an obsolete version of the library's interface.\n\nThis means it may not be possible for one Python installation to meet\nthe requirements of every application. If application A needs version\n1.0 of a particular module but application B needs version 2.0, then\nthe requirements are in conflict and installing either version 1.0 or 2.0\nwill leave one application unable to run.\n\n[214dbcc9d673d510e079a85286a9af2b2e0f6090eea114cdef82574c81e31413 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/modules.rst | source unit 4]\nPython checks the modification date of the source against the compiled version\nto see if it's out of date and needs to be recompiled. This is a completely\nautomatic process. Also, the compiled modules are platform-independent, so the\nsame library can be shared among systems with different architectures.\n\nPython does not check the cache in two circumstances. First, it always\nrecompiles and does not store the result for the module that's loaded directly\nfrom the command line. Second, it does not check the cache if there is no\nsource module. To support a non-source (compiled only) distribution, the\ncompiled module must be in the source directory, and there must not be a source\nmodule.\n\nSome tips for experts:\n\n[500327dd555ec10550d73e6254b930b29efd5d337bf5a069ac08970d04e9b8e1 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/venv.rst | source unit 3]\npython -m pip show will display information about a particular package:\n\n(tutorial-env) $ python -m pip show requests\nMetadata-Version: 2.0\nName: requests\nVersion: 2.7.0\nSummary: Python HTTP for Humans.\nHome-page: http://python-requests.org\nAuthor: Kenneth Reitz\nAuthor-email: me@kennethreitz.com\nLicense: Apache 2.0\nLocation: /Users/akuchling/envs/tutorial-env/lib/python3.4/site-packages\nRequires:\n\npython -m pip list will display all of the packages installed in\nthe virtual environment:\n\n(tutorial-env) $ python -m pip list\nnovas (3.1.1.3)\nnumpy (1.9.2)\npip (7.0.3)\nrequests (2.7.0)\nsetuptools (16.0)\n\npython -m pip freeze will produce a similar list of the installed packages,\nbut the output uses the format that python -m pip install expects.\nA common convention is to put this list in a requirements.txt file:\n\n[0ff0e6bbf6d502b3fcf8cd3b6bad0fd00d39582ef59bfef9a823215d08251b38 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/venv.rst | source unit 3]\n(tutorial-env) $ python -m pip freeze > requirements.txt\n(tutorial-env) $ cat requirements.txt\nnovas==3.1.1.3\nnumpy==1.9.2\nrequests==2.7.0\n\nThe requirements.txt can then be committed to version control and\nshipped as part of an application. Users can then install all the\nnecessary packages with install -r:\n\n(tutorial-env) $ python -m pip install -r requirements.txt\nCollecting novas==3.1.1.3 (from -r requirements.txt (line 1))\n...\nCollecting numpy==1.9.2 (from -r requirements.txt (line 2))\n...\nCollecting requests==2.7.0 (from -r requirements.txt (line 3))\n...\nInstalling collected packages: novas, numpy, requests\nRunning setup.py install for novas\nSuccessfully installed novas-3.1.1.3 numpy-1.9.2 requests-2.7.0\n\n[36dd4492b0116e42bd734d2de5f70897c45908f1dd95aacc230423910fc9a2a0 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/venv.rst | source unit 2]\nOn Unix or MacOS, run::\n\nsource tutorial-env/bin/activate\n\n(This script is written for the bash shell. If you use the\ncsh or fish shells, there are alternate\nactivate.csh and activate.fish scripts you should use\ninstead.)\n\nActivating the virtual environment will change your shell's prompt to show what\nvirtual environment you're using, and modify the environment so that running\npython will get you that particular version and installation of Python.\nFor example:\n\n$ source ~/envs/tutorial-env/bin/activate\n(tutorial-env) $ python\nPython 3.5.1 (default, May 6 2016, 10:59:36)\n...\n>>> import sys\n>>> sys.path\n['', '/usr/local/lib/python35.zip', ...,\n'~/envs/tutorial-env/lib/python3.5/site-packages']\n>>>\n\nTo deactivate a virtual environment, type::\n\ndeactivate\n\ninto the terminal.\n\nManaging Packages with pip",
+    "context_ids": [
+      "62df0e483169e95847c412daedcccb96819fd07878433374239b27b6db5aa65e",
+      "54f3d919b4e5b882e2ad6c3f13af70d8b4724291f207453ab4f5e75ce6ee37aa",
+      "214dbcc9d673d510e079a85286a9af2b2e0f6090eea114cdef82574c81e31413",
+      "500327dd555ec10550d73e6254b930b29efd5d337bf5a069ac08970d04e9b8e1",
+      "0ff0e6bbf6d502b3fcf8cd3b6bad0fd00d39582ef59bfef9a823215d08251b38",
+      "36dd4492b0116e42bd734d2de5f70897c45908f1dd95aacc230423910fc9a2a0"
+    ],
+    "context_chars": 5560,
+    "elapsed_seconds": 0.003292599999999979,
+    "cost_usd": 0,
+    "query_id": "d7-u04",
+    "split": "test",
+    "question": "How does pip --require-hashes validate every dependency's archive hash?",
+    "answerable": false,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false,
+    "metric_scope": "Single-chunk alternative evidence; hit1/hit3 on FIRST query, context_hit on cumulative final context",
+    "configuration": "hybrid_context"
+  }
+]

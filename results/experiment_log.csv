@@ -1,0 +1,7 @@
+configuration,split,method,top_k,budget,max_searches,hypothesis,hit1,hit3,context_hit,retrieval_api_cost_usd
+dense_base,dev,dense,3,1800,1,Baseline: Day 6 B exact cosine; small context may omit long evidence.,10/15 (66.7%),14/15 (93.3%),12/15 (80.0%),0
+bm25,dev,bm25,3,1800,1,Lexical terms preserve exact Python identifiers and operators.,10/15 (66.7%),13/15 (86.7%),11/15 (73.3%),0
+hybrid,dev,hybrid,3,1800,1,Improvement 1: reciprocal rank fusion combines semantic and lexical evidence.,10/15 (66.7%),15/15 (100.0%),11/15 (73.3%),0
+hybrid_context,dev,hybrid,6,6000,2,Improvement 2: larger context and optional second search recover omitted evidence at greater token cost.,10/15 (66.7%),15/15 (100.0%),15/15 (100.0%),0
+dense_base,test,dense,3,1800,1,Baseline: Day 6 B exact cosine; small context may omit long evidence.,3/5 (60.0%),4/5 (80.0%),3/5 (60.0%),0
+hybrid_context,test,hybrid,6,6000,2,Improvement 2: larger context and optional second search recover omitted evidence at greater token cost.,4/5 (80.0%),4/5 (80.0%),5/5 (100.0%),0

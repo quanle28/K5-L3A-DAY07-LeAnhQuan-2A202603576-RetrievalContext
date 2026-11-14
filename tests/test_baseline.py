@@ -70,7 +70,7 @@ class BaselineTests(unittest.TestCase):
                            check=True, capture_output=True, text=True)
             summary = json.loads((root/'out/summary.json').read_text())
             self.assertEqual((summary['split'], summary['n'], summary['hit1']), ('dev', 1, 1))
-            self.assertEqual(len(json.loads((root/'out/traces.json').read_text())), 1)
+            self.assertEqual(len(json.loads((root/'out/traces.json').read_text(encoding='utf-8'))), 1)
 
 
 if __name__ == '__main__': unittest.main()

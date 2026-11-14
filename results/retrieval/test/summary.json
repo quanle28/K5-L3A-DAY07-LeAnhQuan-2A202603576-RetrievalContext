@@ -1,0 +1,50 @@
+{
+  "dense_base": {
+    "cases": 7,
+    "errors": 0,
+    "hit1": {
+      "n": 3,
+      "N": 5,
+      "rate": 0.6
+    },
+    "hit3": {
+      "n": 4,
+      "N": 5,
+      "rate": 0.8
+    },
+    "context_hit": {
+      "n": 3,
+      "N": 5,
+      "rate": 0.6
+    },
+    "median_seconds": 0.3010780999999998,
+    "total_seconds": 2.1151553,
+    "cost_usd": 0,
+    "mean_context_chars": 1187.857142857143,
+    "answer_quality": "Not inferred from evidence substring matches; requires per-query semantic review."
+  },
+  "hybrid_context": {
+    "cases": 7,
+    "errors": 0,
+    "hit1": {
+      "n": 4,
+      "N": 5,
+      "rate": 0.8
+    },
+    "hit3": {
+      "n": 4,
+      "N": 5,
+      "rate": 0.8
+    },
+    "context_hit": {
+      "n": 5,
+      "N": 5,
+      "rate": 1.0
+    },
+    "median_seconds": 0.0035136000000006717,
+    "total_seconds": 0.025823800000001285,
+    "cost_usd": 0,
+    "mean_context_chars": 5553.857142857143,
+    "answer_quality": "Not inferred from evidence substring matches; requires per-query semantic review."
+  }
+}

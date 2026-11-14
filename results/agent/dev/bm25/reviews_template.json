@@ -1,0 +1,204 @@
+[
+  {
+    "query_id": "d7-q01",
+    "answer_grade": null,
+    "context_grade": null,
+    "citation_support": [
+      null,
+      null
+    ],
+    "abstention_correct": null,
+    "reason": "",
+    "reviewer": "",
+    "human_confirmed": false
+  },
+  {
+    "query_id": "d7-q02",
+    "answer_grade": null,
+    "context_grade": null,
+    "citation_support": [
+      null
+    ],
+    "abstention_correct": null,
+    "reason": "",
+    "reviewer": "",
+    "human_confirmed": false
+  },
+  {
+    "query_id": "d7-q03",
+    "answer_grade": null,
+    "context_grade": null,
+    "citation_support": [
+      null
+    ],
+    "abstention_correct": null,
+    "reason": "",
+    "reviewer": "",
+    "human_confirmed": false
+  },
+  {
+    "query_id": "d7-q04",
+    "answer_grade": null,
+    "context_grade": null,
+    "citation_support": [
+      null
+    ],
+    "abstention_correct": null,
+    "reason": "",
+    "reviewer": "",
+    "human_confirmed": false
+  },
+  {
+    "query_id": "d7-q05",
+    "answer_grade": null,
+    "context_grade": null,
+    "citation_support": [
+      null
+    ],
+    "abstention_correct": null,
+    "reason": "",
+    "reviewer": "",
+    "human_confirmed": false
+  },
+  {
+    "query_id": "d7-q06",
+    "answer_grade": null,
+    "context_grade": null,
+    "citation_support": [
+      null
+    ],
+    "abstention_correct": null,
+    "reason": "",
+    "reviewer": "",
+    "human_confirmed": false
+  },
+  {
+    "query_id": "d7-q07",
+    "answer_grade": null,
+    "context_grade": null,
+    "citation_support": [
+      null
+    ],
+    "abstention_correct": null,
+    "reason": "",
+    "reviewer": "",
+    "human_confirmed": false
+  },
+  {
+    "query_id": "d7-q08",
+    "answer_grade": null,
+    "context_grade": null,
+    "citation_support": [
+      null
+    ],
+    "abstention_correct": null,
+    "reason": "",
+    "reviewer": "",
+    "human_confirmed": false
+  },
+  {
+    "query_id": "d7-q09",
+    "answer_grade": null,
+    "context_grade": null,
+    "citation_support": [
+      null
+    ],
+    "abstention_correct": null,
+    "reason": "",
+    "reviewer": "",
+    "human_confirmed": false
+  },
+  {
+    "query_id": "d7-q10",
+    "answer_grade": null,
+    "context_grade": null,
+    "citation_support": [
+      null
+    ],
+    "abstention_correct": null,
+    "reason": "",
+    "reviewer": "",
+    "human_confirmed": false
+  },
+  {
+    "query_id": "d7-q11",
+    "answer_grade": null,
+    "context_grade": null,
+    "citation_support": [
+      null
+    ],
+    "abstention_correct": null,
+    "reason": "",
+    "reviewer": "",
+    "human_confirmed": false
+  },
+  {
+    "query_id": "d7-q12",
+    "answer_grade": null,
+    "context_grade": null,
+    "citation_support": [
+      null
+    ],
+    "abstention_correct": null,
+    "reason": "",
+    "reviewer": "",
+    "human_confirmed": false
+  },
+  {
+    "query_id": "d7-q13",
+    "answer_grade": null,
+    "context_grade": null,
+    "citation_support": [
+      null,
+      null
+    ],
+    "abstention_correct": null,
+    "reason": "",
+    "reviewer": "",
+    "human_confirmed": false
+  },
+  {
+    "query_id": "d7-q14",
+    "answer_grade": null,
+    "context_grade": null,
+    "citation_support": [
+      null
+    ],
+    "abstention_correct": null,
+    "reason": "",
+    "reviewer": "",
+    "human_confirmed": false
+  },
+  {
+    "query_id": "d7-q15",
+    "answer_grade": null,
+    "context_grade": null,
+    "citation_support": [
+      null
+    ],
+    "abstention_correct": null,
+    "reason": "",
+    "reviewer": "",
+    "human_confirmed": false
+  },
+  {
+    "query_id": "d7-u01",
+    "answer_grade": null,
+    "context_grade": null,
+    "citation_support": [],
+    "abstention_correct": null,
+    "reason": "",
+    "reviewer": "",
+    "human_confirmed": false
+  },
+  {
+    "query_id": "d7-u02",
+    "answer_grade": null,
+    "context_grade": null,
+    "citation_support": [],
+    "abstention_correct": null,
+    "reason": "",
+    "reviewer": "",
+    "human_confirmed": false
+  }
+]

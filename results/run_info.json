@@ -1,0 +1,53 @@
+{
+  "generated_at_utc": "2026-11-14T08:02:43.929245+00:00",
+  "benchmark_python": "3.9.7 (existing Day 6 .venv-lab)",
+  "verification_python": "3.13.0",
+  "models_returned_by_provider": [
+    "openai/gpt-4o-mini"
+  ],
+  "model_configured": "openai/gpt-4o-mini",
+  "endpoint": "https://openrouter.ai/api/v1",
+  "model_limitations": "Provider model alias and upstream routing are not an immutable weight snapshot; stochastic/hosted output may vary despite temperature=0.",
+  "cases_executed": 82,
+  "llm_calls": 168,
+  "usage": {
+    "prompt_tokens": 143061,
+    "completion_tokens": 13756,
+    "total_tokens": 156817
+  },
+  "benchmark_api_cost_usd": 0.02953995,
+  "cost_basis": "OpenRouter usage.cost reported for each call, not estimated rates; excludes initial smoke trials, hardware/electricity and package/model download",
+  "total_case_seconds": 307.50714539999996,
+  "errors": 0,
+  "review": "Codex AI semantic labels; no human confirmation claimed",
+  "data": {
+    "created_at_utc": "2026-11-14T07:46:30.698108+00:00",
+    "hashes": {
+      "data/chunks.json": "53109dc992d13b86262931bd22e504ce774fc1413807c793606f8244ed64540e",
+      "data/questions.json": "5391a381d8160e4a6fcc2d2bbcefff8360202846379f30515d48b0803d87f03b",
+      "data/pages.jsonl": "9908eaff18b77fbee097f25bc6373e62c9d557b97affdf7ccffc02da77e21355",
+      "data/day6_manifest.json": "891f24ec2a4988c568ac9b9a8a4fde67886aef9ecbb702a3386aee9897fcb0e2",
+      "data/model_lock.json": "fcdeca7b4830facae8614795a511beedefdb2a605619c358219e195dfba9fa18"
+    },
+    "day6_root": "D:\\K5-L3A-DAY06-LeAnhQuan-2A202603576-DataIngestion",
+    "chunk_strategy": "B",
+    "collection": "day6_B",
+    "day6_chunk_export_sha256": "4926a63d330f6cc3bd484f178558377942ebb81495b5e1194e6f60f33d3dbfce",
+    "provenance": "PSF-licensed Python Tutorial v3.12.0; 10 chapters, 77 logical text units (not physical PDF pages), 281 chunks. AI-assisted benchmark; no human review claimed.",
+    "test_policy": "Day 6 test was opened in its report and is NOT reused. Five new facts plus two missing-evidence cases frozen before Day 7 retrieval."
+  },
+  "model_lock": {
+    "model": "BAAI/bge-small-en-v1.5",
+    "repository": "qdrant/bge-small-en-v1.5-onnx-q",
+    "revision": "aa8f8b060edb00e03bfdd08813a2949946c8ba55",
+    "license": "MIT",
+    "representation": "quantized ONNX via FastEmbed 0.6.1",
+    "files_sha256": {
+      "config.json": "13582bcf2effc85b7bf3d3f5532e686bc1c9ce86bb009d10f0ec33cbe92299dd",
+      "model_optimized.onnx": "51f1bd0addd6e859e42c2c8021a5e5461385bb676a649f4b269aa445449f2431",
+      "special_tokens_map.json": "5d5b662e421ea9fac075174bb0688ee0d9431699900b90662acd44b2a350503a",
+      "tokenizer.json": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+      "tokenizer_config.json": "0b29c7bfc889e53b36d9dd3e686dd4300f6525110eaa98c76a5dafceb2029f53"
+    }
+  }
+}

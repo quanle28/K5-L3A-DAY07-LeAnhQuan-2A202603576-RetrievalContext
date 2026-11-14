@@ -1,0 +1,22 @@
+{
+  "checked_at_utc": "2026-11-14T08:01:15.054506+00:00",
+  "python": "3.13.0",
+  "dependencies": {
+    "fastembed": "0.6.1",
+    "onnxruntime": "1.32.0",
+    "qdrant-client": "1.15.1",
+    "tokenizers": "0.23.3",
+    "numpy": "2.5.4"
+  },
+  "unit_tests": {
+    "passed": 26,
+    "failed": 0,
+    "includes_real_qdrant": true
+  },
+  "fresh_query_embeddings": 24,
+  "max_query_vector_absolute_difference": 0.00041544437408447266,
+  "rankings_compared": 82,
+  "changed_rankings": [],
+  "max_score_absolute_difference": 0.00018511662347278635,
+  "note": "Fresh ONNX query_embed bypasses old query cache. No LLM regeneration and no tuning from test. Minor upstream SQLite ResourceWarning on Python 3.13; tests pass and client is explicitly closed."
+}

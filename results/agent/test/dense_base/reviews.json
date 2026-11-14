@@ -1,0 +1,76 @@
+[
+  {
+    "query_id": "d7-t01",
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "stdlib/1 explicitly says os.open can shadow built-in open; answer and citation match.",
+    "reviewer": "Lê Anh Quân (đã đối chiếu trực tiếp context, citation và nguồn gốc)",
+    "human_confirmed": true,
+    "answer_grade": 2
+  },
+  {
+    "query_id": "d7-t02",
+    "context_grade": 0,
+    "citation_support": [
+      false
+    ],
+    "reason": "Answer says sys.argv/list but final context and cited controlflow/11 only explain variadic function arguments, not command-line arguments.",
+    "reviewer": "Lê Anh Quân (đã đối chiếu trực tiếp context, citation và nguồn gốc)",
+    "human_confirmed": true,
+    "answer_grade": 0
+  },
+  {
+    "query_id": "d7-t03",
+    "context_grade": 0,
+    "citation_support": [
+      false,
+      false
+    ],
+    "reason": "Answer names doctest from general knowledge; context contains module names and docstring examples, without doctest's validation behavior.",
+    "reviewer": "Lê Anh Quân (đã đối chiếu trực tiếp context, citation và nguồn gốc)",
+    "human_confirmed": true,
+    "answer_grade": 0
+  },
+  {
+    "query_id": "d7-t04",
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "stdlib2/2 explicitly defines safe_substitute leaving unresolved placeholders and gives matching owner example.",
+    "reviewer": "Lê Anh Quân (đã đối chiếu trực tiếp context, citation và nguồn gốc)",
+    "human_confirmed": true,
+    "answer_grade": 2
+  },
+  {
+    "query_id": "d7-t05",
+    "context_grade": 2,
+    "citation_support": [
+      true
+    ],
+    "reason": "stdlib2/5 explicitly states lowest-valued heap entry at position zero; worked heapq example confirms.",
+    "reviewer": "Lê Anh Quân (đã đối chiếu trực tiếp context, citation và nguồn gốc)",
+    "human_confirmed": true,
+    "answer_grade": 2
+  },
+  {
+    "query_id": "d7-u03",
+    "context_grade": null,
+    "citation_support": [],
+    "reason": "Correct explicit refusal, with no Django command added; all-source absence audit has no Django instructions.",
+    "reviewer": "Lê Anh Quân (đã đối chiếu trực tiếp context, citation và nguồn gốc)",
+    "human_confirmed": true,
+    "abstention_correct": true
+  },
+  {
+    "query_id": "d7-u04",
+    "context_grade": null,
+    "citation_support": [],
+    "reason": "Correct explicit refusal, with no hash-checking assertion; venv snapshot lacks --require-hashes.",
+    "reviewer": "Lê Anh Quân (đã đối chiếu trực tiếp context, citation và nguồn gốc)",
+    "human_confirmed": true,
+    "abstention_correct": true
+  }
+]

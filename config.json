@@ -1,0 +1,14 @@
+{
+  "day6_root": "../K5-L3A-DAY06-LeAnhQuan-2A202603576-DataIngestion",
+  "collection": "day6_B",
+  "dimensions": 384,
+  "model": "BAAI/bge-small-en-v1.5",
+  "baseline": "dense_base",
+  "selection_rule": "Maximize dev context_hit, then hit3, then hit1; break ties by smaller context budget, fewer searches, then configuration name. Retrieval selection is provisional until real-agent dev review.",
+  "experiments": {
+    "dense_base": {"method": "dense", "top_k": 3, "budget": 1800, "max_searches": 1, "hypothesis": "Baseline: Day 6 B exact cosine; small context may omit long evidence."},
+    "bm25": {"method": "bm25", "top_k": 3, "budget": 1800, "max_searches": 1, "hypothesis": "Lexical terms preserve exact Python identifiers and operators."},
+    "hybrid": {"method": "hybrid", "top_k": 3, "budget": 1800, "max_searches": 1, "hypothesis": "Improvement 1: reciprocal rank fusion combines semantic and lexical evidence."},
+    "hybrid_context": {"method": "hybrid", "top_k": 6, "budget": 6000, "max_searches": 2, "hypothesis": "Improvement 2: larger context and optional second search recover omitted evidence at greater token cost."}
+  }
+}

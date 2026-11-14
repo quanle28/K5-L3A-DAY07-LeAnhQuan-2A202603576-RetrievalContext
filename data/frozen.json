@@ -1,0 +1,16 @@
+{
+  "created_at_utc": "2026-11-14T07:46:30.698108+00:00",
+  "hashes": {
+    "data/chunks.json": "53109dc992d13b86262931bd22e504ce774fc1413807c793606f8244ed64540e",
+    "data/questions.json": "5391a381d8160e4a6fcc2d2bbcefff8360202846379f30515d48b0803d87f03b",
+    "data/pages.jsonl": "9908eaff18b77fbee097f25bc6373e62c9d557b97affdf7ccffc02da77e21355",
+    "data/day6_manifest.json": "891f24ec2a4988c568ac9b9a8a4fde67886aef9ecbb702a3386aee9897fcb0e2",
+    "data/model_lock.json": "fcdeca7b4830facae8614795a511beedefdb2a605619c358219e195dfba9fa18"
+  },
+  "day6_root": "D:\\K5-L3A-DAY06-LeAnhQuan-2A202603576-DataIngestion",
+  "chunk_strategy": "B",
+  "collection": "day6_B",
+  "day6_chunk_export_sha256": "4926a63d330f6cc3bd484f178558377942ebb81495b5e1194e6f60f33d3dbfce",
+  "provenance": "PSF-licensed Python Tutorial v3.12.0; 10 chapters, 77 logical text units (not physical PDF pages), 281 chunks. AI-assisted benchmark; no human review claimed.",
+  "test_policy": "Day 6 test was opened in its report and is NOT reused. Five new facts plus two missing-evidence cases frozen before Day 7 retrieval."
+}

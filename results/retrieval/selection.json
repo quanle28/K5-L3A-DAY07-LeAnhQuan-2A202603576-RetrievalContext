@@ -1,0 +1,121 @@
+{
+  "selected": "hybrid_context",
+  "selected_at_utc": "2026-11-14T07:57:23.047560+00:00",
+  "hashes": {
+    "data/chunks.json": "53109dc992d13b86262931bd22e504ce774fc1413807c793606f8244ed64540e",
+    "data/questions.json": "5391a381d8160e4a6fcc2d2bbcefff8360202846379f30515d48b0803d87f03b",
+    "data/pages.jsonl": "9908eaff18b77fbee097f25bc6373e62c9d557b97affdf7ccffc02da77e21355",
+    "data/day6_manifest.json": "891f24ec2a4988c568ac9b9a8a4fde67886aef9ecbb702a3386aee9897fcb0e2",
+    "data/model_lock.json": "fcdeca7b4830facae8614795a511beedefdb2a605619c358219e195dfba9fa18",
+    "config.json": "2c9f569ff61df2656d54dcde996d79330cfe92d9e2d316947684c52ab7deb5f0",
+    "src/__init__.py": "3bbe6ca438c97728f625ef76725cf78008dde6aba9564848a1cdd168ae574b57",
+    "src/__main__.py": "6ebe688f687b60b80c96ba9e62ed13242a4fed0dc9d338cccbe77b7f5a191479",
+    "src/agent.py": "1b1e9497a2675337694c9c225be9a95b9ecdc73c5d6e477af747aefb9d8cea3e",
+    "src/common.py": "39fff2e11ca8f64e4c667585e5b4f49798adde2f029083c69e2e1ec99e9e1089",
+    "src/experiment.py": "5959ab5b7cefe5d9d48e09f1388b2e58f1b5b19233c2265c16cd23615c922621",
+    "src/llm.py": "328c8f95272886b5f0eec27a584f56fa3ea0b9b6b319d016ac2894dbb6d601a1",
+    "src/prepare.py": "a1e98bcf363a67ba5a0246985614bb40e727caac3f12df3c18053db5a8abbf41",
+    "src/retrieval.py": "7a3645267df9ecf901d5022f4c0dc759cfa266d99d21faf8b2d71315bd92611d"
+  },
+  "rule": "Maximize dev context_hit, then hit3, then hit1; break ties by smaller context budget, fewer searches, then configuration name. Retrieval selection is provisional until real-agent dev review.",
+  "dev_metrics": {
+    "dense_base": {
+      "cases": 17,
+      "errors": 0,
+      "hit1": {
+        "n": 10,
+        "N": 15,
+        "rate": 0.6666666666666666
+      },
+      "hit3": {
+        "n": 14,
+        "N": 15,
+        "rate": 0.9333333333333333
+      },
+      "context_hit": {
+        "n": 12,
+        "N": 15,
+        "rate": 0.8
+      },
+      "median_seconds": 0.0008747000000002281,
+      "total_seconds": 0.02167160000000079,
+      "cost_usd": 0,
+      "mean_context_chars": 1223.8823529411766,
+      "answer_quality": "Not inferred from evidence substring matches; requires per-query semantic review."
+    },
+    "bm25": {
+      "cases": 17,
+      "errors": 0,
+      "hit1": {
+        "n": 10,
+        "N": 15,
+        "rate": 0.6666666666666666
+      },
+      "hit3": {
+        "n": 13,
+        "N": 15,
+        "rate": 0.8666666666666667
+      },
+      "context_hit": {
+        "n": 11,
+        "N": 15,
+        "rate": 0.7333333333333333
+      },
+      "median_seconds": 0.0021700000000000053,
+      "total_seconds": 0.03360000000000074,
+      "cost_usd": 0,
+      "mean_context_chars": 1313.0588235294117,
+      "answer_quality": "Not inferred from evidence substring matches; requires per-query semantic review."
+    },
+    "hybrid": {
+      "cases": 17,
+      "errors": 0,
+      "hit1": {
+        "n": 10,
+        "N": 15,
+        "rate": 0.6666666666666666
+      },
+      "hit3": {
+        "n": 15,
+        "N": 15,
+        "rate": 1.0
+      },
+      "context_hit": {
+        "n": 11,
+        "N": 15,
+        "rate": 0.7333333333333333
+      },
+      "median_seconds": 0.0036602999999999497,
+      "total_seconds": 0.0636814999999995,
+      "cost_usd": 0,
+      "mean_context_chars": 1146.235294117647,
+      "answer_quality": "Not inferred from evidence substring matches; requires per-query semantic review."
+    },
+    "hybrid_context": {
+      "cases": 17,
+      "errors": 0,
+      "hit1": {
+        "n": 10,
+        "N": 15,
+        "rate": 0.6666666666666666
+      },
+      "hit3": {
+        "n": 15,
+        "N": 15,
+        "rate": 1.0
+      },
+      "context_hit": {
+        "n": 15,
+        "N": 15,
+        "rate": 1.0
+      },
+      "median_seconds": 0.0038576000000003496,
+      "total_seconds": 0.0648974,
+      "cost_usd": 0,
+      "mean_context_chars": 5461.176470588235,
+      "answer_quality": "Not inferred from evidence substring matches; requires per-query semantic review."
+    }
+  },
+  "test_evaluated_before_selection": false,
+  "quality_review_status": "Retrieval only; not a model-quality claim"
+}

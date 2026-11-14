@@ -1,0 +1,405 @@
+[
+  {
+    "id": "d7-q01",
+    "split": "dev",
+    "answerable": true,
+    "question": "What type does ordinary division return, and which operators give floor division and the remainder?",
+    "expected_answer": "A float; // for floor division, % for the remainder.",
+    "gold": [
+      {
+        "source_id": "python-introduction",
+        "page": 1,
+        "evidence": "Division (/) always returns a float. To do floor division and get an integer result you can use the // operator; to calculate the remainder you can use %::"
+      }
+    ],
+    "filter": {},
+    "origin": "Day 6 dev reused; never held out"
+  },
+  {
+    "id": "d7-q02",
+    "split": "dev",
+    "answerable": true,
+    "question": "Can I replace a character of a Python string by assigning to its index?",
+    "expected_answer": "No. Strings are immutable; indexed assignment raises an error.",
+    "gold": [
+      {
+        "source_id": "python-introduction",
+        "page": 5,
+        "evidence": "Python strings cannot be changed --- they are immutable. Therefore, assigning to an indexed position in the string results in an error::"
+      }
+    ],
+    "filter": {},
+    "origin": "Day 6 dev reused; never held out"
+  },
+  {
+    "id": "d7-q03",
+    "split": "dev",
+    "answerable": true,
+    "question": "Which negative index selects the last character, and why is it not negative zero?",
+    "expected_answer": "Use -1; -0 is the same as 0.",
+    "gold": [
+      {
+        "source_id": "python-introduction",
+        "page": 4,
+        "evidence": "Indices may also be negative numbers, to start counting from the right:: >>> word[-1] # last character 'n' >>> word[-2] # second-last character 'o' >>> word[-6] 'P' Note that since -0 is the same as 0, negative indices start from -1."
+      }
+    ],
+    "filter": {},
+    "origin": "Day 6 dev reused; never held out"
+  },
+  {
+    "id": "d7-q04",
+    "split": "dev",
+    "answerable": true,
+    "question": "If loops are nested, which loop does a break statement exit?",
+    "expected_answer": "The innermost enclosing for or while loop.",
+    "gold": [
+      {
+        "source_id": "python-controlflow",
+        "page": 2,
+        "evidence": "The break statement breaks out of the innermost enclosing for or while loop."
+      }
+    ],
+    "filter": {},
+    "origin": "Day 6 dev reused; never held out"
+  },
+  {
+    "id": "d7-q05",
+    "split": "dev",
+    "answerable": true,
+    "question": "In the control-flow chapter, does a loop's else clause run after a break terminates the loop?",
+    "expected_answer": "No; the else clause is not executed after break.",
+    "gold": [
+      {
+        "source_id": "python-controlflow",
+        "page": 2,
+        "evidence": "In either kind of loop, the !else clause is **not** executed if the loop was terminated by a break."
+      }
+    ],
+    "filter": {
+      "chapter": "controlflow"
+    },
+    "origin": "Day 6 dev reused; never held out"
+  },
+  {
+    "id": "d7-q06",
+    "split": "dev",
+    "answerable": true,
+    "question": "Why can a list used as a function's default argument keep values between calls?",
+    "expected_answer": "The default is evaluated once, so a mutable default is shared by later calls.",
+    "gold": [
+      {
+        "source_id": "python-controlflow",
+        "page": 8,
+        "evidence": "**Important warning:** The default value is evaluated only once. This makes a difference when the default is a mutable object such as a list, dictionary, or instances of most classes. For example, the following function accumulates the arguments passed to it on subsequent calls::"
+      }
+    ],
+    "filter": {},
+    "origin": "Day 6 dev reused; never held out"
+  },
+  {
+    "id": "d7-q07",
+    "split": "dev",
+    "answerable": true,
+    "question": "What value comes back if a Python function reaches the end without an explicit return?",
+    "expected_answer": "None.",
+    "gold": [
+      {
+        "source_id": "python-controlflow",
+        "page": 7,
+        "evidence": "* The return statement returns with a value from a function. !return without an expression argument returns None. Falling off the end of a function also returns None."
+      },
+      {
+        "source_id": "python-controlflow",
+        "page": 6,
+        "evidence": "In fact, even functions without a return statement do return a value, albeit a rather boring one. This value is called None (it's a built-in name)."
+      }
+    ],
+    "filter": {},
+    "origin": "Day 6 dev reused; never held out"
+  },
+  {
+    "id": "d7-q08",
+    "split": "dev",
+    "answerable": true,
+    "question": "In the data-structures chapter, how can I append a single item at the end of a list?",
+    "expected_answer": "Call list.append(x).",
+    "gold": [
+      {
+        "source_id": "python-datastructures",
+        "page": 1,
+        "evidence": ".. method:: list.append(x) :noindex: Add an item to the end of the list. Equivalent to a[len(a):] = [x]."
+      }
+    ],
+    "filter": {
+      "chapter": "datastructures"
+    },
+    "origin": "Day 6 dev reused; never held out"
+  },
+  {
+    "id": "d7-q09",
+    "split": "dev",
+    "answerable": true,
+    "question": "What does a.pop() remove and return when no index is supplied?",
+    "expected_answer": "The last item in the list.",
+    "gold": [
+      {
+        "source_id": "python-datastructures",
+        "page": 1,
+        "evidence": "Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and returns the last item in the list."
+      }
+    ],
+    "filter": {},
+    "origin": "Day 6 dev reused; never held out"
+  },
+  {
+    "id": "d7-q10",
+    "split": "dev",
+    "answerable": true,
+    "question": "Which container is designed for efficient queue insertion and removal at both ends?",
+    "expected_answer": "collections.deque.",
+    "gold": [
+      {
+        "source_id": "python-datastructures",
+        "page": 2,
+        "evidence": "To implement a queue, use collections.deque which was designed to have fast appends and pops from both ends."
+      }
+    ],
+    "filter": {},
+    "origin": "Day 6 dev reused; never held out"
+  },
+  {
+    "id": "d7-q11",
+    "split": "dev",
+    "answerable": true,
+    "question": "Why can't a list be a dictionary key?",
+    "expected_answer": "Lists can be modified in place; dictionary keys must be immutable.",
+    "gold": [
+      {
+        "source_id": "python-datastructures",
+        "page": 6,
+        "evidence": "Unlike sequences, which are indexed by a range of numbers, dictionaries are indexed by *keys*, which can be any immutable type; strings and numbers can always be keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable object either directly or indirectly, it cannot be used as a key. You can't use lists as keys, since lists can be modified in place using index assignments, slice assignments, or methods like list.append and list.extend."
+      }
+    ],
+    "filter": {},
+    "origin": "Day 6 dev reused; never held out"
+  },
+  {
+    "id": "d7-q12",
+    "split": "dev",
+    "answerable": true,
+    "question": "How do I create an empty set, and what would empty braces create?",
+    "expected_answer": "Use set(); {} creates an empty dictionary.",
+    "gold": [
+      {
+        "source_id": "python-datastructures",
+        "page": 5,
+        "evidence": "Curly braces or the set function can be used to create sets. Note: to create an empty set you have to use set(), not {}; the latter creates an empty dictionary, a data structure that we discuss in the next section."
+      }
+    ],
+    "filter": {},
+    "origin": "Day 6 dev reused; never held out"
+  },
+  {
+    "id": "d7-q13",
+    "split": "dev",
+    "answerable": true,
+    "question": "Why should a file be opened in a with block even when the code may raise an exception?",
+    "expected_answer": "The file is properly closed when the suite finishes, even on an exception.",
+    "gold": [
+      {
+        "source_id": "python-inputoutput",
+        "page": 5,
+        "evidence": "It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly closed after its suite finishes, even if an exception is raised at some point."
+      },
+      {
+        "source_id": "python-errors",
+        "page": 6,
+        "evidence": "After the statement is executed, the file *f* is always closed, even if a problem was encountered while processing the lines."
+      }
+    ],
+    "filter": {},
+    "origin": "Day 6 dev reused; never held out"
+  },
+  {
+    "id": "d7-q14",
+    "split": "dev",
+    "answerable": true,
+    "question": "What does f.read() return after reaching the end of a text file?",
+    "expected_answer": "An empty string.",
+    "gold": [
+      {
+        "source_id": "python-inputoutput",
+        "page": 5,
+        "evidence": "If the end of the file has been reached, f.read() will return an empty string ('')."
+      }
+    ],
+    "filter": {},
+    "origin": "Day 6 dev reused; never held out"
+  },
+  {
+    "id": "d7-q15",
+    "split": "dev",
+    "answerable": true,
+    "question": "Does the finally clause run if the try statement produces no exception?",
+    "expected_answer": "Yes; it runs whether or not try produces an exception.",
+    "gold": [
+      {
+        "source_id": "python-errors",
+        "page": 5,
+        "evidence": "If a finally clause is present, the !finally clause will execute as the last task before the try statement completes. The !finally clause runs whether or not the !try statement produces an exception."
+      }
+    ],
+    "filter": {},
+    "origin": "Day 6 dev reused; never held out"
+  },
+  {
+    "id": "d7-t01",
+    "split": "test",
+    "answerable": true,
+    "question": "Why does the tutorial recommend import os instead of from os import *?",
+    "expected_answer": "To keep os.open from shadowing the built-in open function, which behaves differently.",
+    "gold": [
+      {
+        "source_id": "python-stdlib",
+        "page": 1,
+        "evidence": "Be sure to use the import os style instead of from os import *. This will keep os.open from shadowing the built-in open function which operates much differently."
+      }
+    ],
+    "filter": {},
+    "origin": "New Day 7 holdout, separate facts from Day 6 test"
+  },
+  {
+    "id": "d7-t02",
+    "split": "test",
+    "answerable": true,
+    "question": "Where are command-line arguments stored, and what container type holds them?",
+    "expected_answer": "In sys.argv, as a list.",
+    "gold": [
+      {
+        "source_id": "python-stdlib",
+        "page": 1,
+        "evidence": "Common utility scripts often need to process command line arguments. These arguments are stored in the sys module's *argv* attribute as a list."
+      }
+    ],
+    "filter": {},
+    "origin": "New Day 7 holdout, separate facts from Day 6 test"
+  },
+  {
+    "id": "d7-t03",
+    "split": "test",
+    "answerable": true,
+    "question": "Which module checks examples embedded in a program's docstrings?",
+    "expected_answer": "doctest.",
+    "gold": [
+      {
+        "source_id": "python-stdlib",
+        "page": 3,
+        "evidence": "The doctest module provides a tool for scanning a module and validating tests embedded in a program's docstrings."
+      }
+    ],
+    "filter": {},
+    "origin": "New Day 7 holdout, separate facts from Day 6 test"
+  },
+  {
+    "id": "d7-t04",
+    "split": "test",
+    "answerable": true,
+    "question": "What happens to an unresolved placeholder with string.Template.safe_substitute?",
+    "expected_answer": "It leaves the placeholder unchanged instead of raising KeyError for missing data.",
+    "gold": [
+      {
+        "source_id": "python-stdlib2",
+        "page": 2,
+        "evidence": "The string.Template.substitute method raises a KeyError when a placeholder is not supplied in a dictionary or a keyword argument. For mail-merge style applications, user supplied data may be incomplete and the string.Template.safe_substitute method may be more appropriate --- it will leave placeholders unchanged if data is missing::"
+      }
+    ],
+    "filter": {},
+    "origin": "New Day 7 holdout, separate facts from Day 6 test"
+  },
+  {
+    "id": "d7-t05",
+    "split": "test",
+    "answerable": true,
+    "question": "For a heapq heap, which position always holds the lowest-valued entry?",
+    "expected_answer": "Position zero (index 0).",
+    "gold": [
+      {
+        "source_id": "python-stdlib2",
+        "page": 5,
+        "evidence": "The heapq module provides functions for implementing heaps based on regular lists. The lowest valued entry is always kept at position zero."
+      }
+    ],
+    "filter": {},
+    "origin": "New Day 7 holdout, separate facts from Day 6 test"
+  },
+  {
+    "id": "d7-u01",
+    "split": "dev",
+    "question": "What timeout value does asyncio.TaskGroup use by default?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "The complete snapshot has no TaskGroup API or default timeout specification.",
+    "absence_audit": {
+      "scope": "All 77 normalized source units, not retrieval top-k",
+      "term_counts": {
+        "TaskGroup": 0
+      },
+      "review": "AI checked corpus scope and nearby paragraphs; student confirmation pending"
+    },
+    "gold": [],
+    "filter": {}
+  },
+  {
+    "id": "d7-u02",
+    "split": "dev",
+    "question": "What default transaction isolation level does sqlite3.connect use?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "The sqlite3 paragraph describes a wrapper only, without connection isolation defaults.",
+    "absence_audit": {
+      "scope": "All 77 normalized source units, not retrieval top-k",
+      "term_counts": {
+        "isolation_level": 0
+      },
+      "review": "AI checked corpus scope and nearby paragraphs; student confirmation pending"
+    },
+    "gold": [],
+    "filter": {}
+  },
+  {
+    "id": "d7-u03",
+    "split": "test",
+    "question": "Which Django command rolls back exactly the latest database migration?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "The snapshot contains no Django migration instructions; generic Python modules are insufficient.",
+    "absence_audit": {
+      "scope": "All 77 normalized source units, not retrieval top-k",
+      "term_counts": {
+        "Django": 0,
+        "migrate": 0
+      },
+      "review": "AI checked corpus scope and nearby paragraphs; student confirmation pending"
+    },
+    "gold": [],
+    "filter": {}
+  },
+  {
+    "id": "d7-u04",
+    "split": "test",
+    "question": "How does pip --require-hashes validate every dependency's archive hash?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "The venv chapter explains pip install/freeze but not hash-checking mode or its dependency rules.",
+    "absence_audit": {
+      "scope": "All 77 normalized source units, not retrieval top-k",
+      "term_counts": {
+        "require-hashes": 0
+      },
+      "review": "AI checked corpus scope and nearby paragraphs; student confirmation pending"
+    },
+    "gold": [],
+    "filter": {}
+  }
+]

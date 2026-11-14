@@ -1,0 +1,174 @@
+[
+  {
+    "query_id": "d7-q01",
+    "citation_support": [
+      true,
+      true
+    ],
+    "reason": "Source text and worked examples support / -> float, // floor division and % remainder for the tutorial's integer operands.",
+    "reviewer": "Lê Anh Quân (đã đối chiếu trực tiếp context, citation và nguồn gốc)",
+    "human_confirmed": true,
+    "answer_grade": 2
+  },
+  {
+    "query_id": "d7-q02",
+    "citation_support": [
+      false
+    ],
+    "reason": "Small-budget configurations omit the immutable/TypeError paragraph and cite indexing/slicing instead. BM25 also invents an incorrect slicing example. Larger context contains the explicit immutable and TypeError example.",
+    "reviewer": "Lê Anh Quân (đã đối chiếu trực tiếp context, citation và nguồn gốc)",
+    "human_confirmed": true,
+    "answer_grade": 0
+  },
+  {
+    "query_id": "d7-q03",
+    "citation_support": [
+      true
+    ],
+    "reason": "Source explicitly shows -1 and says -0 equals 0. hybrid_context's phrase 'not a valid index' is misleading: -0 is valid but identical to 0, so grade 1.",
+    "reviewer": "Lê Anh Quân (đã đối chiếu trực tiếp context, citation và nguồn gốc)",
+    "human_confirmed": true,
+    "answer_grade": 2
+  },
+  {
+    "query_id": "d7-q04",
+    "citation_support": [
+      false
+    ],
+    "reason": "BM25 cites the exact innermost for/while definition. Dense/small hybrid omit it. Larger hybrid includes it in context but cites a different loop-else example, so answer grade 1 and citation unsupported for the full claim.",
+    "reviewer": "Lê Anh Quân (đã đối chiếu trực tiếp context, citation và nguồn gốc)",
+    "human_confirmed": true,
+    "answer_grade": 0
+  },
+  {
+    "query_id": "d7-q05",
+    "citation_support": [
+      true
+    ],
+    "reason": "Loop-else runs when no break occurs. The adjacent analogy paragraph is valid equivalent evidence even when strict frozen-quote context_hit is false; frozen gold is unchanged.",
+    "reviewer": "Lê Anh Quân (đã đối chiếu trực tiếp context, citation và nguồn gốc)",
+    "human_confirmed": true,
+    "answer_grade": 2
+  },
+  {
+    "query_id": "d7-q06",
+    "citation_support": [
+      true
+    ],
+    "reason": "Source says default evaluated once, shows accumulated list and None workaround; the additional short definition-scope citation supports evaluation time.",
+    "reviewer": "Lê Anh Quân (đã đối chiếu trực tiếp context, citation và nguồn gốc)",
+    "human_confirmed": true,
+    "answer_grade": 2
+  },
+  {
+    "query_id": "d7-q07",
+    "citation_support": [
+      false,
+      true
+    ],
+    "reason": "Function source explicitly says implicit return is None. Unrelated finally/list-method sources do not prove the general function claim and are marked unsupported.",
+    "reviewer": "Lê Anh Quân (đã đối chiếu trực tiếp context, citation và nguồn gốc)",
+    "human_confirmed": true,
+    "answer_grade": 2
+  },
+  {
+    "query_id": "d7-q08",
+    "citation_support": [
+      true
+    ],
+    "reason": "Definition and/or stack.append example support adding at list end. list.pop documentation does not support append and is marked unsupported when cited.",
+    "reviewer": "Lê Anh Quân (đã đối chiếu trực tiếp context, citation và nguồn gốc)",
+    "human_confirmed": true,
+    "answer_grade": 2
+  },
+  {
+    "query_id": "d7-q09",
+    "citation_support": [
+      true
+    ],
+    "reason": "list.pop documentation explicitly says no index removes/returns last item.",
+    "reviewer": "Lê Anh Quân (đã đối chiếu trực tiếp context, citation và nguồn gốc)",
+    "human_confirmed": true,
+    "answer_grade": 2
+  },
+  {
+    "query_id": "d7-q10",
+    "citation_support": [
+      true
+    ],
+    "reason": "deque paragraph supports efficient operations at both ends. hybrid_context cites queue.Queue/thread coordination instead; core answer is correct but sourced incorrectly, grade 1.",
+    "reviewer": "Lê Anh Quân (đã đối chiếu trực tiếp context, citation và nguồn gốc)",
+    "human_confirmed": true,
+    "answer_grade": 2
+  },
+  {
+    "query_id": "d7-q11",
+    "citation_support": [
+      true,
+      false
+    ],
+    "reason": "Dictionary paragraph explains mutable lists and immutable keys. Dense/small hybrid add an unsupported changing-hash explanation (lists are unhashable), grade 1; unrelated key-order citation is unsupported.",
+    "reviewer": "Lê Anh Quân (đã đối chiếu trực tiếp context, citation và nguồn gốc)",
+    "human_confirmed": true,
+    "answer_grade": 1
+  },
+  {
+    "query_id": "d7-q12",
+    "citation_support": [
+      true
+    ],
+    "reason": "Set paragraph and dictionary paragraph support set() versus {}.",
+    "reviewer": "Lê Anh Quân (đã đối chiếu trực tiếp context, citation và nguồn gốc)",
+    "human_confirmed": true,
+    "answer_grade": 2
+  },
+  {
+    "query_id": "d7-q13",
+    "citation_support": [
+      true
+    ],
+    "reason": "Dense/large hybrid contain explicit file-always-closed evidence; small BM25/hybrid cite exception chaining/notes instead. Large hybrid adds an unsupported try/finally comparison and extra irrelevant citation, grade 1.",
+    "reviewer": "Lê Anh Quân (đã đối chiếu trực tiếp context, citation và nguồn gốc)",
+    "human_confirmed": true,
+    "answer_grade": 2
+  },
+  {
+    "query_id": "d7-q14",
+    "citation_support": [
+      true,
+      false
+    ],
+    "reason": "Text-mode empty string is explicitly supported. readline/seek citations do not establish read-at-EOF. Large hybrid incorrectly extends the str claim to binary mode (which returns bytes), grade 1.",
+    "reviewer": "Lê Anh Quân (đã đối chiếu trực tiếp context, citation và nguồn gốc)",
+    "human_confirmed": true,
+    "answer_grade": 2
+  },
+  {
+    "query_id": "d7-q15",
+    "citation_support": [
+      false
+    ],
+    "reason": "Small contexts show exceptional/early-exit conditions only, not ordinary completion. Large context includes the explicit whether-or-not exception paragraph and successful divide example; unrelated conditional-only citation is marked unsupported for no-exception claim.",
+    "reviewer": "Lê Anh Quân (đã đối chiếu trực tiếp context, citation và nguồn gốc)",
+    "human_confirmed": true,
+    "answer_grade": 0
+  },
+  {
+    "query_id": "d7-u01",
+    "citation_support": [],
+    "reason": "Agent explicitly abstains without adding a timeout assertion; full-corpus absence audit has no TaskGroup API.",
+    "reviewer": "Lê Anh Quân (đã đối chiếu trực tiếp context, citation và nguồn gốc)",
+    "human_confirmed": true,
+    "abstention_correct": true
+  },
+  {
+    "query_id": "d7-u02",
+    "citation_support": [
+      false
+    ],
+    "reason": "Only BM25 abstains. Other configurations invent DEFERRED/default transaction behavior that is absent from the snapshot; cited sqlite wrapper/example text does not support it.",
+    "reviewer": "Lê Anh Quân (đã đối chiếu trực tiếp context, citation và nguồn gốc)",
+    "human_confirmed": true,
+    "abstention_correct": false
+  }
+]

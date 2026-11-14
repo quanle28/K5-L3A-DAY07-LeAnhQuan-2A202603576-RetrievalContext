@@ -1,0 +1,622 @@
+{
+  "format": "RST text source units, not PDF physical pages",
+  "snapshot": "v3.12.0",
+  "counting_rule": "Sequential non-overlapping units >=1500 normalized characters; target 2400, prefer paragraph boundary; retain final tail >=1500. No duplicated content.",
+  "normalization": "NFC; remove RST targets/index/heading rulers; unwrap inline roles; retain paragraphs and code; whitespace normalized.",
+  "page_count": 77,
+  "errors": [],
+  "documents": [
+    {
+      "source_id": "python-introduction",
+      "title": "Python Tutorial: introduction",
+      "source_path_or_url": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/introduction.rst",
+      "local_path": "data/raw/introduction.rst",
+      "license_or_permission": "PSF License Version 2; examples also 0BSD; see data/raw/LICENSE-PYTHON.txt",
+      "accessed_at": "2026-11-13T04:32:00.140881+00:00",
+      "snapshot": "v3.12.0",
+      "raw_sha256": "2a2bba97766cd2d161513975b3ba1123978647cebab19ad5d5e1a3e4491bc787",
+      "normalized_sha256": "966a7a7a94e2cb032f9fade03aa78a024cc534c6aade08819a3cd8885f754e2f",
+      "normalized_characters": 16382,
+      "physical_pages": null,
+      "pages": [
+        {
+          "page": 1,
+          "char_start": 0,
+          "char_end": 2505,
+          "characters": 2505
+        },
+        {
+          "page": 2,
+          "char_start": 2507,
+          "char_end": 4930,
+          "characters": 2423
+        },
+        {
+          "page": 3,
+          "char_start": 4932,
+          "char_end": 7340,
+          "characters": 2408
+        },
+        {
+          "page": 4,
+          "char_start": 7342,
+          "char_end": 9824,
+          "characters": 2482
+        },
+        {
+          "page": 5,
+          "char_start": 9826,
+          "char_end": 12343,
+          "characters": 2517
+        },
+        {
+          "page": 6,
+          "char_start": 12345,
+          "char_end": 16382,
+          "characters": 4037
+        }
+      ]
+    },
+    {
+      "source_id": "python-controlflow",
+      "title": "Python Tutorial: controlflow",
+      "source_path_or_url": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/controlflow.rst",
+      "local_path": "data/raw/controlflow.rst",
+      "license_or_permission": "PSF License Version 2; examples also 0BSD; see data/raw/LICENSE-PYTHON.txt",
+      "accessed_at": "2026-11-13T04:32:00.140881+00:00",
+      "snapshot": "v3.12.0",
+      "raw_sha256": "23844cf6d42e67063c7ef9354a2529da7c0b02266e46d9d3823d5f6c0f1b7809",
+      "normalized_sha256": "48f4d7b66b73d8a2612f7b8f2160b39b35edd06486281b8382dc264446c4b44d",
+      "normalized_characters": 34026,
+      "physical_pages": null,
+      "pages": [
+        {
+          "page": 1,
+          "char_start": 0,
+          "char_end": 2435,
+          "characters": 2435
+        },
+        {
+          "page": 2,
+          "char_start": 2437,
+          "char_end": 4913,
+          "characters": 2476
+        },
+        {
+          "page": 3,
+          "char_start": 4915,
+          "char_end": 7322,
+          "characters": 2407
+        },
+        {
+          "page": 4,
+          "char_start": 7324,
+          "char_end": 9845,
+          "characters": 2521
+        },
+        {
+          "page": 5,
+          "char_start": 9847,
+          "char_end": 12396,
+          "characters": 2549
+        },
+        {
+          "page": 6,
+          "char_start": 12398,
+          "char_end": 14897,
+          "characters": 2499
+        },
+        {
+          "page": 7,
+          "char_start": 14899,
+          "char_end": 17325,
+          "characters": 2426
+        },
+        {
+          "page": 8,
+          "char_start": 17327,
+          "char_end": 19770,
+          "characters": 2443
+        },
+        {
+          "page": 9,
+          "char_start": 19772,
+          "char_end": 22494,
+          "characters": 2722
+        },
+        {
+          "page": 10,
+          "char_start": 22496,
+          "char_end": 24938,
+          "characters": 2442
+        },
+        {
+          "page": 11,
+          "char_start": 24940,
+          "char_end": 27544,
+          "characters": 2604
+        },
+        {
+          "page": 12,
+          "char_start": 27546,
+          "char_end": 30597,
+          "characters": 3051
+        },
+        {
+          "page": 13,
+          "char_start": 30599,
+          "char_end": 34026,
+          "characters": 3427
+        }
+      ]
+    },
+    {
+      "source_id": "python-datastructures",
+      "title": "Python Tutorial: datastructures",
+      "source_path_or_url": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/datastructures.rst",
+      "local_path": "data/raw/datastructures.rst",
+      "license_or_permission": "PSF License Version 2; examples also 0BSD; see data/raw/LICENSE-PYTHON.txt",
+      "accessed_at": "2026-11-13T04:32:00.140881+00:00",
+      "snapshot": "v3.12.0",
+      "raw_sha256": "eddd812992aa24ed1c213b8fb1ab6ff43197352c4b8df6d1586438fd8e1cfa52",
+      "normalized_sha256": "e11ef1ec206b1b6b3647100d5935d224391ccd91bbd3d1c55fdfce52adf9f6c9",
+      "normalized_characters": 22173,
+      "physical_pages": null,
+      "pages": [
+        {
+          "page": 1,
+          "char_start": 0,
+          "char_end": 2927,
+          "characters": 2927
+        },
+        {
+          "page": 2,
+          "char_start": 2929,
+          "char_end": 5383,
+          "characters": 2454
+        },
+        {
+          "page": 3,
+          "char_start": 5385,
+          "char_end": 7892,
+          "characters": 2507
+        },
+        {
+          "page": 4,
+          "char_start": 7894,
+          "char_end": 10728,
+          "characters": 2834
+        },
+        {
+          "page": 5,
+          "char_start": 10730,
+          "char_end": 13161,
+          "characters": 2431
+        },
+        {
+          "page": 6,
+          "char_start": 13163,
+          "char_end": 15618,
+          "characters": 2455
+        },
+        {
+          "page": 7,
+          "char_start": 15620,
+          "char_end": 18027,
+          "characters": 2407
+        },
+        {
+          "page": 8,
+          "char_start": 18029,
+          "char_end": 20612,
+          "characters": 2583
+        },
+        {
+          "page": 9,
+          "char_start": 20614,
+          "char_end": 22173,
+          "characters": 1559
+        }
+      ]
+    },
+    {
+      "source_id": "python-modules",
+      "title": "Python Tutorial: modules",
+      "source_path_or_url": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/modules.rst",
+      "local_path": "data/raw/modules.rst",
+      "license_or_permission": "PSF License Version 2; examples also 0BSD; see data/raw/LICENSE-PYTHON.txt",
+      "accessed_at": "2026-11-13T04:32:00.140881+00:00",
+      "snapshot": "v3.12.0",
+      "raw_sha256": "05cae16853afbe75e901f26bfd66a0e2c36a64c2631997cc2bbc33d2f22a4380",
+      "normalized_sha256": "ed5b70fc20f0bf2eee49a8326c3284bb5f2097987d5ba13f9604971d0c025703",
+      "normalized_characters": 22903,
+      "physical_pages": null,
+      "pages": [
+        {
+          "page": 1,
+          "char_start": 0,
+          "char_end": 2542,
+          "characters": 2542
+        },
+        {
+          "page": 2,
+          "char_start": 2544,
+          "char_end": 5040,
+          "characters": 2496
+        },
+        {
+          "page": 3,
+          "char_start": 5042,
+          "char_end": 7728,
+          "characters": 2686
+        },
+        {
+          "page": 4,
+          "char_start": 7730,
+          "char_end": 10209,
+          "characters": 2479
+        },
+        {
+          "page": 5,
+          "char_start": 10211,
+          "char_end": 12686,
+          "characters": 2475
+        },
+        {
+          "page": 6,
+          "char_start": 12688,
+          "char_end": 15174,
+          "characters": 2486
+        },
+        {
+          "page": 7,
+          "char_start": 15176,
+          "char_end": 17611,
+          "characters": 2435
+        },
+        {
+          "page": 8,
+          "char_start": 17613,
+          "char_end": 20055,
+          "characters": 2442
+        },
+        {
+          "page": 9,
+          "char_start": 20057,
+          "char_end": 22903,
+          "characters": 2846
+        }
+      ]
+    },
+    {
+      "source_id": "python-inputoutput",
+      "title": "Python Tutorial: inputoutput",
+      "source_path_or_url": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/inputoutput.rst",
+      "local_path": "data/raw/inputoutput.rst",
+      "license_or_permission": "PSF License Version 2; examples also 0BSD; see data/raw/LICENSE-PYTHON.txt",
+      "accessed_at": "2026-11-13T04:32:00.140881+00:00",
+      "snapshot": "v3.12.0",
+      "raw_sha256": "2fb6533d10638f2e16a0d8a0fd3743fa5281450992b44936b9f72d756cd4f194",
+      "normalized_sha256": "fe2ab6b00e8e5359893981a940147b7ba46205be7f00d68d77533fac7bde186d",
+      "normalized_characters": 17838,
+      "physical_pages": null,
+      "pages": [
+        {
+          "page": 1,
+          "char_start": 0,
+          "char_end": 2474,
+          "characters": 2474
+        },
+        {
+          "page": 2,
+          "char_start": 2476,
+          "char_end": 4960,
+          "characters": 2484
+        },
+        {
+          "page": 3,
+          "char_start": 4962,
+          "char_end": 7570,
+          "characters": 2608
+        },
+        {
+          "page": 4,
+          "char_start": 7572,
+          "char_end": 10336,
+          "characters": 2764
+        },
+        {
+          "page": 5,
+          "char_start": 10338,
+          "char_end": 13065,
+          "characters": 2727
+        },
+        {
+          "page": 6,
+          "char_start": 13067,
+          "char_end": 15725,
+          "characters": 2658
+        },
+        {
+          "page": 7,
+          "char_start": 15727,
+          "char_end": 17838,
+          "characters": 2111
+        }
+      ]
+    },
+    {
+      "source_id": "python-errors",
+      "title": "Python Tutorial: errors",
+      "source_path_or_url": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/errors.rst",
+      "local_path": "data/raw/errors.rst",
+      "license_or_permission": "PSF License Version 2; examples also 0BSD; see data/raw/LICENSE-PYTHON.txt",
+      "accessed_at": "2026-11-13T04:32:00.140881+00:00",
+      "snapshot": "v3.12.0",
+      "raw_sha256": "0c09ca192cd9a88c2d60362f78a51915d8957dd4e8bbc5947dc48d036e96166a",
+      "normalized_sha256": "abeee6fa5b99660c5741f607d9df77bfd0e9c5234bce5e8f53722c63e6e0a3bf",
+      "normalized_characters": 19826,
+      "physical_pages": null,
+      "pages": [
+        {
+          "page": 1,
+          "char_start": 0,
+          "char_end": 2566,
+          "characters": 2566
+        },
+        {
+          "page": 2,
+          "char_start": 2568,
+          "char_end": 5129,
+          "characters": 2561
+        },
+        {
+          "page": 3,
+          "char_start": 5131,
+          "char_end": 7675,
+          "characters": 2544
+        },
+        {
+          "page": 4,
+          "char_start": 7677,
+          "char_end": 10473,
+          "characters": 2796
+        },
+        {
+          "page": 5,
+          "char_start": 10475,
+          "char_end": 13011,
+          "characters": 2536
+        },
+        {
+          "page": 6,
+          "char_start": 13013,
+          "char_end": 15522,
+          "characters": 2509
+        },
+        {
+          "page": 7,
+          "char_start": 15524,
+          "char_end": 18238,
+          "characters": 2714
+        },
+        {
+          "page": 8,
+          "char_start": 18240,
+          "char_end": 19826,
+          "characters": 1586
+        }
+      ]
+    },
+    {
+      "source_id": "python-classes",
+      "title": "Python Tutorial: classes",
+      "source_path_or_url": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/classes.rst",
+      "local_path": "data/raw/classes.rst",
+      "license_or_permission": "PSF License Version 2; examples also 0BSD; see data/raw/LICENSE-PYTHON.txt",
+      "accessed_at": "2026-11-13T04:32:00.140881+00:00",
+      "snapshot": "v3.12.0",
+      "raw_sha256": "6c4a8fd872dbb07ff76f3d09bb73dfa2edf9634abd4b0d68206606d4c230b997",
+      "normalized_sha256": "93e22b2c63984bcf93c8baaf27f654a32ac164b13630fb91c9eeaec337023568",
+      "normalized_characters": 33910,
+      "physical_pages": null,
+      "pages": [
+        {
+          "page": 1,
+          "char_start": 0,
+          "char_end": 2898,
+          "characters": 2898
+        },
+        {
+          "page": 2,
+          "char_start": 2900,
+          "char_end": 5524,
+          "characters": 2624
+        },
+        {
+          "page": 3,
+          "char_start": 5526,
+          "char_end": 8340,
+          "characters": 2814
+        },
+        {
+          "page": 4,
+          "char_start": 8342,
+          "char_end": 11172,
+          "characters": 2830
+        },
+        {
+          "page": 5,
+          "char_start": 11174,
+          "char_end": 13689,
+          "characters": 2515
+        },
+        {
+          "page": 6,
+          "char_start": 13691,
+          "char_end": 16466,
+          "characters": 2775
+        },
+        {
+          "page": 7,
+          "char_start": 16468,
+          "char_end": 18943,
+          "characters": 2475
+        },
+        {
+          "page": 8,
+          "char_start": 18945,
+          "char_end": 21492,
+          "characters": 2547
+        },
+        {
+          "page": 9,
+          "char_start": 21494,
+          "char_end": 24069,
+          "characters": 2575
+        },
+        {
+          "page": 10,
+          "char_start": 24071,
+          "char_end": 26915,
+          "characters": 2844
+        },
+        {
+          "page": 11,
+          "char_start": 26917,
+          "char_end": 29387,
+          "characters": 2470
+        },
+        {
+          "page": 12,
+          "char_start": 29389,
+          "char_end": 31837,
+          "characters": 2448
+        },
+        {
+          "page": 13,
+          "char_start": 31839,
+          "char_end": 33910,
+          "characters": 2071
+        }
+      ]
+    },
+    {
+      "source_id": "python-stdlib",
+      "title": "Python Tutorial: stdlib",
+      "source_path_or_url": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/stdlib.rst",
+      "local_path": "data/raw/stdlib.rst",
+      "license_or_permission": "PSF License Version 2; examples also 0BSD; see data/raw/LICENSE-PYTHON.txt",
+      "accessed_at": "2026-11-13T04:32:00.140881+00:00",
+      "snapshot": "v3.12.0",
+      "raw_sha256": "4f6bc514620c5c6298a699064b94562268eba56486acc5f4360bad4589886021",
+      "normalized_sha256": "5d67806df7a92ba8c5edff6dc88fd1c4580b5056e2719a3a4e2f6d8369074692",
+      "normalized_characters": 9719,
+      "physical_pages": null,
+      "pages": [
+        {
+          "page": 1,
+          "char_start": 0,
+          "char_end": 2502,
+          "characters": 2502
+        },
+        {
+          "page": 2,
+          "char_start": 2504,
+          "char_end": 5006,
+          "characters": 2502
+        },
+        {
+          "page": 3,
+          "char_start": 5008,
+          "char_end": 7514,
+          "characters": 2506
+        },
+        {
+          "page": 4,
+          "char_start": 7516,
+          "char_end": 9719,
+          "characters": 2203
+        }
+      ]
+    },
+    {
+      "source_id": "python-stdlib2",
+      "title": "Python Tutorial: stdlib2",
+      "source_path_or_url": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/stdlib2.rst",
+      "local_path": "data/raw/stdlib2.rst",
+      "license_or_permission": "PSF License Version 2; examples also 0BSD; see data/raw/LICENSE-PYTHON.txt",
+      "accessed_at": "2026-11-13T04:32:00.140881+00:00",
+      "snapshot": "v3.12.0",
+      "raw_sha256": "59def21a3170a29c8a623b97fe327983657e4dae02d252d28ff6a33c8120b141",
+      "normalized_sha256": "4e49ef810633ea872d8e590a4d53d592d9654f87d776f1eb817c717009fcd90a",
+      "normalized_characters": 13407,
+      "physical_pages": null,
+      "pages": [
+        {
+          "page": 1,
+          "char_start": 0,
+          "char_end": 2505,
+          "characters": 2505
+        },
+        {
+          "page": 2,
+          "char_start": 2507,
+          "char_end": 5035,
+          "characters": 2528
+        },
+        {
+          "page": 3,
+          "char_start": 5037,
+          "char_end": 7551,
+          "characters": 2514
+        },
+        {
+          "page": 4,
+          "char_start": 7553,
+          "char_end": 10054,
+          "characters": 2501
+        },
+        {
+          "page": 5,
+          "char_start": 10056,
+          "char_end": 13407,
+          "characters": 3351
+        }
+      ]
+    },
+    {
+      "source_id": "python-venv",
+      "title": "Python Tutorial: venv",
+      "source_path_or_url": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/venv.rst",
+      "local_path": "data/raw/venv.rst",
+      "license_or_permission": "PSF License Version 2; examples also 0BSD; see data/raw/LICENSE-PYTHON.txt",
+      "accessed_at": "2026-11-13T04:32:00.140881+00:00",
+      "snapshot": "v3.12.0",
+      "raw_sha256": "cddbb3a66998a0832d8a5e592f08a37aa465ce34094af942713dae171d480fee",
+      "normalized_sha256": "24bde5b4614912d72dfda41b3e60496988756db397ba1efb2c6431255d7f2b9c",
+      "normalized_characters": 6776,
+      "physical_pages": null,
+      "pages": [
+        {
+          "page": 1,
+          "char_start": 0,
+          "char_end": 2429,
+          "characters": 2429
+        },
+        {
+          "page": 2,
+          "char_start": 2431,
+          "char_end": 4904,
+          "characters": 2473
+        },
+        {
+          "page": 3,
+          "char_start": 4906,
+          "char_end": 6776,
+          "characters": 1870
+        }
+      ]
+    }
+  ]
+}

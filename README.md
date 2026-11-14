@@ -1,3 +1,9 @@
+# Bài làm của Le Anh Quan — 2A202603576
+
+Mã nguồn hoàn thiện ở `src/`. Xem **[hướng dẫn chạy bài làm](SOLUTION.md)**, [báo cáo cá nhân](report/individual/2A202603576_LeAnhQuan.md), [kết quả thực chạy](results/README.md) và [thiết kế](docs/ARCHITECTURE.md). Phần dưới giữ nguyên đề bài.
+
+---
+
 # Day 7 — Agentic RAG
 
 **Bài cá nhân · Python 3.11+ · tiếp nối Day 6**

@@ -1,5 +1,7 @@
 # Định dạng dữ liệu
 
+**Dữ liệu bài làm:** `chunks.json` có 281 chunk B của DAY06; `questions.json` có 24 câu (17 dev/7 test), `answerable` boolean và `gold` là các nguồn thay thế. Câu thiếu bằng chứng có `gold: []` cùng absence audit. `frozen.json` giữ checksum. `pages.jsonl`/`day6_manifest.json`/`LICENSE-PYTHON.txt` giữ nội dung và provenance. `page` là đơn vị text DAY06, không phải trang PDF. Dùng `python -m src ...` với dữ liệu thật; baseline mẫu bên dưới chỉ hỗ trợ câu có gold. Xem [bài làm](../SOLUTION.md).
+
 Các file `example_*.json` chỉ minh họa định dạng, không đủ để nộp bài. Dữ liệu thật là JSON array UTF-8; nếu dùng định dạng khác, ghi cách chuyển trong README.
 
 - **Chunk:** `id`, `text`, `source_id`, `source`, `page`, `metadata`. ID phải duy nhất; giữ phiên bản hoặc ngày nếu có.

@@ -1,0 +1,24 @@
+{
+  "cases": 17,
+  "errors": 0,
+  "hit1": {
+    "n": 9,
+    "N": 15,
+    "rate": 0.6
+  },
+  "hit3": {
+    "n": 15,
+    "N": 15,
+    "rate": 1.0
+  },
+  "context_hit": {
+    "n": 15,
+    "N": 15,
+    "rate": 1.0
+  },
+  "median_seconds": 4.133073499999995,
+  "total_seconds": 75.65731899999997,
+  "cost_usd": 0.0097212,
+  "mean_context_chars": 5523.764705882353,
+  "answer_quality": "Not inferred from evidence substring matches; requires per-query semantic review."
+}

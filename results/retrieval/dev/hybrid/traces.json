@@ -1,0 +1,1976 @@
+[
+  {
+    "status": "retrieved",
+    "events": [
+      {
+        "event": "search",
+        "tool": "hybrid",
+        "query": "What type does ordinary division return, and which operators give floor division and the remainder?",
+        "filter": {},
+        "results": [
+          {
+            "id": "dc0e98dce484747a439f6792ec7d0c961ebaaad4d5c4de52b0fd118d1e3a1363",
+            "source_id": "python-introduction",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/introduction.rst",
+            "page": 1,
+            "text": ">>> 17 / 3 # classic division returns a float\n5.666666666666667\n>>>\n>>> 17 // 3 # floor division discards the fractional part\n5\n>>> 17 % 3 # the % operator returns the remainder of the division\n2\n>>> 5 * 3 + 2 # floored quotient * divisor + remainder\n17",
+            "metadata": {
+              "chapter": "introduction",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 0,
+              "source_char_end": 2505,
+              "char_start": 2252,
+              "char_end": 2505,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.03278688524590164,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 1,
+                "score": 0.8147324782243922
+              },
+              "bm25": {
+                "rank": 1,
+                "score": 23.0446080750504
+              }
+            }
+          },
+          {
+            "id": "d08612c3959010c59297c871125874638729ffe0c67310a6ecb845a173ae4322",
+            "source_id": "python-introduction",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/introduction.rst",
+            "page": 1,
+            "text": "The interpreter acts as a simple calculator: you can type an expression at it\nand it will write the value. Expression syntax is straightforward: the\noperators +, -, * and / can be used to perform\narithmetic; parentheses (()) can be used for grouping.\nFor example::\n\n>>> 2 + 2\n4\n>>> 50 - 5*6\n20\n>>> (50 - 5*6) / 4\n5.0\n>>> 8 / 5 # division always returns a floating point number\n1.6\n\nThe integer numbers (e.g. 2, 4, 20) have type int,\nthe ones with a fractional part (e.g. 5.0, 1.6) have type\nfloat. We will see more about numeric types later in the tutorial.\n\nDivision (/) always returns a float. To do floor division and\nget an integer result you can use the // operator; to calculate\nthe remainder you can use %::",
+            "metadata": {
+              "chapter": "introduction",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 0,
+              "source_char_end": 2505,
+              "char_start": 1536,
+              "char_end": 2250,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.03225806451612903,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 2,
+                "score": 0.7874621482332227
+              },
+              "bm25": {
+                "rank": 2,
+                "score": 21.947371274512296
+              }
+            }
+          },
+          {
+            "id": "90c0d4e9cc7cf40b85b558975929c6730520fef03083387ce0a123dc4257c495",
+            "source_id": "python-errors",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/errors.rst",
+            "page": 6,
+            "text": "For example::\n\n>>> def bool_return():\n... try:\n... return True\n... finally:\n... return False\n...\n>>> bool_return()\nFalse\n\nA more complicated example::\n\n>>> def divide(x, y):\n... try:\n... result = x / y\n... except ZeroDivisionError:\n... print(\"division by zero!\")\n... else:\n... print(\"result is\", result)\n... finally:\n... print(\"executing finally clause\")\n...\n>>> divide(2, 1)\nresult is 2.0\nexecuting finally clause\n>>> divide(2, 0)\ndivision by zero!\nexecuting finally clause\n>>> divide(\"2\", \"1\")\nexecuting finally clause\nTraceback (most recent call last):\nFile \"<stdin>\", line 1, in <module>\nFile \"<stdin>\", line 3, in divide\nTypeError: unsupported operand type(s) for /: 'str' and 'str'\n\nAs you can see, the finally clause is executed in any event. The\nTypeError raised by dividing two strings is not handled by the\nexcept clause and therefore re-raised after the !finally\nclause has been executed.",
+            "metadata": {
+              "chapter": "errors",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 13013,
+              "source_char_end": 15522,
+              "char_start": 0,
+              "char_end": 899,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.031746031746031744,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 3,
+                "score": 0.7143020902315171
+              },
+              "bm25": {
+                "rank": 3,
+                "score": 10.562715299733618
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "context": "[dc0e98dce484747a439f6792ec7d0c961ebaaad4d5c4de52b0fd118d1e3a1363 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/introduction.rst | source unit 1]\n>>> 17 / 3 # classic division returns a float\n5.666666666666667\n>>>\n>>> 17 // 3 # floor division discards the fractional part\n5\n>>> 17 % 3 # the % operator returns the remainder of the division\n2\n>>> 5 * 3 + 2 # floored quotient * divisor + remainder\n17\n\n[d08612c3959010c59297c871125874638729ffe0c67310a6ecb845a173ae4322 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/introduction.rst | source unit 1]\nThe interpreter acts as a simple calculator: you can type an expression at it\nand it will write the value. Expression syntax is straightforward: the\noperators +, -, * and / can be used to perform\narithmetic; parentheses (()) can be used for grouping.\nFor example::\n\n>>> 2 + 2\n4\n>>> 50 - 5*6\n20\n>>> (50 - 5*6) / 4\n5.0\n>>> 8 / 5 # division always returns a floating point number\n1.6\n\nThe integer numbers (e.g. 2, 4, 20) have type int,\nthe ones with a fractional part (e.g. 5.0, 1.6) have type\nfloat. We will see more about numeric types later in the tutorial.\n\nDivision (/) always returns a float. To do floor division and\nget an integer result you can use the // operator; to calculate\nthe remainder you can use %::",
+    "context_ids": [
+      "dc0e98dce484747a439f6792ec7d0c961ebaaad4d5c4de52b0fd118d1e3a1363",
+      "d08612c3959010c59297c871125874638729ffe0c67310a6ecb845a173ae4322"
+    ],
+    "context_chars": 1293,
+    "elapsed_seconds": 0.003731099999999987,
+    "cost_usd": 0,
+    "query_id": "d7-q01",
+    "split": "dev",
+    "question": "What type does ordinary division return, and which operators give floor division and the remainder?",
+    "answerable": true,
+    "hit1": false,
+    "hit3": true,
+    "context_hit": true,
+    "metric_scope": "Single-chunk alternative evidence; hit1/hit3 on FIRST query, context_hit on cumulative final context",
+    "configuration": "hybrid"
+  },
+  {
+    "status": "retrieved",
+    "events": [
+      {
+        "event": "search",
+        "tool": "hybrid",
+        "query": "Can I replace a character of a Python string by assigning to its index?",
+        "filter": {},
+        "results": [
+          {
+            "id": "3b23c27057e1f92001a5801f599b9a7db8991e02e10372255c351952085243d6",
+            "source_id": "python-introduction",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/introduction.rst",
+            "page": 4,
+            "text": ">>> prefix + 'thon'\n'Python'\n\nStrings can be *indexed* (subscripted), with the first character having index 0.\nThere is no separate character type; a character is simply a string of size\none::\n\n>>> word = 'Python'\n>>> word[0] # character in position 0\n'P'\n>>> word[5] # character in position 5\n'n'\n\nIndices may also be negative numbers, to start counting from the right::\n\n>>> word[-1] # last character\n'n'\n>>> word[-2] # second-last character\n'o'\n>>> word[-6]\n'P'\n\nNote that since -0 is the same as 0, negative indices start from -1.\n\nIn addition to indexing, *slicing* is also supported. While indexing is used\nto obtain individual characters, *slicing* allows you to obtain a substring::\n\n>>> word[0:2] # characters from position 0 (included) to 2 (excluded)\n'Py'\n>>> word[2:5] # characters from position 2 (included) to 5 (excluded)\n'tho'",
+            "metadata": {
+              "chapter": "introduction",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 7342,
+              "source_char_end": 9824,
+              "char_start": 0,
+              "char_end": 842,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.03252247488101534,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 1,
+                "score": 0.7916320341974837
+              },
+              "bm25": {
+                "rank": 2,
+                "score": 15.797362076572279
+              }
+            }
+          },
+          {
+            "id": "255f100c84e88a043ea577bb62a187eeeb6d62cdd1108da8ec1a089a52923dd7",
+            "source_id": "python-introduction",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/introduction.rst",
+            "page": 4,
+            "text": "Slice indices have useful defaults; an omitted first index defaults to zero, an\nomitted second index defaults to the size of the string being sliced. ::\n\n>>> word[:2] # character from the beginning to position 2 (excluded)\n'Py'\n>>> word[4:] # characters from position 4 (included) to the end\n'on'\n>>> word[-2:] # characters from the second-last (included) to the end\n'on'\n\nNote how the start is always included, and the end always excluded. This\nmakes sure that s[:i] + s[i:] is always equal to s::\n\n>>> word[:2] + word[2:]\n'Python'\n>>> word[:4] + word[4:]\n'Python'\n\nOne way to remember how slices work is to think of the indices as pointing\n*between* characters, with the left edge of the first character numbered 0.\nThen the right edge of the last character of a string of *n* characters has\nindex *n*, for example::",
+            "metadata": {
+              "chapter": "introduction",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 7342,
+              "source_char_end": 9824,
+              "char_start": 844,
+              "char_end": 1662,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.03131881575727918,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 7,
+                "score": 0.7126037090355588
+              },
+              "bm25": {
+                "rank": 1,
+                "score": 18.772935211043013
+              }
+            }
+          },
+          {
+            "id": "1cbdd90fc7145476cfc22b42118b2929a5bc40b51000a92c81b36cf1003a093c",
+            "source_id": "python-introduction",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/introduction.rst",
+            "page": 5,
+            "text": ">>> word[4:42]\n'on'\n>>> word[42:]\n''\n\nPython strings cannot be changed --- they are immutable.\nTherefore, assigning to an indexed position in the string results in an error::\n\n>>> word[0] = 'J'\nTraceback (most recent call last):\nFile \"<stdin>\", line 1, in <module>\nTypeError: 'str' object does not support item assignment\n>>> word[2:] = 'py'\nTraceback (most recent call last):\nFile \"<stdin>\", line 1, in <module>\nTypeError: 'str' object does not support item assignment\n\nIf you need a different string, you should create a new one::\n\n>>> 'J' + word[1:]\n'Jython'\n>>> word[:2] + 'py'\n'Pypy'\n\nThe built-in function len returns the length of a string::\n\n>>> s = 'supercalifragilisticexpialidocious'\n>>> len(s)\n34\n\n.. seealso::\n\ntextseq\nStrings are examples of *sequence types*, and support the common\noperations supported by such types.",
+            "metadata": {
+              "chapter": "introduction",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 9826,
+              "source_char_end": 12343,
+              "char_start": 0,
+              "char_end": 832,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.031054405392392875,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 2,
+                "score": 0.7897676913838513
+              },
+              "bm25": {
+                "rank": 7,
+                "score": 10.101044831640705
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "context": "[3b23c27057e1f92001a5801f599b9a7db8991e02e10372255c351952085243d6 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/introduction.rst | source unit 4]\n>>> prefix + 'thon'\n'Python'\n\nStrings can be *indexed* (subscripted), with the first character having index 0.\nThere is no separate character type; a character is simply a string of size\none::\n\n>>> word = 'Python'\n>>> word[0] # character in position 0\n'P'\n>>> word[5] # character in position 5\n'n'\n\nIndices may also be negative numbers, to start counting from the right::\n\n>>> word[-1] # last character\n'n'\n>>> word[-2] # second-last character\n'o'\n>>> word[-6]\n'P'\n\nNote that since -0 is the same as 0, negative indices start from -1.\n\nIn addition to indexing, *slicing* is also supported. While indexing is used\nto obtain individual characters, *slicing* allows you to obtain a substring::\n\n>>> word[0:2] # characters from position 0 (included) to 2 (excluded)\n'Py'\n>>> word[2:5] # characters from position 2 (included) to 5 (excluded)\n'tho'",
+    "context_ids": [
+      "3b23c27057e1f92001a5801f599b9a7db8991e02e10372255c351952085243d6"
+    ],
+    "context_chars": 1004,
+    "elapsed_seconds": 0.003940700000000241,
+    "cost_usd": 0,
+    "query_id": "d7-q02",
+    "split": "dev",
+    "question": "Can I replace a character of a Python string by assigning to its index?",
+    "answerable": true,
+    "hit1": false,
+    "hit3": true,
+    "context_hit": false,
+    "metric_scope": "Single-chunk alternative evidence; hit1/hit3 on FIRST query, context_hit on cumulative final context",
+    "configuration": "hybrid"
+  },
+  {
+    "status": "retrieved",
+    "events": [
+      {
+        "event": "search",
+        "tool": "hybrid",
+        "query": "Which negative index selects the last character, and why is it not negative zero?",
+        "filter": {},
+        "results": [
+          {
+            "id": "3b23c27057e1f92001a5801f599b9a7db8991e02e10372255c351952085243d6",
+            "source_id": "python-introduction",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/introduction.rst",
+            "page": 4,
+            "text": ">>> prefix + 'thon'\n'Python'\n\nStrings can be *indexed* (subscripted), with the first character having index 0.\nThere is no separate character type; a character is simply a string of size\none::\n\n>>> word = 'Python'\n>>> word[0] # character in position 0\n'P'\n>>> word[5] # character in position 5\n'n'\n\nIndices may also be negative numbers, to start counting from the right::\n\n>>> word[-1] # last character\n'n'\n>>> word[-2] # second-last character\n'o'\n>>> word[-6]\n'P'\n\nNote that since -0 is the same as 0, negative indices start from -1.\n\nIn addition to indexing, *slicing* is also supported. While indexing is used\nto obtain individual characters, *slicing* allows you to obtain a substring::\n\n>>> word[0:2] # characters from position 0 (included) to 2 (excluded)\n'Py'\n>>> word[2:5] # characters from position 2 (included) to 5 (excluded)\n'tho'",
+            "metadata": {
+              "chapter": "introduction",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 7342,
+              "source_char_end": 9824,
+              "char_start": 0,
+              "char_end": 842,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.03278688524590164,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 1,
+                "score": 0.7881426496289738
+              },
+              "bm25": {
+                "rank": 1,
+                "score": 19.22705463536457
+              }
+            }
+          },
+          {
+            "id": "255f100c84e88a043ea577bb62a187eeeb6d62cdd1108da8ec1a089a52923dd7",
+            "source_id": "python-introduction",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/introduction.rst",
+            "page": 4,
+            "text": "Slice indices have useful defaults; an omitted first index defaults to zero, an\nomitted second index defaults to the size of the string being sliced. ::\n\n>>> word[:2] # character from the beginning to position 2 (excluded)\n'Py'\n>>> word[4:] # characters from position 4 (included) to the end\n'on'\n>>> word[-2:] # characters from the second-last (included) to the end\n'on'\n\nNote how the start is always included, and the end always excluded. This\nmakes sure that s[:i] + s[i:] is always equal to s::\n\n>>> word[:2] + word[2:]\n'Python'\n>>> word[:4] + word[4:]\n'Python'\n\nOne way to remember how slices work is to think of the indices as pointing\n*between* characters, with the left edge of the first character numbered 0.\nThen the right edge of the last character of a string of *n* characters has\nindex *n*, for example::",
+            "metadata": {
+              "chapter": "introduction",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 7342,
+              "source_char_end": 9824,
+              "char_start": 844,
+              "char_end": 1662,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.03200204813108039,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 3,
+                "score": 0.7626180076386251
+              },
+              "bm25": {
+                "rank": 2,
+                "score": 17.047203650493845
+              }
+            }
+          },
+          {
+            "id": "d596bc4ca4fa70942537138a54c7177c8b8a18bfd55ef616c4342628b6489660",
+            "source_id": "python-introduction",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/introduction.rst",
+            "page": 4,
+            "text": "+---+---+---+---+---+---+\n| P | y | t | h | o | n |\n+---+---+---+---+---+---+\n0 1 2 3 4 5 6\n-6 -5 -4 -3 -2 -1\n\nThe first row of numbers gives the position of the indices 0...6 in the string;\nthe second row gives the corresponding negative indices. The slice from *i* to\n*j* consists of all characters between the edges labeled *i* and *j*,\nrespectively.\n\nFor non-negative indices, the length of a slice is the difference of the\nindices, if both are within bounds. For example, the length of word[1:3] is\n2.\n\nAttempting to use an index that is too large will result in an error::\n\n>>> word[42] # the word only has 6 characters\nTraceback (most recent call last):\nFile \"<stdin>\", line 1, in <module>\nIndexError: string index out of range\n\nHowever, out of range slice indexes are handled gracefully when used for\nslicing::",
+            "metadata": {
+              "chapter": "introduction",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 7342,
+              "source_char_end": 9824,
+              "char_start": 1664,
+              "char_end": 2482,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.031754032258064516,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 2,
+                "score": 0.7810815211659569
+              },
+              "bm25": {
+                "rank": 4,
+                "score": 11.202753689159639
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "context": "[3b23c27057e1f92001a5801f599b9a7db8991e02e10372255c351952085243d6 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/introduction.rst | source unit 4]\n>>> prefix + 'thon'\n'Python'\n\nStrings can be *indexed* (subscripted), with the first character having index 0.\nThere is no separate character type; a character is simply a string of size\none::\n\n>>> word = 'Python'\n>>> word[0] # character in position 0\n'P'\n>>> word[5] # character in position 5\n'n'\n\nIndices may also be negative numbers, to start counting from the right::\n\n>>> word[-1] # last character\n'n'\n>>> word[-2] # second-last character\n'o'\n>>> word[-6]\n'P'\n\nNote that since -0 is the same as 0, negative indices start from -1.\n\nIn addition to indexing, *slicing* is also supported. While indexing is used\nto obtain individual characters, *slicing* allows you to obtain a substring::\n\n>>> word[0:2] # characters from position 0 (included) to 2 (excluded)\n'Py'\n>>> word[2:5] # characters from position 2 (included) to 5 (excluded)\n'tho'",
+    "context_ids": [
+      "3b23c27057e1f92001a5801f599b9a7db8991e02e10372255c351952085243d6"
+    ],
+    "context_chars": 1004,
+    "elapsed_seconds": 0.003604099999999999,
+    "cost_usd": 0,
+    "query_id": "d7-q03",
+    "split": "dev",
+    "question": "Which negative index selects the last character, and why is it not negative zero?",
+    "answerable": true,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "metric_scope": "Single-chunk alternative evidence; hit1/hit3 on FIRST query, context_hit on cumulative final context",
+    "configuration": "hybrid"
+  },
+  {
+    "status": "retrieved",
+    "events": [
+      {
+        "event": "search",
+        "tool": "hybrid",
+        "query": "If loops are nested, which loop does a break statement exit?",
+        "filter": {},
+        "results": [
+          {
+            "id": "28159438e1fc5b8baa6894e2d0f2182d9287c478346994d8462ef4893a0d5b2f",
+            "source_id": "python-controlflow",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/controlflow.rst",
+            "page": 3,
+            "text": "(Yes, this is the correct code. Look closely: the else clause belongs to\nthe for loop, **not** the if statement.)\n\nWhen used with a loop, the else clause has more in common with the\nelse clause of a try statement than it does with that of\nif statements: a try statement's else clause runs\nwhen no exception occurs, and a loop's else clause runs when no break\noccurs. For more on the !try statement and exceptions, see\ntut-handling.\n\nThe continue statement, also borrowed from C, continues with the next\niteration of the loop::\n\n>>> for num in range(2, 10):\n... if num % 2 == 0:\n... print(\"Found an even number\", num)\n... continue\n... print(\"Found an odd number\", num)\n...\nFound an even number 2\nFound an odd number 3\nFound an even number 4\nFound an odd number 5\nFound an even number 6\nFound an odd number 7\nFound an even number 8\nFound an odd number 9\n\n!pass Statements",
+            "metadata": {
+              "chapter": "controlflow",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 4915,
+              "source_char_end": 7322,
+              "char_start": 0,
+              "char_end": 869,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.03252247488101534,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 1,
+                "score": 0.7575129156307636
+              },
+              "bm25": {
+                "rank": 2,
+                "score": 15.136743394040739
+              }
+            }
+          },
+          {
+            "id": "2b225aa6f7a3387dae5709328cb2ed18a2dea5b49e6e71223f7dbe5e742b224f",
+            "source_id": "python-controlflow",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/controlflow.rst",
+            "page": 2,
+            "text": "In many ways the object returned by range behaves as if it is a list,\nbut in fact it isn't. It is an object which returns the successive items of\nthe desired sequence when you iterate over it, but it doesn't really make\nthe list, thus saving space.\n\nWe say such an object is iterable, that is, suitable as a target for\nfunctions and constructs that expect something from which they can\nobtain successive items until the supply is exhausted. We have seen that\nthe for statement is such a construct, while an example of a function\nthat takes an iterable is sum::\n\n>>> sum(range(4)) # 0 + 1 + 2 + 3\n6\n\nLater we will see more functions that return iterables and take iterables as\narguments. In chapter tut-structures, we will discuss in more detail about\nlist.\n\n!break and !continue Statements, and !else Clauses on Loops\n\nThe break statement breaks out of the innermost enclosing\nfor or while loop.",
+            "metadata": {
+              "chapter": "controlflow",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 2437,
+              "source_char_end": 4913,
+              "char_start": 824,
+              "char_end": 1719,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.032018442622950824,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 4,
+                "score": 0.7297715963292173
+              },
+              "bm25": {
+                "rank": 1,
+                "score": 16.56814745480528
+              }
+            }
+          },
+          {
+            "id": "f935f66edee52f7cc19a06c6a1fa107e5c154d0edf84dcdd4b16920c71f3c1c9",
+            "source_id": "python-controlflow",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/controlflow.rst",
+            "page": 2,
+            "text": "A !for or !while loop can include an !else clause.\n\nIn a for loop, the !else clause is executed\nafter the loop reaches its final iteration.\n\nIn a while loop, it's executed after the loop's condition becomes false.\n\nIn either kind of loop, the !else clause is **not** executed\nif the loop was terminated by a break.\n\nThis is exemplified in the following !for loop,\nwhich searches for prime numbers::\n\n>>> for n in range(2, 10):\n... for x in range(2, n):\n... if n % x == 0:\n... print(n, 'equals', x, '*', n//x)\n... break\n... else:\n... # loop fell through without finding a factor\n... print(n, 'is a prime number')\n...\n2 is a prime number\n3 is a prime number\n4 equals 2 * 2\n5 is a prime number\n6 equals 2 * 3\n7 is a prime number\n8 equals 2 * 4\n9 equals 3 * 3",
+            "metadata": {
+              "chapter": "controlflow",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 2437,
+              "source_char_end": 4913,
+              "char_start": 1721,
+              "char_end": 2476,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.031024531024531024,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 6,
+                "score": 0.7205617254102348
+              },
+              "bm25": {
+                "rank": 3,
+                "score": 13.70661381945773
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "context": "[28159438e1fc5b8baa6894e2d0f2182d9287c478346994d8462ef4893a0d5b2f | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/controlflow.rst | source unit 3]\n(Yes, this is the correct code. Look closely: the else clause belongs to\nthe for loop, **not** the if statement.)\n\nWhen used with a loop, the else clause has more in common with the\nelse clause of a try statement than it does with that of\nif statements: a try statement's else clause runs\nwhen no exception occurs, and a loop's else clause runs when no break\noccurs. For more on the !try statement and exceptions, see\ntut-handling.\n\nThe continue statement, also borrowed from C, continues with the next\niteration of the loop::\n\n>>> for num in range(2, 10):\n... if num % 2 == 0:\n... print(\"Found an even number\", num)\n... continue\n... print(\"Found an odd number\", num)\n...\nFound an even number 2\nFound an odd number 3\nFound an even number 4\nFound an odd number 5\nFound an even number 6\nFound an odd number 7\nFound an even number 8\nFound an odd number 9\n\n!pass Statements",
+    "context_ids": [
+      "28159438e1fc5b8baa6894e2d0f2182d9287c478346994d8462ef4893a0d5b2f"
+    ],
+    "context_chars": 1030,
+    "elapsed_seconds": 0.0034719999999999196,
+    "cost_usd": 0,
+    "query_id": "d7-q04",
+    "split": "dev",
+    "question": "If loops are nested, which loop does a break statement exit?",
+    "answerable": true,
+    "hit1": false,
+    "hit3": true,
+    "context_hit": false,
+    "metric_scope": "Single-chunk alternative evidence; hit1/hit3 on FIRST query, context_hit on cumulative final context",
+    "configuration": "hybrid"
+  },
+  {
+    "status": "retrieved",
+    "events": [
+      {
+        "event": "search",
+        "tool": "hybrid",
+        "query": "In the control-flow chapter, does a loop's else clause run after a break terminates the loop?",
+        "filter": {
+          "chapter": "controlflow"
+        },
+        "results": [
+          {
+            "id": "f935f66edee52f7cc19a06c6a1fa107e5c154d0edf84dcdd4b16920c71f3c1c9",
+            "source_id": "python-controlflow",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/controlflow.rst",
+            "page": 2,
+            "text": "A !for or !while loop can include an !else clause.\n\nIn a for loop, the !else clause is executed\nafter the loop reaches its final iteration.\n\nIn a while loop, it's executed after the loop's condition becomes false.\n\nIn either kind of loop, the !else clause is **not** executed\nif the loop was terminated by a break.\n\nThis is exemplified in the following !for loop,\nwhich searches for prime numbers::\n\n>>> for n in range(2, 10):\n... for x in range(2, n):\n... if n % x == 0:\n... print(n, 'equals', x, '*', n//x)\n... break\n... else:\n... # loop fell through without finding a factor\n... print(n, 'is a prime number')\n...\n2 is a prime number\n3 is a prime number\n4 equals 2 * 2\n5 is a prime number\n6 equals 2 * 3\n7 is a prime number\n8 equals 2 * 4\n9 equals 3 * 3",
+            "metadata": {
+              "chapter": "controlflow",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 2437,
+              "source_char_end": 4913,
+              "char_start": 1721,
+              "char_end": 2476,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.03278688524590164,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 1,
+                "score": 0.7673894742401901
+              },
+              "bm25": {
+                "rank": 1,
+                "score": 26.569811654939674
+              }
+            }
+          },
+          {
+            "id": "28159438e1fc5b8baa6894e2d0f2182d9287c478346994d8462ef4893a0d5b2f",
+            "source_id": "python-controlflow",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/controlflow.rst",
+            "page": 3,
+            "text": "(Yes, this is the correct code. Look closely: the else clause belongs to\nthe for loop, **not** the if statement.)\n\nWhen used with a loop, the else clause has more in common with the\nelse clause of a try statement than it does with that of\nif statements: a try statement's else clause runs\nwhen no exception occurs, and a loop's else clause runs when no break\noccurs. For more on the !try statement and exceptions, see\ntut-handling.\n\nThe continue statement, also borrowed from C, continues with the next\niteration of the loop::\n\n>>> for num in range(2, 10):\n... if num % 2 == 0:\n... print(\"Found an even number\", num)\n... continue\n... print(\"Found an odd number\", num)\n...\nFound an even number 2\nFound an odd number 3\nFound an even number 4\nFound an odd number 5\nFound an even number 6\nFound an odd number 7\nFound an even number 8\nFound an odd number 9\n\n!pass Statements",
+            "metadata": {
+              "chapter": "controlflow",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 4915,
+              "source_char_end": 7322,
+              "char_start": 0,
+              "char_end": 869,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.03225806451612903,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 2,
+                "score": 0.751468547494
+              },
+              "bm25": {
+                "rank": 2,
+                "score": 23.54554775580203
+              }
+            }
+          },
+          {
+            "id": "2b225aa6f7a3387dae5709328cb2ed18a2dea5b49e6e71223f7dbe5e742b224f",
+            "source_id": "python-controlflow",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/controlflow.rst",
+            "page": 2,
+            "text": "In many ways the object returned by range behaves as if it is a list,\nbut in fact it isn't. It is an object which returns the successive items of\nthe desired sequence when you iterate over it, but it doesn't really make\nthe list, thus saving space.\n\nWe say such an object is iterable, that is, suitable as a target for\nfunctions and constructs that expect something from which they can\nobtain successive items until the supply is exhausted. We have seen that\nthe for statement is such a construct, while an example of a function\nthat takes an iterable is sum::\n\n>>> sum(range(4)) # 0 + 1 + 2 + 3\n6\n\nLater we will see more functions that return iterables and take iterables as\narguments. In chapter tut-structures, we will discuss in more detail about\nlist.\n\n!break and !continue Statements, and !else Clauses on Loops\n\nThe break statement breaks out of the innermost enclosing\nfor or while loop.",
+            "metadata": {
+              "chapter": "controlflow",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 2437,
+              "source_char_end": 4913,
+              "char_start": 824,
+              "char_end": 1719,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.03149801587301587,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 3,
+                "score": 0.7102381631130467
+              },
+              "bm25": {
+                "rank": 4,
+                "score": 14.144612861688403
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "context": "[f935f66edee52f7cc19a06c6a1fa107e5c154d0edf84dcdd4b16920c71f3c1c9 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/controlflow.rst | source unit 2]\nA !for or !while loop can include an !else clause.\n\nIn a for loop, the !else clause is executed\nafter the loop reaches its final iteration.\n\nIn a while loop, it's executed after the loop's condition becomes false.\n\nIn either kind of loop, the !else clause is **not** executed\nif the loop was terminated by a break.\n\nThis is exemplified in the following !for loop,\nwhich searches for prime numbers::\n\n>>> for n in range(2, 10):\n... for x in range(2, n):\n... if n % x == 0:\n... print(n, 'equals', x, '*', n//x)\n... break\n... else:\n... # loop fell through without finding a factor\n... print(n, 'is a prime number')\n...\n2 is a prime number\n3 is a prime number\n4 equals 2 * 2\n5 is a prime number\n6 equals 2 * 3\n7 is a prime number\n8 equals 2 * 4\n9 equals 3 * 3",
+    "context_ids": [
+      "f935f66edee52f7cc19a06c6a1fa107e5c154d0edf84dcdd4b16920c71f3c1c9"
+    ],
+    "context_chars": 916,
+    "elapsed_seconds": 0.00444129999999987,
+    "cost_usd": 0,
+    "query_id": "d7-q05",
+    "split": "dev",
+    "question": "In the control-flow chapter, does a loop's else clause run after a break terminates the loop?",
+    "answerable": true,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "metric_scope": "Single-chunk alternative evidence; hit1/hit3 on FIRST query, context_hit on cumulative final context",
+    "configuration": "hybrid"
+  },
+  {
+    "status": "retrieved",
+    "events": [
+      {
+        "event": "search",
+        "tool": "hybrid",
+        "query": "Why can a list used as a function's default argument keep values between calls?",
+        "filter": {},
+        "results": [
+          {
+            "id": "20164fa7b694099f03f5acad5de35245db1e9336ba707018a0521477f79acbc5",
+            "source_id": "python-controlflow",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/controlflow.rst",
+            "page": 8,
+            "text": "i = 5\n\ndef f(arg=i):\nprint(arg)\n\ni = 6\nf()\n\nwill print 5.\n\n**Important warning:** The default value is evaluated only once. This makes a\ndifference when the default is a mutable object such as a list, dictionary, or\ninstances of most classes. For example, the following function accumulates the\narguments passed to it on subsequent calls::\n\ndef f(a, L=[]):\nL.append(a)\nreturn L\n\nprint(f(1))\nprint(f(2))\nprint(f(3))\n\nThis will print ::\n\n[1]\n[1, 2]\n[1, 2, 3]\n\nIf you don't want the default to be shared between subsequent calls, you can\nwrite the function like this instead::\n\ndef f(a, L=None):\nif L is None:\nL = []\nL.append(a)\nreturn L\n\nKeyword Arguments\n\nFunctions can also be called using keyword arguments\nof the form kwarg=value. For instance, the following function::",
+            "metadata": {
+              "chapter": "controlflow",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 17327,
+              "source_char_end": 19770,
+              "char_start": 0,
+              "char_end": 771,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.03278688524590164,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 1,
+                "score": 0.8140656876552985
+              },
+              "bm25": {
+                "rank": 1,
+                "score": 15.866781760971891
+              }
+            }
+          },
+          {
+            "id": "b3f13a0bc7e79788ea9280ca1699b4f07587f3fc6c4f53e9a3f06e0955a178c1",
+            "source_id": "python-classes",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/classes.rst",
+            "page": 6,
+            "text": "What exactly happens when a method is called? You may have noticed that\nx.f() was called without an argument above, even though the function\ndefinition for !f specified an argument. What happened to the argument?\nSurely Python raises an exception when a function that requires an argument is\ncalled without any --- even if the argument isn't actually used...\n\nActually, you may have guessed the answer: the special thing about methods is\nthat the instance object is passed as the first argument of the function. In our\nexample, the call x.f() is exactly equivalent to MyClass.f(x). In\ngeneral, calling a method with a list of *n* arguments is equivalent to calling\nthe corresponding function with an argument list that is created by inserting\nthe method's instance object before the first argument.",
+            "metadata": {
+              "chapter": "classes",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 13691,
+              "source_char_end": 16466,
+              "char_start": 1341,
+              "char_end": 2139,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.030117753623188408,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 9,
+                "score": 0.7372523763393775
+              },
+              "bm25": {
+                "rank": 4,
+                "score": 11.793010249381293
+              }
+            }
+          },
+          {
+            "id": "956a3f2af28b394d7bdf42fa22adf6d1b09148e6a41bbd14604f4deb750a8494",
+            "source_id": "python-controlflow",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/controlflow.rst",
+            "page": 7,
+            "text": "The default values are evaluated at the point of function definition in the\n*defining* scope, so that ::",
+            "metadata": {
+              "chapter": "controlflow",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 14899,
+              "source_char_end": 17325,
+              "char_start": 2322,
+              "char_end": 2426,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.02964426877470356,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 6,
+                "score": 0.7500783278265171
+              },
+              "bm25": {
+                "rank": 9,
+                "score": 10.44978498738388
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "context": "[20164fa7b694099f03f5acad5de35245db1e9336ba707018a0521477f79acbc5 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/controlflow.rst | source unit 8]\ni = 5\n\ndef f(arg=i):\nprint(arg)\n\ni = 6\nf()\n\nwill print 5.\n\n**Important warning:** The default value is evaluated only once. This makes a\ndifference when the default is a mutable object such as a list, dictionary, or\ninstances of most classes. For example, the following function accumulates the\narguments passed to it on subsequent calls::\n\ndef f(a, L=[]):\nL.append(a)\nreturn L\n\nprint(f(1))\nprint(f(2))\nprint(f(3))\n\nThis will print ::\n\n[1]\n[1, 2]\n[1, 2, 3]\n\nIf you don't want the default to be shared between subsequent calls, you can\nwrite the function like this instead::\n\ndef f(a, L=None):\nif L is None:\nL = []\nL.append(a)\nreturn L\n\nKeyword Arguments\n\nFunctions can also be called using keyword arguments\nof the form kwarg=value. For instance, the following function::\n\n[956a3f2af28b394d7bdf42fa22adf6d1b09148e6a41bbd14604f4deb750a8494 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/controlflow.rst | source unit 7]\nThe default values are evaluated at the point of function definition in the\n*defining* scope, so that ::",
+    "context_ids": [
+      "20164fa7b694099f03f5acad5de35245db1e9336ba707018a0521477f79acbc5",
+      "956a3f2af28b394d7bdf42fa22adf6d1b09148e6a41bbd14604f4deb750a8494"
+    ],
+    "context_chars": 1199,
+    "elapsed_seconds": 0.0037161999999999473,
+    "cost_usd": 0,
+    "query_id": "d7-q06",
+    "split": "dev",
+    "question": "Why can a list used as a function's default argument keep values between calls?",
+    "answerable": true,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "metric_scope": "Single-chunk alternative evidence; hit1/hit3 on FIRST query, context_hit on cumulative final context",
+    "configuration": "hybrid"
+  },
+  {
+    "status": "retrieved",
+    "events": [
+      {
+        "event": "search",
+        "tool": "hybrid",
+        "query": "What value comes back if a Python function reaches the end without an explicit return?",
+        "filter": {},
+        "results": [
+          {
+            "id": "5e2d251b8f3522798c2ca7cbdc7292ee4918fc60c372243ef3f4d86fc7b5f7fc",
+            "source_id": "python-controlflow",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/controlflow.rst",
+            "page": 6,
+            "text": "Coming from other languages, you might object that fib is not a function but\na procedure since it doesn't return a value. In fact, even functions without a\nreturn statement do return a value, albeit a rather boring one. This\nvalue is called None (it's a built-in name). Writing the value None is\nnormally suppressed by the interpreter if it would be the only value written.\nYou can see it if you really want to using print::\n\n>>> fib(0)\n>>> print(fib(0))\nNone\n\nIt is simple to write a function that returns a list of the numbers of the\nFibonacci series, instead of printing it::",
+            "metadata": {
+              "chapter": "controlflow",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 12398,
+              "source_char_end": 14897,
+              "char_start": 1921,
+              "char_end": 2499,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.031754032258064516,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 2,
+                "score": 0.7289113210123818
+              },
+              "bm25": {
+                "rank": 4,
+                "score": 12.532349879857811
+              }
+            }
+          },
+          {
+            "id": "b2d879a1c5b16f8ec6dd674b6ae0594eb6888627829545fa24fa1f35812cd6c2",
+            "source_id": "python-datastructures",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/datastructures.rst",
+            "page": 2,
+            "text": "You might have noticed that methods like insert, remove or sort that\nonly modify the list have no return value printed -- they return the default\nNone. [#]_ This is a design principle for all mutable data structures in\nPython.\n\nAnother thing you might notice is that not all data can be sorted or\ncompared. For instance, [None, 'hello', 10] doesn't sort because\nintegers can't be compared to strings and *None* can't be compared to\nother types. Also, there are some types that don't have a defined\nordering relation. For example, 3+4j < 5+7j isn't a valid\ncomparison.\n\nUsing Lists as Stacks\n\nThe list methods make it very easy to use a list as a stack, where the last\nelement added is the first element retrieved (\"last-in, first-out\"). To add an\nitem to the top of the stack, use list.append. To retrieve an item from the\ntop of the stack, use list.pop without an explicit index. For example::",
+            "metadata": {
+              "chapter": "datastructures",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 2929,
+              "source_char_end": 5383,
+              "char_start": 0,
+              "char_end": 894,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.030090497737556562,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 8,
+                "score": 0.7120316021302537
+              },
+              "bm25": {
+                "rank": 5,
+                "score": 11.753870176236035
+              }
+            }
+          },
+          {
+            "id": "4f01d895f33a66636cb7b882d91115e478f5a6bc56bb5f275199c3133543f910",
+            "source_id": "python-controlflow",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/controlflow.rst",
+            "page": 7,
+            "text": ">>> def fib2(n): # return Fibonacci series up to n\n... \"\"\"Return a list containing the Fibonacci series up to n.\"\"\"\n... result = []\n... a, b = 0, 1\n... while a < n:\n... result.append(a) # see below\n... a, b = b, a+b\n... return result\n...\n>>> f100 = fib2(100) # call it\n>>> f100 # write the result\n[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]\n\nThis example, as usual, demonstrates some new Python features:\n\n* The return statement returns with a value from a function.\n!return without an expression argument returns None. Falling off\nthe end of a function also returns None.",
+            "metadata": {
+              "chapter": "controlflow",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 14899,
+              "source_char_end": 17325,
+              "char_start": 0,
+              "char_end": 570,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.029906956136464335,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 14,
+                "score": 0.6980464003653118
+              },
+              "bm25": {
+                "rank": 1,
+                "score": 14.839162614136136
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "context": "[5e2d251b8f3522798c2ca7cbdc7292ee4918fc60c372243ef3f4d86fc7b5f7fc | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/controlflow.rst | source unit 6]\nComing from other languages, you might object that fib is not a function but\na procedure since it doesn't return a value. In fact, even functions without a\nreturn statement do return a value, albeit a rather boring one. This\nvalue is called None (it's a built-in name). Writing the value None is\nnormally suppressed by the interpreter if it would be the only value written.\nYou can see it if you really want to using print::\n\n>>> fib(0)\n>>> print(fib(0))\nNone\n\nIt is simple to write a function that returns a list of the numbers of the\nFibonacci series, instead of printing it::\n\n[b2d879a1c5b16f8ec6dd674b6ae0594eb6888627829545fa24fa1f35812cd6c2 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/datastructures.rst | source unit 2]\nYou might have noticed that methods like insert, remove or sort that\nonly modify the list have no return value printed -- they return the default\nNone. [#]_ This is a design principle for all mutable data structures in\nPython.\n\nAnother thing you might notice is that not all data can be sorted or\ncompared. For instance, [None, 'hello', 10] doesn't sort because\nintegers can't be compared to strings and *None* can't be compared to\nother types. Also, there are some types that don't have a defined\nordering relation. For example, 3+4j < 5+7j isn't a valid\ncomparison.\n\nUsing Lists as Stacks\n\nThe list methods make it very easy to use a list as a stack, where the last\nelement added is the first element retrieved (\"last-in, first-out\"). To add an\nitem to the top of the stack, use list.append. To retrieve an item from the\ntop of the stack, use list.pop without an explicit index. For example::",
+    "context_ids": [
+      "5e2d251b8f3522798c2ca7cbdc7292ee4918fc60c372243ef3f4d86fc7b5f7fc",
+      "b2d879a1c5b16f8ec6dd674b6ae0594eb6888627829545fa24fa1f35812cd6c2"
+    ],
+    "context_chars": 1799,
+    "elapsed_seconds": 0.004146800000000006,
+    "cost_usd": 0,
+    "query_id": "d7-q07",
+    "split": "dev",
+    "question": "What value comes back if a Python function reaches the end without an explicit return?",
+    "answerable": true,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "metric_scope": "Single-chunk alternative evidence; hit1/hit3 on FIRST query, context_hit on cumulative final context",
+    "configuration": "hybrid"
+  },
+  {
+    "status": "retrieved",
+    "events": [
+      {
+        "event": "search",
+        "tool": "hybrid",
+        "query": "In the data-structures chapter, how can I append a single item at the end of a list?",
+        "filter": {
+          "chapter": "datastructures"
+        },
+        "results": [
+          {
+            "id": "64ce139cedcb79f9226b7c1da5f1c950cddd1b126a50c267323bc699f09fd160",
+            "source_id": "python-datastructures",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/datastructures.rst",
+            "page": 1,
+            "text": "Data Structures\n\nThis chapter describes some things you've learned about already in more detail,\nand adds some new things as well.\n\nMore on Lists\n\nThe list data type has some more methods. Here are all of the methods of list\nobjects:\n\n.. method:: list.append(x)\n:noindex:\n\nAdd an item to the end of the list. Equivalent to a[len(a):] = [x].\n\n.. method:: list.extend(iterable)\n:noindex:\n\nExtend the list by appending all the items from the iterable. Equivalent to\na[len(a):] = iterable.\n\n.. method:: list.insert(i, x)\n:noindex:\n\nInsert an item at a given position. The first argument is the index of the\nelement before which to insert, so a.insert(0, x) inserts at the front of\nthe list, and a.insert(len(a), x) is equivalent to a.append(x).\n\n.. method:: list.remove(x)\n:noindex:\n\nRemove the first item from the list whose value is equal to *x*. It raises a\nValueError if there is no such item.",
+            "metadata": {
+              "chapter": "datastructures",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 0,
+              "source_char_end": 2927,
+              "char_start": 0,
+              "char_end": 893,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.03278688524590164,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 1,
+                "score": 0.7649464965267863
+              },
+              "bm25": {
+                "rank": 1,
+                "score": 26.90948742018849
+              }
+            }
+          },
+          {
+            "id": "b2d879a1c5b16f8ec6dd674b6ae0594eb6888627829545fa24fa1f35812cd6c2",
+            "source_id": "python-datastructures",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/datastructures.rst",
+            "page": 2,
+            "text": "You might have noticed that methods like insert, remove or sort that\nonly modify the list have no return value printed -- they return the default\nNone. [#]_ This is a design principle for all mutable data structures in\nPython.\n\nAnother thing you might notice is that not all data can be sorted or\ncompared. For instance, [None, 'hello', 10] doesn't sort because\nintegers can't be compared to strings and *None* can't be compared to\nother types. Also, there are some types that don't have a defined\nordering relation. For example, 3+4j < 5+7j isn't a valid\ncomparison.\n\nUsing Lists as Stacks\n\nThe list methods make it very easy to use a list as a stack, where the last\nelement added is the first element retrieved (\"last-in, first-out\"). To add an\nitem to the top of the stack, use list.append. To retrieve an item from the\ntop of the stack, use list.pop without an explicit index. For example::",
+            "metadata": {
+              "chapter": "datastructures",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 2929,
+              "source_char_end": 5383,
+              "char_start": 0,
+              "char_end": 894,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.031746031746031744,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 3,
+                "score": 0.7249104175190317
+              },
+              "bm25": {
+                "rank": 3,
+                "score": 15.90638916915065
+              }
+            }
+          },
+          {
+            "id": "1a0126fe8acf81f506d0dfdb3141f758c27ca284bfb957be732853d9c542a5dc",
+            "source_id": "python-datastructures",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/datastructures.rst",
+            "page": 1,
+            "text": ".. method:: list.pop([i])\n:noindex:\n\nRemove the item at the given position in the list, and return it. If no index\nis specified, a.pop() removes and returns the last item in the list. (The\nsquare brackets around the *i* in the method signature denote that the parameter\nis optional, not that you should type square brackets at that position. You\nwill see this notation frequently in the Python Library Reference.)\n\n.. method:: list.clear()\n:noindex:\n\nRemove all items from the list. Equivalent to del a[:].\n\n.. method:: list.index(x[, start[, end]])\n:noindex:\n\nReturn zero-based index in the list of the first item whose value is equal to *x*.\nRaises a ValueError if there is no such item.",
+            "metadata": {
+              "chapter": "datastructures",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 0,
+              "source_char_end": 2927,
+              "char_start": 895,
+              "char_end": 1584,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.0315136476426799,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 5,
+                "score": 0.7054500967297446
+              },
+              "bm25": {
+                "rank": 2,
+                "score": 17.10656018364147
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "context": "[64ce139cedcb79f9226b7c1da5f1c950cddd1b126a50c267323bc699f09fd160 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/datastructures.rst | source unit 1]\nData Structures\n\nThis chapter describes some things you've learned about already in more detail,\nand adds some new things as well.\n\nMore on Lists\n\nThe list data type has some more methods. Here are all of the methods of list\nobjects:\n\n.. method:: list.append(x)\n:noindex:\n\nAdd an item to the end of the list. Equivalent to a[len(a):] = [x].\n\n.. method:: list.extend(iterable)\n:noindex:\n\nExtend the list by appending all the items from the iterable. Equivalent to\na[len(a):] = iterable.\n\n.. method:: list.insert(i, x)\n:noindex:\n\nInsert an item at a given position. The first argument is the index of the\nelement before which to insert, so a.insert(0, x) inserts at the front of\nthe list, and a.insert(len(a), x) is equivalent to a.append(x).\n\n.. method:: list.remove(x)\n:noindex:\n\nRemove the first item from the list whose value is equal to *x*. It raises a\nValueError if there is no such item.",
+    "context_ids": [
+      "64ce139cedcb79f9226b7c1da5f1c950cddd1b126a50c267323bc699f09fd160"
+    ],
+    "context_chars": 1057,
+    "elapsed_seconds": 0.004259400000000024,
+    "cost_usd": 0,
+    "query_id": "d7-q08",
+    "split": "dev",
+    "question": "In the data-structures chapter, how can I append a single item at the end of a list?",
+    "answerable": true,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "metric_scope": "Single-chunk alternative evidence; hit1/hit3 on FIRST query, context_hit on cumulative final context",
+    "configuration": "hybrid"
+  },
+  {
+    "status": "retrieved",
+    "events": [
+      {
+        "event": "search",
+        "tool": "hybrid",
+        "query": "What does a.pop() remove and return when no index is supplied?",
+        "filter": {},
+        "results": [
+          {
+            "id": "1a0126fe8acf81f506d0dfdb3141f758c27ca284bfb957be732853d9c542a5dc",
+            "source_id": "python-datastructures",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/datastructures.rst",
+            "page": 1,
+            "text": ".. method:: list.pop([i])\n:noindex:\n\nRemove the item at the given position in the list, and return it. If no index\nis specified, a.pop() removes and returns the last item in the list. (The\nsquare brackets around the *i* in the method signature denote that the parameter\nis optional, not that you should type square brackets at that position. You\nwill see this notation frequently in the Python Library Reference.)\n\n.. method:: list.clear()\n:noindex:\n\nRemove all items from the list. Equivalent to del a[:].\n\n.. method:: list.index(x[, start[, end]])\n:noindex:\n\nReturn zero-based index in the list of the first item whose value is equal to *x*.\nRaises a ValueError if there is no such item.",
+            "metadata": {
+              "chapter": "datastructures",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 0,
+              "source_char_end": 2927,
+              "char_start": 895,
+              "char_end": 1584,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.03278688524590164,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 1,
+                "score": 0.8460265791554974
+              },
+              "bm25": {
+                "rank": 1,
+                "score": 21.328266893793792
+              }
+            }
+          },
+          {
+            "id": "b2d879a1c5b16f8ec6dd674b6ae0594eb6888627829545fa24fa1f35812cd6c2",
+            "source_id": "python-datastructures",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/datastructures.rst",
+            "page": 2,
+            "text": "You might have noticed that methods like insert, remove or sort that\nonly modify the list have no return value printed -- they return the default\nNone. [#]_ This is a design principle for all mutable data structures in\nPython.\n\nAnother thing you might notice is that not all data can be sorted or\ncompared. For instance, [None, 'hello', 10] doesn't sort because\nintegers can't be compared to strings and *None* can't be compared to\nother types. Also, there are some types that don't have a defined\nordering relation. For example, 3+4j < 5+7j isn't a valid\ncomparison.\n\nUsing Lists as Stacks\n\nThe list methods make it very easy to use a list as a stack, where the last\nelement added is the first element retrieved (\"last-in, first-out\"). To add an\nitem to the top of the stack, use list.append. To retrieve an item from the\ntop of the stack, use list.pop without an explicit index. For example::",
+            "metadata": {
+              "chapter": "datastructures",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 2929,
+              "source_char_end": 5383,
+              "char_start": 0,
+              "char_end": 894,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.03200204813108039,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 3,
+                "score": 0.7643158576406114
+              },
+              "bm25": {
+                "rank": 2,
+                "score": 13.174220382615733
+              }
+            }
+          },
+          {
+            "id": "6099bf64477a01f4f1b7e79fc6be38788cf178fcdb294cb1d4694f8568444399",
+            "source_id": "python-datastructures",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/datastructures.rst",
+            "page": 4,
+            "text": "There is a way to remove an item from a list given its index instead of its\nvalue: the del statement. This differs from the list.pop method\nwhich returns a value. The !del statement can also be used to remove\nslices from a list or clear the entire list (which we did earlier by assignment\nof an empty list to the slice). For example::\n\n>>> a = [-1, 1, 66.25, 333, 333, 1234.5]\n>>> del a[0]\n>>> a\n[1, 66.25, 333, 333, 1234.5]\n>>> del a[2:4]\n>>> a\n[1, 66.25, 1234.5]\n>>> del a[:]\n>>> a\n[]\n\ndel can also be used to delete entire variables::\n\n>>> del a\n\nReferencing the name a hereafter is an error (at least until another value\nis assigned to it). We'll find other uses for del later.\n\nTuples and Sequences",
+            "metadata": {
+              "chapter": "datastructures",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 7894,
+              "source_char_end": 10728,
+              "char_start": 1287,
+              "char_end": 1990,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.031754032258064516,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 2,
+                "score": 0.7720310351961367
+              },
+              "bm25": {
+                "rank": 4,
+                "score": 11.380509964927752
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "context": "[1a0126fe8acf81f506d0dfdb3141f758c27ca284bfb957be732853d9c542a5dc | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/datastructures.rst | source unit 1]\n.. method:: list.pop([i])\n:noindex:\n\nRemove the item at the given position in the list, and return it. If no index\nis specified, a.pop() removes and returns the last item in the list. (The\nsquare brackets around the *i* in the method signature denote that the parameter\nis optional, not that you should type square brackets at that position. You\nwill see this notation frequently in the Python Library Reference.)\n\n.. method:: list.clear()\n:noindex:\n\nRemove all items from the list. Equivalent to del a[:].\n\n.. method:: list.index(x[, start[, end]])\n:noindex:\n\nReturn zero-based index in the list of the first item whose value is equal to *x*.\nRaises a ValueError if there is no such item.\n\n[6099bf64477a01f4f1b7e79fc6be38788cf178fcdb294cb1d4694f8568444399 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/datastructures.rst | source unit 4]\nThere is a way to remove an item from a list given its index instead of its\nvalue: the del statement. This differs from the list.pop method\nwhich returns a value. The !del statement can also be used to remove\nslices from a list or clear the entire list (which we did earlier by assignment\nof an empty list to the slice). For example::\n\n>>> a = [-1, 1, 66.25, 333, 333, 1234.5]\n>>> del a[0]\n>>> a\n[1, 66.25, 333, 333, 1234.5]\n>>> del a[2:4]\n>>> a\n[1, 66.25, 1234.5]\n>>> del a[:]\n>>> a\n[]\n\ndel can also be used to delete entire variables::\n\n>>> del a\n\nReferencing the name a hereafter is an error (at least until another value\nis assigned to it). We'll find other uses for del later.\n\nTuples and Sequences",
+    "context_ids": [
+      "1a0126fe8acf81f506d0dfdb3141f758c27ca284bfb957be732853d9c542a5dc",
+      "6099bf64477a01f4f1b7e79fc6be38788cf178fcdb294cb1d4694f8568444399"
+    ],
+    "context_chars": 1722,
+    "elapsed_seconds": 0.0034136000000000166,
+    "cost_usd": 0,
+    "query_id": "d7-q09",
+    "split": "dev",
+    "question": "What does a.pop() remove and return when no index is supplied?",
+    "answerable": true,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "metric_scope": "Single-chunk alternative evidence; hit1/hit3 on FIRST query, context_hit on cumulative final context",
+    "configuration": "hybrid"
+  },
+  {
+    "status": "retrieved",
+    "events": [
+      {
+        "event": "search",
+        "tool": "hybrid",
+        "query": "Which container is designed for efficient queue insertion and removal at both ends?",
+        "filter": {},
+        "results": [
+          {
+            "id": "a687efac3e0240eccb8fdc09406abaa12f67554f7a3129670e19fb90c422b363",
+            "source_id": "python-datastructures",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/datastructures.rst",
+            "page": 2,
+            "text": ">>> stack = [3, 4, 5]\n>>> stack.append(6)\n>>> stack.append(7)\n>>> stack\n[3, 4, 5, 6, 7]\n>>> stack.pop()\n7\n>>> stack\n[3, 4, 5, 6]\n>>> stack.pop()\n6\n>>> stack.pop()\n5\n>>> stack\n[3, 4]\n\nUsing Lists as Queues\n\nIt is also possible to use a list as a queue, where the first element added is\nthe first element retrieved (\"first-in, first-out\"); however, lists are not\nefficient for this purpose. While appends and pops from the end of list are\nfast, doing inserts or pops from the beginning of a list is slow (because all\nof the other elements have to be shifted by one).\n\nTo implement a queue, use collections.deque which was designed to\nhave fast appends and pops from both ends. For example::",
+            "metadata": {
+              "chapter": "datastructures",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 2929,
+              "source_char_end": 5383,
+              "char_start": 896,
+              "char_end": 1584,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.03278688524590164,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 1,
+                "score": 0.7141017870819231
+              },
+              "bm25": {
+                "rank": 1,
+                "score": 24.09748604676537
+              }
+            }
+          },
+          {
+            "id": "99259945b947ac41087589c93a93b50aaff4186fa47fd3ff2c77c225e6eee405",
+            "source_id": "python-stdlib2",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/stdlib2.rst",
+            "page": 3,
+            "text": "While those tools are powerful, minor design errors can result in problems that\nare difficult to reproduce. So, the preferred approach to task coordination is\nto concentrate all access to a resource in a single thread and then use the\nqueue module to feed that thread with requests from other threads.\nApplications using queue.Queue objects for inter-thread communication and\ncoordination are easier to design, more readable, and more reliable.\n\nLogging\n\nThe logging module offers a full featured and flexible logging system.\nAt its simplest, log messages are sent to a file or to sys.stderr::\n\nimport logging\nlogging.debug('Debugging information')\nlogging.info('Informational message')\nlogging.warning('Warning:config file %s not found', 'server.conf')\nlogging.error('Error occurred')\nlogging.critical('Critical error -- shutting down')\n\nThis produces the following output:",
+            "metadata": {
+              "chapter": "stdlib2",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 5037,
+              "source_char_end": 7551,
+              "char_start": 1512,
+              "char_end": 2386,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.031754032258064516,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 2,
+                "score": 0.6955172782338751
+              },
+              "bm25": {
+                "rank": 4,
+                "score": 9.752805198983008
+              }
+            }
+          },
+          {
+            "id": "f773ba41cda20eb676325b874ca748036bc70df894eb39c2c529bd7d2422b5fb",
+            "source_id": "python-datastructures",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/datastructures.rst",
+            "page": 2,
+            "text": ">>> from collections import deque\n>>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n>>> queue.append(\"Terry\") # Terry arrives\n>>> queue.append(\"Graham\") # Graham arrives\n>>> queue.popleft() # The first to arrive now leaves\n'Eric'\n>>> queue.popleft() # The second to arrive now leaves\n'John'\n>>> queue # Remaining queue in order of arrival\ndeque(['Michael', 'Terry', 'Graham'])\n\nList Comprehensions\n\nList comprehensions provide a concise way to create lists.\nCommon applications are to make new lists where each element is the result of\nsome operations applied to each member of another sequence or iterable, or to\ncreate a subsequence of those elements that satisfy a certain condition.\n\nFor example, assume we want to create a list of squares, like::\n\n>>> squares = []\n>>> for x in range(10):\n... squares.append(x**2)\n...\n>>> squares\n[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]",
+            "metadata": {
+              "chapter": "datastructures",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 2929,
+              "source_char_end": 5383,
+              "char_start": 1586,
+              "char_end": 2454,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.031009615384615385,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 4,
+                "score": 0.6692024715192407
+              },
+              "bm25": {
+                "rank": 5,
+                "score": 9.608766950731836
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "context": "[a687efac3e0240eccb8fdc09406abaa12f67554f7a3129670e19fb90c422b363 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/datastructures.rst | source unit 2]\n>>> stack = [3, 4, 5]\n>>> stack.append(6)\n>>> stack.append(7)\n>>> stack\n[3, 4, 5, 6, 7]\n>>> stack.pop()\n7\n>>> stack\n[3, 4, 5, 6]\n>>> stack.pop()\n6\n>>> stack.pop()\n5\n>>> stack\n[3, 4]\n\nUsing Lists as Queues\n\nIt is also possible to use a list as a queue, where the first element added is\nthe first element retrieved (\"first-in, first-out\"); however, lists are not\nefficient for this purpose. While appends and pops from the end of list are\nfast, doing inserts or pops from the beginning of a list is slow (because all\nof the other elements have to be shifted by one).\n\nTo implement a queue, use collections.deque which was designed to\nhave fast appends and pops from both ends. For example::",
+    "context_ids": [
+      "a687efac3e0240eccb8fdc09406abaa12f67554f7a3129670e19fb90c422b363"
+    ],
+    "context_chars": 852,
+    "elapsed_seconds": 0.0034316999999997044,
+    "cost_usd": 0,
+    "query_id": "d7-q10",
+    "split": "dev",
+    "question": "Which container is designed for efficient queue insertion and removal at both ends?",
+    "answerable": true,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "metric_scope": "Single-chunk alternative evidence; hit1/hit3 on FIRST query, context_hit on cumulative final context",
+    "configuration": "hybrid"
+  },
+  {
+    "status": "retrieved",
+    "events": [
+      {
+        "event": "search",
+        "tool": "hybrid",
+        "query": "Why can't a list be a dictionary key?",
+        "filter": {},
+        "results": [
+          {
+            "id": "43a0af301a58da3f15b918dc75f104d175efaa4ce23da928df5812447a93fb63",
+            "source_id": "python-datastructures",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/datastructures.rst",
+            "page": 6,
+            "text": "Another useful data type built into Python is the *dictionary* (see\ntypesmapping). Dictionaries are sometimes found in other languages as\n\"associative memories\" or \"associative arrays\". Unlike sequences, which are\nindexed by a range of numbers, dictionaries are indexed by *keys*, which can be\nany immutable type; strings and numbers can always be keys. Tuples can be used\nas keys if they contain only strings, numbers, or tuples; if a tuple contains\nany mutable object either directly or indirectly, it cannot be used as a key.\nYou can't use lists as keys, since lists can be modified in place using index\nassignments, slice assignments, or methods like list.append and\nlist.extend.",
+            "metadata": {
+              "chapter": "datastructures",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 13163,
+              "source_char_end": 15618,
+              "char_start": 844,
+              "char_end": 1527,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.032266458495966696,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 1,
+                "score": 0.7557788240096572
+              },
+              "bm25": {
+                "rank": 3,
+                "score": 12.772851210778986
+              }
+            }
+          },
+          {
+            "id": "1c86f2a629ce9df0cf161b4e920ffb141ea42b17ac91233aab837c99f8f61b29",
+            "source_id": "python-datastructures",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/datastructures.rst",
+            "page": 6,
+            "text": "Performing list(d) on a dictionary returns a list of all the keys\nused in the dictionary, in insertion order (if you want it sorted, just use\nsorted(d) instead). To check whether a single key is in the\ndictionary, use the in keyword.",
+            "metadata": {
+              "chapter": "datastructures",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 13163,
+              "source_char_end": 15618,
+              "char_start": 2222,
+              "char_end": 2455,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.03225806451612903,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 2,
+                "score": 0.7418595694924262
+              },
+              "bm25": {
+                "rank": 2,
+                "score": 12.832235371271329
+              }
+            }
+          },
+          {
+            "id": "cf8f2dc1aa410a9f9659e7b5fcd9bb1ee6d37c95bc469cfcecadb85d7e36fed8",
+            "source_id": "python-datastructures",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/datastructures.rst",
+            "page": 6,
+            "text": "It is best to think of a dictionary as a set of *key: value* pairs,\nwith the requirement that the keys are unique (within one dictionary). A pair of\nbraces creates an empty dictionary: {}. Placing a comma-separated list of\nkey:value pairs within the braces adds initial key:value pairs to the\ndictionary; this is also the way dictionaries are written on output.\n\nThe main operations on a dictionary are storing a value with some key and\nextracting the value given the key. It is also possible to delete a key:value\npair with del. If you store using a key that is already in use, the old\nvalue associated with that key is forgotten. It is an error to extract a value\nusing a non-existent key.",
+            "metadata": {
+              "chapter": "datastructures",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 13163,
+              "source_char_end": 15618,
+              "char_start": 1529,
+              "char_end": 2220,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.03177805800756621,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 5,
+                "score": 0.715003089127507
+              },
+              "bm25": {
+                "rank": 1,
+                "score": 13.632169996310907
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "context": "[43a0af301a58da3f15b918dc75f104d175efaa4ce23da928df5812447a93fb63 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/datastructures.rst | source unit 6]\nAnother useful data type built into Python is the *dictionary* (see\ntypesmapping). Dictionaries are sometimes found in other languages as\n\"associative memories\" or \"associative arrays\". Unlike sequences, which are\nindexed by a range of numbers, dictionaries are indexed by *keys*, which can be\nany immutable type; strings and numbers can always be keys. Tuples can be used\nas keys if they contain only strings, numbers, or tuples; if a tuple contains\nany mutable object either directly or indirectly, it cannot be used as a key.\nYou can't use lists as keys, since lists can be modified in place using index\nassignments, slice assignments, or methods like list.append and\nlist.extend.\n\n[1c86f2a629ce9df0cf161b4e920ffb141ea42b17ac91233aab837c99f8f61b29 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/datastructures.rst | source unit 6]\nPerforming list(d) on a dictionary returns a list of all the keys\nused in the dictionary, in insertion order (if you want it sorted, just use\nsorted(d) instead). To check whether a single key is in the\ndictionary, use the in keyword.",
+    "context_ids": [
+      "43a0af301a58da3f15b918dc75f104d175efaa4ce23da928df5812447a93fb63",
+      "1c86f2a629ce9df0cf161b4e920ffb141ea42b17ac91233aab837c99f8f61b29"
+    ],
+    "context_chars": 1246,
+    "elapsed_seconds": 0.00362360000000006,
+    "cost_usd": 0,
+    "query_id": "d7-q11",
+    "split": "dev",
+    "question": "Why can't a list be a dictionary key?",
+    "answerable": true,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "metric_scope": "Single-chunk alternative evidence; hit1/hit3 on FIRST query, context_hit on cumulative final context",
+    "configuration": "hybrid"
+  },
+  {
+    "status": "retrieved",
+    "events": [
+      {
+        "event": "search",
+        "tool": "hybrid",
+        "query": "How do I create an empty set, and what would empty braces create?",
+        "filter": {},
+        "results": [
+          {
+            "id": "09f2db92dd8f3a06293866ecff0e0cfa692042cf41536ef91e562cac9311801e",
+            "source_id": "python-datastructures",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/datastructures.rst",
+            "page": 5,
+            "text": "This is called, appropriately enough, *sequence unpacking* and works for any\nsequence on the right-hand side. Sequence unpacking requires that there are as\nmany variables on the left side of the equals sign as there are elements in the\nsequence. Note that multiple assignment is really just a combination of tuple\npacking and sequence unpacking.\n\nSets\n\nPython also includes a data type for *sets*. A set is an unordered collection\nwith no duplicate elements. Basic uses include membership testing and\neliminating duplicate entries. Set objects also support mathematical operations\nlike union, intersection, difference, and symmetric difference.\n\nCurly braces or the set function can be used to create sets. Note: to\ncreate an empty set you have to use set(), not {}; the latter creates an\nempty dictionary, a data structure that we discuss in the next section.\n\nHere is a brief demonstration::",
+            "metadata": {
+              "chapter": "datastructures",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 10730,
+              "source_char_end": 13161,
+              "char_start": 1538,
+              "char_end": 2431,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.03278688524590164,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 1,
+                "score": 0.7346751774307954
+              },
+              "bm25": {
+                "rank": 1,
+                "score": 18.377338316203577
+              }
+            }
+          },
+          {
+            "id": "cf8f2dc1aa410a9f9659e7b5fcd9bb1ee6d37c95bc469cfcecadb85d7e36fed8",
+            "source_id": "python-datastructures",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/datastructures.rst",
+            "page": 6,
+            "text": "It is best to think of a dictionary as a set of *key: value* pairs,\nwith the requirement that the keys are unique (within one dictionary). A pair of\nbraces creates an empty dictionary: {}. Placing a comma-separated list of\nkey:value pairs within the braces adds initial key:value pairs to the\ndictionary; this is also the way dictionaries are written on output.\n\nThe main operations on a dictionary are storing a value with some key and\nextracting the value given the key. It is also possible to delete a key:value\npair with del. If you store using a key that is already in use, the old\nvalue associated with that key is forgotten. It is an error to extract a value\nusing a non-existent key.",
+            "metadata": {
+              "chapter": "datastructures",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 13163,
+              "source_char_end": 15618,
+              "char_start": 1529,
+              "char_end": 2220,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.03225806451612903,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 2,
+                "score": 0.7312600510364157
+              },
+              "bm25": {
+                "rank": 2,
+                "score": 13.062401113362661
+              }
+            }
+          },
+          {
+            "id": "f0fbb08ce9def06cb7b922c94dbef1b2fa5b57f2e62e119385818a3ef34b96a2",
+            "source_id": "python-datastructures",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/datastructures.rst",
+            "page": 5,
+            "text": "A special problem is the construction of tuples containing 0 or 1 items: the\nsyntax has some extra quirks to accommodate these. Empty tuples are constructed\nby an empty pair of parentheses; a tuple with one item is constructed by\nfollowing a value with a comma (it is not sufficient to enclose a single value\nin parentheses). Ugly, but effective. For example::\n\n>>> empty = ()\n>>> singleton = 'hello', # <-- note trailing comma\n>>> len(empty)\n0\n>>> len(singleton)\n1\n>>> singleton\n('hello',)\n\nThe statement t = 12345, 54321, 'hello!' is an example of *tuple packing*:\nthe values 12345, 54321 and 'hello!' are packed together in a tuple.\nThe reverse operation is also possible::\n\n>>> x, y, z = t",
+            "metadata": {
+              "chapter": "datastructures",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 10730,
+              "source_char_end": 13161,
+              "char_start": 843,
+              "char_end": 1536,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.02976190476190476,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 3,
+                "score": 0.730663041512977
+              },
+              "bm25": {
+                "rank": 12,
+                "score": 7.4181792891767815
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "context": "[09f2db92dd8f3a06293866ecff0e0cfa692042cf41536ef91e562cac9311801e | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/datastructures.rst | source unit 5]\nThis is called, appropriately enough, *sequence unpacking* and works for any\nsequence on the right-hand side. Sequence unpacking requires that there are as\nmany variables on the left side of the equals sign as there are elements in the\nsequence. Note that multiple assignment is really just a combination of tuple\npacking and sequence unpacking.\n\nSets\n\nPython also includes a data type for *sets*. A set is an unordered collection\nwith no duplicate elements. Basic uses include membership testing and\neliminating duplicate entries. Set objects also support mathematical operations\nlike union, intersection, difference, and symmetric difference.\n\nCurly braces or the set function can be used to create sets. Note: to\ncreate an empty set you have to use set(), not {}; the latter creates an\nempty dictionary, a data structure that we discuss in the next section.\n\nHere is a brief demonstration::",
+    "context_ids": [
+      "09f2db92dd8f3a06293866ecff0e0cfa692042cf41536ef91e562cac9311801e"
+    ],
+    "context_chars": 1057,
+    "elapsed_seconds": 0.0036033999999998123,
+    "cost_usd": 0,
+    "query_id": "d7-q12",
+    "split": "dev",
+    "question": "How do I create an empty set, and what would empty braces create?",
+    "answerable": true,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "metric_scope": "Single-chunk alternative evidence; hit1/hit3 on FIRST query, context_hit on cumulative final context",
+    "configuration": "hybrid"
+  },
+  {
+    "status": "retrieved",
+    "events": [
+      {
+        "event": "search",
+        "tool": "hybrid",
+        "query": "Why should a file be opened in a with block even when the code may raise an exception?",
+        "filter": {},
+        "results": [
+          {
+            "id": "8b225ef04cf56f46eecf64ce2012675472ec704ae7b3e0b685dd21b269e95c05",
+            "source_id": "python-errors",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/errors.rst",
+            "page": 4,
+            "text": "If an unhandled exception occurs inside an except section, it will\nhave the exception being handled attached to it and included in the error\nmessage::\n\n>>> try:\n... open(\"database.sqlite\")\n... except OSError:\n... raise RuntimeError(\"unable to handle error\")\n...\nTraceback (most recent call last):\nFile \"<stdin>\", line 2, in <module>\nFileNotFoundError: [Errno 2] No such file or directory: 'database.sqlite'\n<BLANKLINE>\nDuring handling of the above exception, another exception occurred:\n<BLANKLINE>\nTraceback (most recent call last):\nFile \"<stdin>\", line 4, in <module>\nRuntimeError: unable to handle error\n\nTo indicate that an exception is a direct consequence of another, the\nraise statement allows an optional from<raise> clause::\n\n# exc must be exception instance or None.\nraise RuntimeError from exc\n\nThis can be useful when you are transforming exceptions. For example::",
+            "metadata": {
+              "chapter": "errors",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 7677,
+              "source_char_end": 10473,
+              "char_start": 1434,
+              "char_end": 2310,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.03225806451612903,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 2,
+                "score": 0.7626061429588835
+              },
+              "bm25": {
+                "rank": 2,
+                "score": 15.257725476845536
+              }
+            }
+          },
+          {
+            "id": "3d24b823e6cf9c1cc0e63a64d80e338fa7c8c58077d06306f608aa1eca3de1c3",
+            "source_id": "python-errors",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/errors.rst",
+            "page": 3,
+            "text": "try:\nf = open('myfile.txt')\ns = f.readline()\ni = int(s.strip())\nexcept OSError as err:\nprint(\"OS error:\", err)\nexcept ValueError:\nprint(\"Could not convert data to an integer.\")\nexcept Exception as err:\nprint(f\"Unexpected {err=}, {type(err)=}\")\nraise\n\nThe try ... except statement has an optional *else\nclause*, which, when present, must follow all *except clauses*. It is useful\nfor code that must be executed if the *try clause* does not raise an exception.\nFor example::\n\nfor arg in sys.argv[1:]:\ntry:\nf = open(arg, 'r')\nexcept OSError:\nprint('cannot open', arg)\nelse:\nprint(arg, 'has', len(f.readlines()), 'lines')\nf.close()\n\nThe use of the !else clause is better than adding additional code to\nthe try clause because it avoids accidentally catching an exception\nthat wasn't raised by the code being protected by the !try ...\n!except statement.",
+            "metadata": {
+              "chapter": "errors",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 5131,
+              "source_char_end": 7675,
+              "char_start": 1697,
+              "char_end": 2544,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.03057889822595705,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 3,
+                "score": 0.7584841836756495
+              },
+              "bm25": {
+                "rank": 8,
+                "score": 13.658005149645989
+              }
+            }
+          },
+          {
+            "id": "ec96d7c2599ce8ff642836b4b9a6be803d6395be417444de8cd66ffb60dadc6c",
+            "source_id": "python-errors",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/errors.rst",
+            "page": 6,
+            "text": "The problem with this code is that it leaves the file open for an indeterminate\namount of time after this part of the code has finished executing.\nThis is not an issue in simple scripts, but can be a problem for larger\napplications. The with statement allows objects like files to be\nused in a way that ensures they are always cleaned up promptly and correctly. ::\n\nwith open(\"myfile.txt\") as f:\nfor line in f:\nprint(line, end=\"\")\n\nAfter the statement is executed, the file *f* is always closed, even if a\nproblem was encountered while processing the lines. Objects which, like files,\nprovide predefined clean-up actions will indicate this in their documentation.\n\nRaising and Handling Multiple Unrelated Exceptions",
+            "metadata": {
+              "chapter": "errors",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 13013,
+              "source_char_end": 15522,
+              "char_start": 1457,
+              "char_end": 2172,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.029551337359792925,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 1,
+                "score": 0.7920917784246757
+              },
+              "bm25": {
+                "rank": 16,
+                "score": 11.732715051595038
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "context": "[8b225ef04cf56f46eecf64ce2012675472ec704ae7b3e0b685dd21b269e95c05 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/errors.rst | source unit 4]\nIf an unhandled exception occurs inside an except section, it will\nhave the exception being handled attached to it and included in the error\nmessage::\n\n>>> try:\n... open(\"database.sqlite\")\n... except OSError:\n... raise RuntimeError(\"unable to handle error\")\n...\nTraceback (most recent call last):\nFile \"<stdin>\", line 2, in <module>\nFileNotFoundError: [Errno 2] No such file or directory: 'database.sqlite'\n<BLANKLINE>\nDuring handling of the above exception, another exception occurred:\n<BLANKLINE>\nTraceback (most recent call last):\nFile \"<stdin>\", line 4, in <module>\nRuntimeError: unable to handle error\n\nTo indicate that an exception is a direct consequence of another, the\nraise statement allows an optional from<raise> clause::\n\n# exc must be exception instance or None.\nraise RuntimeError from exc\n\nThis can be useful when you are transforming exceptions. For example::",
+    "context_ids": [
+      "8b225ef04cf56f46eecf64ce2012675472ec704ae7b3e0b685dd21b269e95c05"
+    ],
+    "context_chars": 1032,
+    "elapsed_seconds": 0.004314599999999835,
+    "cost_usd": 0,
+    "query_id": "d7-q13",
+    "split": "dev",
+    "question": "Why should a file be opened in a with block even when the code may raise an exception?",
+    "answerable": true,
+    "hit1": false,
+    "hit3": true,
+    "context_hit": false,
+    "metric_scope": "Single-chunk alternative evidence; hit1/hit3 on FIRST query, context_hit on cumulative final context",
+    "configuration": "hybrid"
+  },
+  {
+    "status": "retrieved",
+    "events": [
+      {
+        "event": "search",
+        "tool": "hybrid",
+        "query": "What does f.read() return after reaching the end of a text file?",
+        "filter": {},
+        "results": [
+          {
+            "id": "d899a63c318bde37d2a5cf6eaf55ede5f49cb30a6e98665fffff8a67586d1030",
+            "source_id": "python-inputoutput",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/inputoutput.rst",
+            "page": 5,
+            "text": "To read a file's contents, call f.read(size), which reads some quantity of\ndata and returns it as a string (in text mode) or bytes object (in binary mode).\n*size* is an optional numeric argument. When *size* is omitted or negative, the\nentire contents of the file will be read and returned; it's your problem if the\nfile is twice as large as your machine's memory. Otherwise, at most *size*\ncharacters (in text mode) or *size* bytes (in binary mode) are read and returned.\nIf the end of the file has been reached, f.read() will return an empty\nstring (''). ::\n\n>>> f.read()\n'This is the entire file.\\n'\n>>> f.read()\n''",
+            "metadata": {
+              "chapter": "inputoutput",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 10338,
+              "source_char_end": 13065,
+              "char_start": 1705,
+              "char_end": 2323,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.03278688524590164,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 1,
+                "score": 0.8162338664218677
+              },
+              "bm25": {
+                "rank": 1,
+                "score": 20.001978939794554
+              }
+            }
+          },
+          {
+            "id": "9d532c51e019d76f1a6513e833574e3587822d313ddb2c0fd45f7b0f347146ec",
+            "source_id": "python-inputoutput",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/inputoutput.rst",
+            "page": 6,
+            "text": "f.tell() returns an integer giving the file object's current position in the file\nrepresented as number of bytes from the beginning of the file when in binary mode and\nan opaque number when in text mode.\n\nTo change the file object's position, use f.seek(offset, whence). The position is computed\nfrom adding *offset* to a reference point; the reference point is selected by\nthe *whence* argument. A *whence* value of 0 measures from the beginning\nof the file, 1 uses the current file position, and 2 uses the end of the file as\nthe reference point. *whence* can be omitted and defaults to 0, using the\nbeginning of the file as the reference point. ::\n\n>>> f = open('workfile', 'rb+')\n>>> f.write(b'0123456789abcdef')\n16\n>>> f.seek(5) # Go to the 6th byte in the file\n5\n>>> f.read(1)\nb'5'\n>>> f.seek(-3, 2) # Go to the 3rd byte before the end\n13\n>>> f.read(1)\nb'd'",
+            "metadata": {
+              "chapter": "inputoutput",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 13067,
+              "source_char_end": 15725,
+              "char_start": 841,
+              "char_end": 1704,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.0315136476426799,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 5,
+                "score": 0.7451875576266528
+              },
+              "bm25": {
+                "rank": 2,
+                "score": 15.398734872540066
+              }
+            }
+          },
+          {
+            "id": "bf0a4dbaae2ace7bc92f42617299c686d1ded0181c2099bbc80aba7c4b2bc091",
+            "source_id": "python-inputoutput",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/inputoutput.rst",
+            "page": 5,
+            "text": "f.readline() reads a single line from the file; a newline character (\\n)\nis left at the end of the string, and is only omitted on the last line of the\nfile if the file doesn't end in a newline. This makes the return value\nunambiguous; if f.readline() returns an empty string, the end of the file\nhas been reached, while a blank line is represented by '\\n', a string\ncontaining only a single newline. ::",
+            "metadata": {
+              "chapter": "inputoutput",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 10338,
+              "source_char_end": 13065,
+              "char_start": 2325,
+              "char_end": 2727,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.0315136476426799,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 2,
+                "score": 0.8159441265223042
+              },
+              "bm25": {
+                "rank": 5,
+                "score": 12.620043396037394
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "context": "[d899a63c318bde37d2a5cf6eaf55ede5f49cb30a6e98665fffff8a67586d1030 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/inputoutput.rst | source unit 5]\nTo read a file's contents, call f.read(size), which reads some quantity of\ndata and returns it as a string (in text mode) or bytes object (in binary mode).\n*size* is an optional numeric argument. When *size* is omitted or negative, the\nentire contents of the file will be read and returned; it's your problem if the\nfile is twice as large as your machine's memory. Otherwise, at most *size*\ncharacters (in text mode) or *size* bytes (in binary mode) are read and returned.\nIf the end of the file has been reached, f.read() will return an empty\nstring (''). ::\n\n>>> f.read()\n'This is the entire file.\\n'\n>>> f.read()\n''\n\n[bf0a4dbaae2ace7bc92f42617299c686d1ded0181c2099bbc80aba7c4b2bc091 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/inputoutput.rst | source unit 5]\nf.readline() reads a single line from the file; a newline character (\\n)\nis left at the end of the string, and is only omitted on the last line of the\nfile if the file doesn't end in a newline. This makes the return value\nunambiguous; if f.readline() returns an empty string, the end of the file\nhas been reached, while a blank line is represented by '\\n', a string\ncontaining only a single newline. ::",
+    "context_ids": [
+      "d899a63c318bde37d2a5cf6eaf55ede5f49cb30a6e98665fffff8a67586d1030",
+      "bf0a4dbaae2ace7bc92f42617299c686d1ded0181c2099bbc80aba7c4b2bc091"
+    ],
+    "context_chars": 1344,
+    "elapsed_seconds": 0.0038664000000001586,
+    "cost_usd": 0,
+    "query_id": "d7-q14",
+    "split": "dev",
+    "question": "What does f.read() return after reaching the end of a text file?",
+    "answerable": true,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "metric_scope": "Single-chunk alternative evidence; hit1/hit3 on FIRST query, context_hit on cumulative final context",
+    "configuration": "hybrid"
+  },
+  {
+    "status": "retrieved",
+    "events": [
+      {
+        "event": "search",
+        "tool": "hybrid",
+        "query": "Does the finally clause run if the try statement produces no exception?",
+        "filter": {},
+        "results": [
+          {
+            "id": "26168ce059654ad42d57126c7693af421c3711cf00aa8c2e5a6b2f264941d9ae",
+            "source_id": "python-errors",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/errors.rst",
+            "page": 5,
+            "text": "* If an exception occurs during execution of the !try\nclause, the exception may be handled by an except\nclause. If the exception is not handled by an !except\nclause, the exception is re-raised after the !finally\nclause has been executed.\n\n* An exception could occur during execution of an !except\nor !else clause. Again, the exception is re-raised after\nthe !finally clause has been executed.\n\n* If the !finally clause executes a break,\ncontinue or return statement, exceptions are not\nre-raised.\n\n* If the !try statement reaches a break,\ncontinue or return statement, the\n!finally clause will execute just prior to the\n!break, !continue or !return\nstatement's execution.\n\n* If a !finally clause includes a !return\nstatement, the returned value will be the one from the\n!finally clause's !return statement, not the\nvalue from the !try clause's !return\nstatement.",
+            "metadata": {
+              "chapter": "errors",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 10475,
+              "source_char_end": 13011,
+              "char_start": 1674,
+              "char_end": 2536,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.03278688524590164,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 1,
+                "score": 0.8551037867048887
+              },
+              "bm25": {
+                "rank": 1,
+                "score": 25.882297980585165
+              }
+            }
+          },
+          {
+            "id": "1db380a64c394cb525cdc8121fbd466232b30d70f0a7c5a27782ba400977a3af",
+            "source_id": "python-errors",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/errors.rst",
+            "page": 5,
+            "text": "Most exceptions are defined with names that end in \"Error\", similar to the\nnaming of the standard exceptions.\n\nMany standard modules define their own exceptions to report errors that may\noccur in functions they define.\n\nDefining Clean-up Actions\n\nThe try statement has another optional clause which is intended to\ndefine clean-up actions that must be executed under all circumstances. For\nexample::\n\n>>> try:\n... raise KeyboardInterrupt\n... finally:\n... print('Goodbye, world!')\n...\nGoodbye, world!\nTraceback (most recent call last):\nFile \"<stdin>\", line 2, in <module>\nKeyboardInterrupt\n\nIf a finally clause is present, the !finally\nclause will execute as the last task before the try\nstatement completes. The !finally clause runs whether or\nnot the !try statement produces an exception. The following\npoints discuss more complex cases when an exception occurs:",
+            "metadata": {
+              "chapter": "errors",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 10475,
+              "source_char_end": 13011,
+              "char_start": 810,
+              "char_end": 1672,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.03225806451612903,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 2,
+                "score": 0.8215616695944774
+              },
+              "bm25": {
+                "rank": 2,
+                "score": 25.809584067779518
+              }
+            }
+          },
+          {
+            "id": "586daa5d33168bab677d088bb3882d27a87cace027a92da75838e8384fd256d4",
+            "source_id": "python-errors",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/errors.rst",
+            "page": 2,
+            "text": "* If an exception occurs during execution of the try clause, the rest of the\nclause is skipped. Then, if its type matches the exception named after the\nexcept keyword, the *except clause* is executed, and then execution\ncontinues after the try/except block.\n\n* If an exception occurs which does not match the exception named in the *except\nclause*, it is passed on to outer try statements; if no handler is\nfound, it is an *unhandled exception* and execution stops with a message as\nshown above.\n\nA try statement may have more than one *except clause*, to specify\nhandlers for different exceptions. At most one handler will be executed.\nHandlers only handle exceptions that occur in the corresponding *try clause*,\nnot in other handlers of the same !try statement. An *except clause*\nmay name multiple exceptions as a parenthesized tuple, for example::",
+            "metadata": {
+              "chapter": "errors",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 2568,
+              "source_char_end": 5129,
+              "char_start": 868,
+              "char_end": 1720,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.03125763125763126,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 5,
+                "score": 0.7945346697058678
+              },
+              "bm25": {
+                "rank": 3,
+                "score": 22.480268373840513
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "context": "[26168ce059654ad42d57126c7693af421c3711cf00aa8c2e5a6b2f264941d9ae | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/errors.rst | source unit 5]\n* If an exception occurs during execution of the !try\nclause, the exception may be handled by an except\nclause. If the exception is not handled by an !except\nclause, the exception is re-raised after the !finally\nclause has been executed.\n\n* An exception could occur during execution of an !except\nor !else clause. Again, the exception is re-raised after\nthe !finally clause has been executed.\n\n* If the !finally clause executes a break,\ncontinue or return statement, exceptions are not\nre-raised.\n\n* If the !try statement reaches a break,\ncontinue or return statement, the\n!finally clause will execute just prior to the\n!break, !continue or !return\nstatement's execution.\n\n* If a !finally clause includes a !return\nstatement, the returned value will be the one from the\n!finally clause's !return statement, not the\nvalue from the !try clause's !return\nstatement.",
+    "context_ids": [
+      "26168ce059654ad42d57126c7693af421c3711cf00aa8c2e5a6b2f264941d9ae"
+    ],
+    "context_chars": 1018,
+    "elapsed_seconds": 0.0036602999999999497,
+    "cost_usd": 0,
+    "query_id": "d7-q15",
+    "split": "dev",
+    "question": "Does the finally clause run if the try statement produces no exception?",
+    "answerable": true,
+    "hit1": false,
+    "hit3": true,
+    "context_hit": false,
+    "metric_scope": "Single-chunk alternative evidence; hit1/hit3 on FIRST query, context_hit on cumulative final context",
+    "configuration": "hybrid"
+  },
+  {
+    "status": "retrieved",
+    "events": [
+      {
+        "event": "search",
+        "tool": "hybrid",
+        "query": "What timeout value does asyncio.TaskGroup use by default?",
+        "filter": {},
+        "results": [
+          {
+            "id": "dad93f2af6359491f889c16fbf4831f29d32f4a9cafb6722066fb820863ae8f6",
+            "source_id": "python-controlflow",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/controlflow.rst",
+            "page": 7,
+            "text": "The most useful form is to specify a default value for one or more arguments.\nThis creates a function that can be called with fewer arguments than it is\ndefined to allow. For example::\n\ndef ask_ok(prompt, retries=4, reminder='Please try again!'):\nwhile True:\nok = input(prompt)\nif ok in ('y', 'ye', 'yes'):\nreturn True\nif ok in ('n', 'no', 'nop', 'nope'):\nreturn False\nretries = retries - 1\nif retries < 0:\nraise ValueError('invalid user response')\nprint(reminder)\n\nThis function can be called in several ways:\n\n* giving only the mandatory argument:\nask_ok('Do you really want to quit?')\n* giving one of the optional arguments:\nask_ok('OK to overwrite the file?', 2)\n* or even giving all arguments:\nask_ok('OK to overwrite the file?', 2, 'Come on, only yes or no!')\n\nThis example also introduces the in keyword. This tests whether or\nnot a sequence contains a certain value.",
+            "metadata": {
+              "chapter": "controlflow",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 14899,
+              "source_char_end": 17325,
+              "char_start": 1446,
+              "char_end": 2320,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.026856524873828405,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 13,
+                "score": 0.6006360663812541
+              },
+              "bm25": {
+                "rank": 16,
+                "score": 4.7230019758552295
+              }
+            }
+          },
+          {
+            "id": "36dd4492b0116e42bd734d2de5f70897c45908f1dd95aacc230423910fc9a2a0",
+            "source_id": "python-venv",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/venv.rst",
+            "page": 2,
+            "text": "On Unix or MacOS, run::\n\nsource tutorial-env/bin/activate\n\n(This script is written for the bash shell. If you use the\ncsh or fish shells, there are alternate\nactivate.csh and activate.fish scripts you should use\ninstead.)\n\nActivating the virtual environment will change your shell's prompt to show what\nvirtual environment you're using, and modify the environment so that running\npython will get you that particular version and installation of Python.\nFor example:\n\n$ source ~/envs/tutorial-env/bin/activate\n(tutorial-env) $ python\nPython 3.5.1 (default, May 6 2016, 10:59:36)\n...\n>>> import sys\n>>> sys.path\n['', '/usr/local/lib/python35.zip', ...,\n'~/envs/tutorial-env/lib/python3.5/site-packages']\n>>>\n\nTo deactivate a virtual environment, type::\n\ndeactivate\n\ninto the terminal.\n\nManaging Packages with pip",
+            "metadata": {
+              "chapter": "venv",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 2431,
+              "source_char_end": 4904,
+              "char_start": 0,
+              "char_end": 809,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.01639344262295082,
+            "method": "hybrid",
+            "component_ranks": {
+              "bm25": {
+                "rank": 1,
+                "score": 6.787275130483803
+              }
+            }
+          },
+          {
+            "id": "3f72f3450ff33402f212df2a9b688165fb24430d35308c3e81555c88f9650984",
+            "source_id": "python-modules",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/modules.rst",
+            "page": 5,
+            "text": "'getdlopenflags',\n'getfilesystemencodeerrors', 'getfilesystemencoding', 'getprofile',\n'getrecursionlimit', 'getrefcount', 'getsizeof', 'getswitchinterval',\n'gettrace', 'hash_info', 'hexversion', 'implementation', 'int_info',\n'intern', 'is_finalizing', 'last_traceback', 'last_type', 'last_value',\n'maxsize', 'maxunicode', 'meta_path', 'modules', 'path', 'path_hooks',\n'path_importer_cache', 'platform', 'prefix', 'ps1', 'ps2', 'pycache_prefix',\n'set_asyncgen_hooks', 'set_coroutine_origin_tracking_depth', 'setdlopenflags',\n'setprofile', 'setrecursionlimit', 'setswitchinterval', 'settrace', 'stderr',\n'stdin', 'stdout', 'thread_info', 'unraisablehook', 'version', 'version_info',\n'warnoptions']\n\nWithout arguments, dir lists the names you have defined currently::\n\n>>> a = [1, 2, 3, 4, 5]\n>>> import fibo\n>>> fib = fibo.fib\n>>> dir()\n['__builtins__', '__name__', 'a', 'fib', 'fibo', 'sys']",
+            "metadata": {
+              "chapter": "modules",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 10211,
+              "source_char_end": 12686,
+              "char_start": 1363,
+              "char_end": 2253,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.01639344262295082,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 1,
+                "score": 0.6608663706414969
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "context": "[dad93f2af6359491f889c16fbf4831f29d32f4a9cafb6722066fb820863ae8f6 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/controlflow.rst | source unit 7]\nThe most useful form is to specify a default value for one or more arguments.\nThis creates a function that can be called with fewer arguments than it is\ndefined to allow. For example::\n\ndef ask_ok(prompt, retries=4, reminder='Please try again!'):\nwhile True:\nok = input(prompt)\nif ok in ('y', 'ye', 'yes'):\nreturn True\nif ok in ('n', 'no', 'nop', 'nope'):\nreturn False\nretries = retries - 1\nif retries < 0:\nraise ValueError('invalid user response')\nprint(reminder)\n\nThis function can be called in several ways:\n\n* giving only the mandatory argument:\nask_ok('Do you really want to quit?')\n* giving one of the optional arguments:\nask_ok('OK to overwrite the file?', 2)\n* or even giving all arguments:\nask_ok('OK to overwrite the file?', 2, 'Come on, only yes or no!')\n\nThis example also introduces the in keyword. This tests whether or\nnot a sequence contains a certain value.",
+    "context_ids": [
+      "dad93f2af6359491f889c16fbf4831f29d32f4a9cafb6722066fb820863ae8f6"
+    ],
+    "context_chars": 1035,
+    "elapsed_seconds": 0.0030806000000001,
+    "cost_usd": 0,
+    "query_id": "d7-u01",
+    "split": "dev",
+    "question": "What timeout value does asyncio.TaskGroup use by default?",
+    "answerable": false,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false,
+    "metric_scope": "Single-chunk alternative evidence; hit1/hit3 on FIRST query, context_hit on cumulative final context",
+    "configuration": "hybrid"
+  },
+  {
+    "status": "retrieved",
+    "events": [
+      {
+        "event": "search",
+        "tool": "hybrid",
+        "query": "What default transaction isolation level does sqlite3.connect use?",
+        "filter": {},
+        "results": [
+          {
+            "id": "695484b10edc6101e7f6454f1478e4ead64182b44f23896308d4e4f6c97c0497",
+            "source_id": "python-stdlib",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/stdlib.rst",
+            "page": 4,
+            "text": "* The json package provides robust support for parsing this\npopular data interchange format. The csv module supports\ndirect reading and writing of files in Comma-Separated Value format,\ncommonly supported by databases and spreadsheets. XML processing is\nsupported by the xml.etree.ElementTree, xml.dom and\nxml.sax packages. Together, these modules and packages\ngreatly simplify data interchange between Python applications and\nother tools.\n\n* The sqlite3 module is a wrapper for the SQLite database\nlibrary, providing a persistent database that can be updated and\naccessed using slightly nonstandard SQL syntax.\n\n* Internationalization is supported by a number of modules including\ngettext, locale, and the codecs package.",
+            "metadata": {
+              "chapter": "stdlib",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 7516,
+              "source_char_end": 9719,
+              "char_start": 1481,
+              "char_end": 2203,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.031099324975891997,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 1,
+                "score": 0.6568279258441292
+              },
+              "bm25": {
+                "rank": 8,
+                "score": 5.4179319766730485
+              }
+            }
+          },
+          {
+            "id": "dd341d6ba9590c1ba1ba82fd00658a3fe3b34e0aad7b9fbe53afbf50df778646",
+            "source_id": "python-stdlib2",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/stdlib2.rst",
+            "page": 3,
+            "text": "start += 16\nfilename = data[start:start+filenamesize]\nstart += filenamesize\nextra = data[start:start+extra_size]\nprint(filename, hex(crc32), comp_size, uncomp_size)\n\nstart += extra_size + comp_size # skip to the next header\n\nMulti-threading\n\nThreading is a technique for decoupling tasks which are not sequentially\ndependent. Threads can be used to improve the responsiveness of applications\nthat accept user input while other tasks run in the background. A related use\ncase is running I/O in parallel with computations in another thread.\n\nThe following code shows how the high level threading module can run\ntasks in background while the main program continues to run::\n\nimport threading, zipfile\n\nclass AsyncZip(threading.Thread):\ndef __init__(self, infile, outfile):\nthreading.Thread.__init__(self)\nself.infile = infile\nself.outfile = outfile",
+            "metadata": {
+              "chapter": "stdlib2",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 5037,
+              "source_char_end": 7551,
+              "char_start": 0,
+              "char_end": 845,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.0293236301369863,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 4,
+                "score": 0.62668883444221
+              },
+              "bm25": {
+                "rank": 13,
+                "score": 4.414828719229626
+              }
+            }
+          },
+          {
+            "id": "b2d879a1c5b16f8ec6dd674b6ae0594eb6888627829545fa24fa1f35812cd6c2",
+            "source_id": "python-datastructures",
+            "source": "https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/datastructures.rst",
+            "page": 2,
+            "text": "You might have noticed that methods like insert, remove or sort that\nonly modify the list have no return value printed -- they return the default\nNone. [#]_ This is a design principle for all mutable data structures in\nPython.\n\nAnother thing you might notice is that not all data can be sorted or\ncompared. For instance, [None, 'hello', 10] doesn't sort because\nintegers can't be compared to strings and *None* can't be compared to\nother types. Also, there are some types that don't have a defined\nordering relation. For example, 3+4j < 5+7j isn't a valid\ncomparison.\n\nUsing Lists as Stacks\n\nThe list methods make it very easy to use a list as a stack, where the last\nelement added is the first element retrieved (\"last-in, first-out\"). To add an\nitem to the top of the stack, use list.append. To retrieve an item from the\ntop of the stack, use list.pop without an explicit index. For example::",
+            "metadata": {
+              "chapter": "datastructures",
+              "language": "en",
+              "version": "3.12.0",
+              "source_char_start": 2929,
+              "source_char_end": 5383,
+              "char_start": 0,
+              "char_end": 894,
+              "chunking": "paragraph-900"
+            },
+            "score": 0.027205882352941177,
+            "method": "hybrid",
+            "component_ranks": {
+              "dense": {
+                "rank": 8,
+                "score": 0.6086513609754619
+              },
+              "bm25": {
+                "rank": 20,
+                "score": 4.218131967673219
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "context": "[695484b10edc6101e7f6454f1478e4ead64182b44f23896308d4e4f6c97c0497 | https://github.com/python/cpython/blob/v3.12.0/Doc/tutorial/stdlib.rst | source unit 4]\n* The json package provides robust support for parsing this\npopular data interchange format. The csv module supports\ndirect reading and writing of files in Comma-Separated Value format,\ncommonly supported by databases and spreadsheets. XML processing is\nsupported by the xml.etree.ElementTree, xml.dom and\nxml.sax packages. Together, these modules and packages\ngreatly simplify data interchange between Python applications and\nother tools.\n\n* The sqlite3 module is a wrapper for the SQLite database\nlibrary, providing a persistent database that can be updated and\naccessed using slightly nonstandard SQL syntax.\n\n* Internationalization is supported by a number of modules including\ngettext, locale, and the codecs package.",
+    "context_ids": [
+      "695484b10edc6101e7f6454f1478e4ead64182b44f23896308d4e4f6c97c0497"
+    ],
+    "context_chars": 878,
+    "elapsed_seconds": 0.0033756999999998705,
+    "cost_usd": 0,
+    "query_id": "d7-u02",
+    "split": "dev",
+    "question": "What default transaction isolation level does sqlite3.connect use?",
+    "answerable": false,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false,
+    "metric_scope": "Single-chunk alternative evidence; hit1/hit3 on FIRST query, context_hit on cumulative final context",
+    "configuration": "hybrid"
+  }
+]
